@@ -1,113 +1,113 @@
-import Image from 'next/image'
+import FeatureCard from "@/components/FeatureCard";
+import ProcessCard from "@/components/ProcessCard";
+import ServiceCard from "@/components/ServiceCard";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { services } from "@/assets/services";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      {/* Intro */}
+      <section
+        id="section-home"
+        className="flex flex-col space-y-10 lg:flex-row max-w-5xl mx-auto lg:h-[650px]"
+      >
+        <div className="space-y-7 p-10 lg:pt-40 pb-32 lg:w-2/3">
+          <h1 className="text-5xl md:text-6xl lg:max-w-lg">
+            We follow a holistic approach to health care.
+          </h1>
+          <h2 className="text-lg w-1/2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <Button>Request Appointment</Button>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="bg-purple-300 relative min-h-[400px] lg:w-1/3">
+          <Image
+            src={
+              "https://assets.website-files.com/62444c22812cca0a6e05b335/62444c9c770af7c8b7b23c16_Healthcare%20Worker.png"
+            }
+            alt="healthcare worker photo"
+            width={500}
+            height={500}
+            className="absolute max-w-md bottom-0 right-0"
+          />
+        </div>
+      </section>
+      {/* Feature */}
+      <section
+        id="section-feature"
+        className="flex flex-col p-10 bg-purple-800 lg:flex-row justify-center lg:py-14"
+      >
+        <FeatureCard />
+        <FeatureCard />
+        <FeatureCard />
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      {/* Services */}
+      <section
+        id="section-services"
+        className="flex flex-col px-5 py-12 items-center text-center space-y-7 sm:p-20 max-w-7xl mx-auto"
+      >
+        <h2 className="uppercase tracking-wider text-purple-800">Services</h2>
+        <p className="uppercase text-4xl font-medium max-w-lg pb-12">
+          Using our latest technology
+        </p>
+        <div className="flex flex-col space-y-7 lg:space-y-0 lg:flex-row lg:space-x-8">
+          {services.map((service, i) => (
+            <ServiceCard key={i} service={service} />
+          ))}
+        </div>
+      </section>
+      {/* Easy Process */}
+      <section
+        id="section-process"
+        className="flex flex-col items-center text-center bg-purple-50 px-5 py-12 space-y-7 sm:p-20 "
+      >
+        <h2 className="uppercase tracking-wider text-purple-800">Steps</h2>
+        <p className="uppercase text-4xl font-medium max-w-lg lg:pb-12">
+          How does it work?
+        </p>
+        <div className="flex flex-col lg:flex-row">
+          <ProcessCard step={1} desc="Request Appointment" />
+          <div className="hidden lg:flex lg:items-end">
+            <Image
+              src="https://assets.website-files.com/5fc4341651db5a6e16d9ead7/5fc571f6b429986492de81d7_line-arc-1.svg"
+              width={100}
+              height={100}
+              alt="arrow"
+            />
+          </div>
+          <ProcessCard step={2} desc="Perform Examination" />
+          <div className="hidden lg:flex lg:items-start">
+            <Image
+              src="https://assets.website-files.com/5fc4341651db5a6e16d9ead7/5fc571f682f57cd28d76c4ca_line-arc-2.svg"
+              width={100}
+              height={100}
+              alt="arrow"
+            />
+          </div>
+          <ProcessCard step={3} desc="Results to Referrer" />
+        </div>
+      </section>
+      {/* CTA */}
+      <section
+        id="cta"
+        className="flex flex-col items-center py-16 text-center"
+      >
+        <h2 className="text-4xl text-center p-5">
+          Book your next appointment now
+        </h2>
+        <p className="p-10 max-w-5xl">
+          Complete our booking form and one of our friendly staff will contact
+          you &#45; it&#39;s quick, and easy. Click on the below link and follow
+          the simple steps. Remember to have your referral handy.
+        </p>
+        <div>
+          <Button>Request Appointment</Button>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
