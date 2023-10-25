@@ -1,10 +1,9 @@
+import { services } from "@/assets/services";
 import FeatureCard from "@/components/FeatureCard";
 import ProcessCard from "@/components/ProcessCard";
-import ServiceCard from "@/components/ServiceCard";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { services } from "@/assets/services";
 import RequestAppointmentButton from "@/components/RequestAppointmentButton";
+import ServiceCard from "@/components/ServiceCard";
+import Image from "next/image";
 
 export default function Home() {
   return (
