@@ -4,6 +4,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { services } from "@/assets/services";
+import RequestAppointmentButton from "@/components/RequestAppointmentButton";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
           <h2 className="text-lg w-1/2">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </h2>
-          <Button>Request Appointment</Button>
+          <RequestAppointmentButton />
         </div>
 
         <div className="bg-purple-300 relative min-h-[400px] lg:w-1/3">
@@ -105,7 +106,7 @@ export default function Home() {
           the simple steps. Remember to have your referral handy.
         </p>
         <div>
-          <Button>Request Appointment</Button>
+          <RequestAppointmentButton />
         </div>
       </section>
     </main>

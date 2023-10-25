@@ -10,6 +10,7 @@ import BillingCard from "@/components/BillingCard";
 import ContactUsCard from "@/components/ContactUsCard";
 import a from "indefinite";
 import { services } from "@/assets/services";
+import RequestAppointmentButton from "@/components/RequestAppointmentButton";
 
 function ServicePage({ params }: { params: { service: string } }) {
   const currService = services.filter(
@@ -50,7 +51,7 @@ function ServicePage({ params }: { params: { service: string } }) {
             ))}
           </div>
           <div className="mt-10">
-            <Button>Request Appointment</Button>
+            <RequestAppointmentButton />
           </div>
         </div>
         <div className="flex flex-col basis-1/3 gap-5">

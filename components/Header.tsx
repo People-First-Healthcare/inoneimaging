@@ -1,14 +1,14 @@
 "use client";
 
+import { Menu } from "@/typings";
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import TopNav from "./TopNav";
+import Logo from "./Logo";
+import RequestAppointmentButton from "./RequestAppointmentButton";
 import SideNav from "./SideNav";
 import SideNavContent from "./SideNavContent";
-import { Button } from "./ui/button";
-import { Menu } from "@/typings";
+import TopNav from "./TopNav";
 import TopNavContent from "./TopNavContent";
-import { AnimatePresence } from "framer-motion";
-import Logo from "./Logo";
 
 const menu: Menu[] = [
   {
@@ -34,7 +34,10 @@ const menu: Menu[] = [
   {
     menuTitle: "Referrers",
     subMenu: [
-      { subMenuTitle: "Access Images", link: "" },
+      {
+        subMenuTitle: "Access Images",
+        link: "https://patient.northwestradiology.com/",
+      },
       { subMenuTitle: "e-Referral", link: "" },
     ],
     link: "",
@@ -63,6 +66,11 @@ function Header() {
     setActiveTopNav(menu);
   };
 
+  const handleLeave = () => {
+    handleTopNavLeave();
+    if (sideOpen) handleSideNavLeave();
+  };
+
   const handleTopNavLeave = () => {
     setActiveTopNav(null);
   };
@@ -77,12 +85,15 @@ function Header() {
       <div className="flex flex-col max-w-7xl mx-auto ">
         <div className="flex justify-between items-center px-6 md:px-14 py-6 lg:py-3">
           <div className="flex space-x-24 items-center">
-            <Logo />
+            <div onClick={() => handleLeave()}>
+              <Logo />
+            </div>
+
             <TopNav menu={menu} handleHover={handleTopNavHover} />
           </div>
 
           <div className="flex items-center space-x-8">
-            <Button className="hidden sm:block">Request Appointment</Button>
+            <RequestAppointmentButton className="hidden sm:block" />
             <SideNav sideOpen={sideOpen} handleClick={handleBurgerClick} />
           </div>
         </div>
