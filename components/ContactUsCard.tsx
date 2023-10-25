@@ -26,7 +26,7 @@ function ContactUsCard() {
           </div>
           <div className="flex gap-3 items-center">
             <Mail className="w-10 basis-1/12" />
-            <p className="basis-11/12">info@ineoneimaging.com.au</p>
+            <p className="basis-11/12">info@inoneimaging.com.au</p>
           </div>
           <div className="flex gap-3 items-center">
             <Phone className="w-10 basis-1/12" />

@@ -53,7 +53,7 @@ function Footer() {
             Shop RP25E Roxburgh Village, 250 Somerton Road, Roxburgh Park, VIC
             3064
           </p>
-          <p>info@ineoneimaging.com.au</p>
+          <p>info@inoneimaging.com.au</p>
           <p>+61 3 9063 0200</p>
         </div>
       </div>
