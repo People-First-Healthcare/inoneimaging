@@ -45,9 +45,9 @@ const menu: Menu[] = [
   {
     menuTitle: "About",
     subMenu: [
-      { subMenuTitle: "Our Vision", link: "" },
-      { subMenuTitle: "Getting Here", link: "" },
-      { subMenuTitle: "Contact Us", link: "" },
+      { subMenuTitle: "Our Story", link: "/about/our-story" },
+      { subMenuTitle: "Getting Here", link: "/about/getting-here" },
+      { subMenuTitle: "Contact Us", link: "/about/contact-us" },
     ],
     link: "",
   },
