@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Faq } from "@/typings";
-import Image from "next/image";
+import HeroBanner from "./HeroBanner";
 
 type Props = {
   sectionId: string;
@@ -33,17 +33,7 @@ function CustomTemplate({
   return (
     <section id={sectionId} className="flex flex-col">
       {/* Image, title */}
-      <div className="relative flex flex-col justify-center items-center h-80 lg:h-96">
-        <Image
-          src={heroBackground}
-          alt={heroTitle}
-          fill
-          className="absolute object-cover opacity-50 -z-10"
-        />
-        <div className="flex flex-col items-center gap-2 bg-white p-3">
-          <h1 className="text-5xl lg:text-7xl text-gray-950">{heroTitle}</h1>
-        </div>
-      </div>
+      <HeroBanner title={heroTitle} image={heroBackground} />
 
       {/* faq, contact*/}
       <div className="flex flex-col md:flex-row px-6 py-10 gap-20 max-w-7xl mx-auto">

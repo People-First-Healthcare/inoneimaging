@@ -1,9 +1,9 @@
 import { feesBillingFaq } from "@/assets/fees-billing-faq";
-import CustomTemplate from "@/components/CustomTemplate";
+import CustomFAQTemplate from "@/components/CustomFAQTemplate";
 
 function FeesAndBillingPage() {
   return (
-    <CustomTemplate
+    <CustomFAQTemplate
       sectionId="fees-billing"
       heroTitle="Fees & Billing"
       heroBackground="https://picsum.photos/id/370/1600/500"

@@ -11,7 +11,7 @@ function TopNav({ menu, handleHover }: Props) {
       {menu.map((menuItem, i) => (
         <button
           key={i}
-          className="w-full whitespace-nowrap p-5"
+          className="w-full whitespace-nowrap px-5"
           onMouseOver={() => handleHover(menuItem)}
         >
           {menuItem.menuTitle}
