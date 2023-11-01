@@ -5,7 +5,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Menu } from "@/typings";
-import BillingCard from "./BillingCard";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -25,7 +24,7 @@ function SideNavContent({ menu, handleLeave }: Props) {
     <motion.div
       key={"sideNav"}
       {...sideNavAnimation}
-      className="absolute flex flex-col space-y-24 px-14 h-screen w-full bg-white z-10"
+      className="absolute flex flex-col space-y-24 px-14 h-screen w-full bg-white z-10 overflow-y-scroll"
     >
       <div className="space-y-5">
         {menu.map((menuItem, i) => (
@@ -46,10 +45,6 @@ function SideNavContent({ menu, handleLeave }: Props) {
             </AccordionItem>
           </Accordion>
         ))}
-      </div>
-
-      <div className="mx-auto" onClick={() => handleLeave()}>
-        <BillingCard />
       </div>
     </motion.div>
   );
