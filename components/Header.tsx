@@ -38,7 +38,7 @@ const menu: Menu[] = [
         subMenuTitle: "Access Images",
         link: "https://patient.northwestradiology.com/",
       },
-      { subMenuTitle: "e-Referral", link: "" },
+      { subMenuTitle: "e-Referral", link: "/referrers/e-referral" },
     ],
     link: "",
   },
