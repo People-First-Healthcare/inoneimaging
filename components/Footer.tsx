@@ -4,7 +4,7 @@ import Logo from "./Logo";
 function Footer() {
   return (
     <footer className="bg-purple-800">
-      <div className="grid sm:grid-cols-3 lg:grid-cols-5 text-center  text-white py-14 sm:py-16 space-y-8 lg:space-y-0 sm:text-left max-w-5xl mx-auto w-11/12">
+      <div className="grid sm:grid-cols-3 lg:grid-cols-5 text-center  text-white py-14 sm:py-16 space-y-8 lg:space-y-0 sm:text-left max-w-7xl mx-auto w-11/12">
         <div className="sm:col-span-3 lg:col-span-2 flex flex-col space-y-5">
           <div className="flex justify-center sm:justify-normal">
             <Logo />
@@ -53,7 +53,7 @@ function Footer() {
             Shop RP25E Roxburgh Village, 250 Somerton Road, Roxburgh Park, VIC
             3064
           </p>
-          <p>info@ineoneimaging.com.au</p>
+          <p>info@inoneimaging.com.au</p>
           <p>+61 3 9063 0200</p>
         </div>
       </div>

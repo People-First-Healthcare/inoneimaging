@@ -11,6 +11,7 @@ import ContactUsCard from "@/components/ContactUsCard";
 import a from "indefinite";
 import { services } from "@/assets/services";
 import RequestAppointmentButton from "@/components/RequestAppointmentButton";
+import HeroBanner from "@/components/HeroBanner";
 
 function ServicePage({ params }: { params: { service: string } }) {
   const currService = services.filter(
@@ -19,19 +20,7 @@ function ServicePage({ params }: { params: { service: string } }) {
   return (
     <section id={params.service} className="flex flex-col">
       {/* Image, title, cta */}
-      <div className="relative flex flex-col justify-center items-center h-80 lg:h-96">
-        <Image
-          src={currService.image}
-          alt={currService.title}
-          fill
-          className="absolute object-cover opacity-50 -z-10"
-        />
-        <div className="flex flex-col items-center gap-2 bg-white p-3">
-          <h1 className="text-5xl lg:text-7xl text-gray-950">
-            {currService.title}
-          </h1>
-        </div>
-      </div>
+      <HeroBanner title={currService.title} image={currService.image} />
 
       {/* description and faq, billing and contact*/}
       <div className="flex flex-col md:flex-row px-6 py-10 gap-20 max-w-7xl mx-auto">
