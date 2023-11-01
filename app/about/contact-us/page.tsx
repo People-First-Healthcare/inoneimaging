@@ -34,7 +34,7 @@ function ContactUs() {
           <div className="border-b border-black"></div>
           <ContactUsContent />
         </div>
-        <div className="p-5 rounded-md">
+        <div className="p-5 rounded-md bg-slate-50">
           <h3 className="text-center text-2xl lg:text-3xl p-5">
             Send us a message
           </h3>
