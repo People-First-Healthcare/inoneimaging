@@ -17,8 +17,8 @@ function TradingHoursCard() {
         <TimerIcon />
         <p>Our trading hours</p>
       </div>
-      {tradingHours.map((dayOfWeek) => (
-        <div className="grid grid-cols-2 border-b p-2">
+      {tradingHours.map((dayOfWeek, i) => (
+        <div key={i} className="grid grid-cols-2 border-b p-2">
           <p>{dayOfWeek.day}</p>
           <p>
             {dayOfWeek.open} - {dayOfWeek.close}
