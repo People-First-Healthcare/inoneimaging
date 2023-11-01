@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/card";
 import ContactUsContent from "./ContactUsContent";
 import { Button } from "./ui/button";
+import Link from "next/link";
+import ContactUsButton from "./ContactUsButton";
 
 function ContactUsCard() {
   return (
@@ -18,7 +20,7 @@ function ContactUsCard() {
         <ContactUsContent />
       </CardContent>
       <CardFooter>
-        <Button className="w-full">Contact us</Button>
+        <ContactUsButton className="w-full" />
       </CardFooter>
     </Card>
   );

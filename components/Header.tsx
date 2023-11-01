@@ -93,7 +93,10 @@ function Header() {
           </div>
 
           <div className="flex items-center space-x-8">
-            <RequestAppointmentButton className="hidden sm:block" />
+            <div onClick={() => handleLeave()}>
+              <RequestAppointmentButton className="hidden sm:block" />
+            </div>
+
             <SideNav sideOpen={sideOpen} handleClick={handleBurgerClick} />
           </div>
         </div>
