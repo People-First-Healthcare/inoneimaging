@@ -61,7 +61,7 @@ function TurnstileWidget(
     }
     return () => {
       (window as any).turnstile?.remove(widgetID.current || "");
-      (window as any).turnstile?.reset(widgetID.current || "");
+      widgetID.current = undefined;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -77,11 +77,9 @@ function TurnstileWidget(
     );
   }
 
-  console.log("turnstile");
-
   return (
     <>
-      <div id="captcha-container"></div>
+      <div id="captcha-container" className="hidden"></div>
       <Script
         src={scriptLink}
         onLoad={onLoad}

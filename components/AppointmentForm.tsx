@@ -23,20 +23,17 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SubmitButton from "./SubmitButton";
 import TurnstileWidget from "./TurnstileWidget";
 import { Label } from "./ui/label";
-import { useRouter } from "next/navigation";
 
 type Props = {
   setFormSubmitted: (isSubbmitted: boolean) => void;
 };
 
 function AppointmentForm({ setFormSubmitted }: Props) {
-  const router = useRouter();
   const [pending, setPending] = useState(false);
-  const [turnstileKey, setTurnstileKey] = useState(0);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -49,28 +46,23 @@ function AppointmentForm({ setFormSubmitted }: Props) {
     },
   });
 
-  console.log("AppointmentForm");
-
   async function onSubmit(values: z.infer<typeof FormSchema>) {
     setPending(true);
-    // const turnstileResponse = await captchaTurnstileVerify({
-    //   token: values.token,
-    // });
-    // console.log(turnstileResponse);
+    const turnstileResponse = await captchaTurnstileVerify({
+      token: values.token,
+    });
 
-    // if (!turnstileResponse.success) {
-    //   alert("Failed verifying human");
-    //   setPending(false);
-    //   return;
-    // }
+    if (!turnstileResponse.success) {
+      alert("Failed verifying human");
+      setPending(false);
+      return;
+    }
     const mailerResponse = await sendAppointmentRequest(values);
-    console.log(mailerResponse);
     if (mailerResponse.success) {
       setFormSubmitted(true);
     } else {
       alert("Something went wrong when requesting an appointment");
     }
-    setTurnstileKey(turnstileKey + 1);
     setPending(false);
   }
   return (
@@ -201,10 +193,8 @@ function AppointmentForm({ setFormSubmitted }: Props) {
         </div>
 
         <TurnstileWidget
-          key={turnstileKey}
           sitekey="0x4AAAAAAAMNP5ZwMQ2wFh7d"
           callback={(token) => {
-            console.log("callback filter", token);
             form.setValue("token", token);
           }}
         />
