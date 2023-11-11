@@ -61,6 +61,7 @@ function TurnstileWidget(
     }
     return () => {
       (window as any).turnstile?.remove(widgetID.current || "");
+      (window as any).turnstile?.reset(widgetID.current || "");
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -75,6 +76,8 @@ function TurnstileWidget(
       </div>
     );
   }
+
+  console.log("turnstile");
 
   return (
     <>
