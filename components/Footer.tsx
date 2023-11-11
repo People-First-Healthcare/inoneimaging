@@ -1,5 +1,6 @@
 import { SocialIcon } from "react-social-icons";
 import Logo from "./Logo";
+import ChangeLanguage from "./ChangeLanguage";
 
 function Footer() {
   return (
@@ -28,6 +29,8 @@ function Footer() {
               url="https://linkedin.com"
               style={{ width: "24px", height: "24px" }}
             />
+
+            <ChangeLanguage />
           </div>
         </div>
         <div className="flex flex-col text-sm space-y-3">
