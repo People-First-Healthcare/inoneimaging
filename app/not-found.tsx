@@ -7,7 +7,7 @@ export default function NotFound() {
       <h2 className="text-9xl">404</h2>
       <p className="text-2xl">Page Not Found</p>
       <div className="p-10 text-center">
-        <p>The page you're looking for isn't available.</p>
+        <p>{`The page you're looking for isn't available.`}</p>
         <p>Try with another page or use the go home button below</p>
       </div>
       <Link href="/">
