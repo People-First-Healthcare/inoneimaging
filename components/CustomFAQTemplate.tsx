@@ -54,7 +54,6 @@ function CustomTemplate({
               </Accordion>
             ))}
           </div>
-          ""
         </div>
         <div className="flex flex-col basis-1/3 gap-5">
           {billingCard && <BillingCard />}
