@@ -83,7 +83,7 @@ function Header() {
   return (
     <header className="sticky top-0 bg-white z-50 opacity-100 shadow-md">
       <div className="flex flex-col max-w-7xl mx-auto ">
-        <div className="flex justify-between items-center px-6 md:px-14 py-6 lg:py-3">
+        <div className="flex justify-between items-center px-6 md:px-14 py-6 lg:py-6">
           <div className="flex space-x-24 items-center">
             <div onClick={() => handleLeave()}>
               <Logo />

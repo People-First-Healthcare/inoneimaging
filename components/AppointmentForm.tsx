@@ -4,11 +4,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { Button } from "@/components/ui/button";
+import { sendAppointmentRequest } from "@/app/actions/request-appointment";
+import captchaTurnstileVerify from "@/app/actions/verify";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -22,43 +22,49 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Label } from "./ui/label";
+import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
+import { useState } from "react";
+import SubmitButton from "./SubmitButton";
 import TurnstileWidget from "./TurnstileWidget";
+import { Label } from "./ui/label";
 
-const formSchema = z.object({
-  firstName: z.string().min(1, {
-    message: "First name is required",
-  }),
-  lastName: z.string().min(1, {
-    message: "Last name is required",
-  }),
-  email: z.string().email("Not a valid email address"),
-  phone: z.string().min(9, {
-    message: "Not a valid phone number",
-  }),
-  service: z.string({
-    required_error: "Please select a service",
-  }),
-  preferredTime: z.string({
-    required_error: "Please select a preferred time",
-  }),
-});
+type Props = {
+  setFormSubmitted: (isSubbmitted: boolean) => void;
+};
 
-function AppointmentForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+function AppointmentForm({ setFormSubmitted }: Props) {
+  const [pending, setPending] = useState(false);
+
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
       email: "",
       phone: "",
+      token: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
+  async function onSubmit(values: z.infer<typeof FormSchema>) {
+    setPending(true);
+    const turnstileResponse = await captchaTurnstileVerify({
+      token: values.token,
+    });
 
+    if (!turnstileResponse.success) {
+      alert("Failed verifying human");
+      setPending(false);
+      return;
+    }
+    const mailerResponse = await sendAppointmentRequest(values);
+    if (mailerResponse.success) {
+      setFormSubmitted(true);
+    } else {
+      alert("Something went wrong when requesting an appointment");
+    }
+    setPending(false);
+  }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -134,9 +140,9 @@ function AppointmentForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="ct-scan">CT Scan</SelectItem>
-                    <SelectItem value="ultrasound">Ultrasound</SelectItem>
-                    <SelectItem value="x-ray">X-Ray</SelectItem>
+                    <SelectItem value="CT Scan">CT Scan</SelectItem>
+                    <SelectItem value="Ultrasound">Ultrasound</SelectItem>
+                    <SelectItem value="X-ray">X-Ray</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -160,11 +166,13 @@ function AppointmentForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="morning">Morning (9AM-12PM)</SelectItem>
-                    <SelectItem value="earlyAfternoon">
+                    <SelectItem value="Morning (9AM-12PM)">
+                      Morning (9AM-12PM)
+                    </SelectItem>
+                    <SelectItem value="Early Afternoon (12PM-3PM)">
                       Early Afternoon (12PM-3PM)
                     </SelectItem>
-                    <SelectItem value="lateAfternoon">
+                    <SelectItem value="Late Afternoon (3PM-5PM)">
                       Late Afternoon (3PM-5PM)
                     </SelectItem>
                   </SelectContent>
@@ -184,9 +192,14 @@ function AppointmentForm() {
           </div>
         </div>
 
-        <TurnstileWidget sitekey="0x4AAAAAAAMNP5ZwMQ2wFh7d" />
+        <TurnstileWidget
+          sitekey="0x4AAAAAAAMNP5ZwMQ2wFh7d"
+          callback={(token) => {
+            form.setValue("token", token);
+          }}
+        />
 
-        <Button type="submit">Submit</Button>
+        <SubmitButton pending={pending}>Submit</SubmitButton>
       </form>
     </Form>
   );

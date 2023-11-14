@@ -1,4 +1,4 @@
-import AppointmentForm from "@/components/AppointmentForm";
+import Appointment from "@/components/Appointment";
 import Image from "next/image";
 
 function RequestAppointmentPage() {
@@ -21,13 +21,7 @@ function RequestAppointmentPage() {
         {/* Form */}
         <div className="flex flex-col gap-5 max-w-xl">
           <h2 className="text-2xl">Request an Appointment</h2>
-          <p>
-            Please submit your details and one of our staff will contact you to
-            confirm the appointment time. Please remember to bring your referral
-            to your appointment.
-          </p>
-
-          <AppointmentForm />
+          <Appointment />
         </div>
 
         {/* Photo */}
@@ -36,7 +30,7 @@ function RequestAppointmentPage() {
           width={400}
           height={500}
           alt="sample-photo"
-          className="rounded-xl hidden lg:block"
+          className="rounded-xl"
         />
       </div>
     </section>
