@@ -170,7 +170,7 @@ export const services: Service[] = [
           ],
         },
         {
-          question: "Morphology pregnancy sca",
+          question: "Morphology pregnancy scan",
           answer: [
             "Drink 2-3 glasses of water 1 hour before your scan. You don’t need to hold your bladder for this scan; you can use the bathroom.",
           ],
