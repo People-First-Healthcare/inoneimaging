@@ -43,7 +43,13 @@ function CustomTemplate({
               <Accordion key={i} type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger>{faq.question}</AccordionTrigger>
-                  <AccordionContent>{faq.answer}</AccordionContent>
+                  <AccordionContent>
+                    {faq.answer.map((answer, i) => (
+                      <p key={i} className="pb-5 last:pb-0">
+                        {answer}
+                      </p>
+                    ))}
+                  </AccordionContent>
                 </AccordionItem>
               </Accordion>
             ))}
