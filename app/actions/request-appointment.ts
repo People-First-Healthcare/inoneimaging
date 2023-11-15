@@ -17,7 +17,10 @@ const transporter = nodemailer.createTransport({
 
 type formData = z.infer<typeof FormSchema>;
 
-export async function sendAppointmentRequest(formData: formData) {
+export async function sendAppointmentRequest(
+  formData: formData,
+  fileFormData?: FormData
+) {
   // simulate delay
   // await new Promise((resolve) => {
   //   setTimeout(() => resolve(1), 3000);
@@ -31,6 +34,10 @@ export async function sendAppointmentRequest(formData: formData) {
 
   const { firstName, lastName, email, phone, service, preferredTime } =
     formData;
+
+  const file = fileFormData?.get('referral') as File;
+  // save file TODO  
+
   try {
     const mailOptions: Object = {
       from: senderEmail,

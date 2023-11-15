@@ -23,7 +23,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import SubmitButton from "./SubmitButton";
 import TurnstileWidget from "./TurnstileWidget";
 import { Label } from "./ui/label";
@@ -35,6 +35,7 @@ type Props = {
 function AppointmentForm({ setFormSubmitted }: Props) {
   const [pending, setPending] = useState(false);
 
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -57,7 +58,11 @@ function AppointmentForm({ setFormSubmitted }: Props) {
       setPending(false);
       return;
     }
-    const mailerResponse = await sendAppointmentRequest(values);
+    const fileFormData = new FormData();
+    if (inputRef.current?.files?.[0]) {
+      fileFormData.append('referral', inputRef.current?.files?.[0]);
+    }
+    const mailerResponse = await sendAppointmentRequest(values, fileFormData);
     if (mailerResponse.success) {
       setFormSubmitted(true);
     } else {
@@ -185,6 +190,7 @@ function AppointmentForm({ setFormSubmitted }: Props) {
           <div className="sm:col-span-2">
             <Label htmlFor="referral">Upload a referral</Label>
             <Input
+              ref={inputRef}
               id="referral"
               type="file"
               className="file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 file:border file:border-solid file:border-blue-700 file:rounded-md border-blue-600"
