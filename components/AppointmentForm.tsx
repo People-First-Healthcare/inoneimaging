@@ -22,7 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import SubmitButton from "./SubmitButton";
 import TurnstileWidget from "./TurnstileWidget";
 import { Label } from "./ui/label";
@@ -36,6 +36,7 @@ type Props = {
 function AppointmentForm({ setFormSubmitted }: Props) {
   const [pending, setPending] = useState(false);
   const [hasReferral, setHasReferral] = useState(false);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -54,9 +55,13 @@ function AppointmentForm({ setFormSubmitted }: Props) {
     console.log(values);
     setPending(true);
 
-    const fileData = new FormData();
+    const fileFormData = new FormData();
 
-    const mailerResponse = await sendAppointmentRequest(values);
+    if (inputRef.current?.files?.[0]) {
+      fileFormData.append("referral", inputRef.current?.files?.[0]);
+    }
+    console.log(fileFormData);
+    const mailerResponse = await sendAppointmentRequest(values, fileFormData);
     if (mailerResponse.success) {
       setFormSubmitted(true);
     } else {
@@ -213,25 +218,15 @@ function AppointmentForm({ setFormSubmitted }: Props) {
           />
 
           {hasReferral && (
-            <FormField
-              control={form.control}
-              name="referralFile"
-              render={({ field }) => (
-                <FormItem className="sm:col-span-2">
-                  <FormLabel>Upload a Referral </FormLabel>
-                  <FormControl>
-                    <Input
-                      type="file"
-                      accept=".pdf, .jpg, .jpeg, .png"
-                      required
-                      className="file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 file:border file:border-solid file:border-blue-700 file:rounded-md border-blue-600"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            <div className="sm:col-span-2">
+              <Input
+                ref={inputRef}
+                type="file"
+                accept=".pdf, .jpg, .jpeg, .png"
+                required
+                className="file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 file:border file:border-solid file:border-blue-700 file:rounded-md border-blue-600"
+              />
+            </div>
           )}
         </div>
 
