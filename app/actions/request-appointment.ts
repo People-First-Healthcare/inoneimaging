@@ -1,6 +1,7 @@
 "use server";
 
 import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
+import axios from "axios";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 
@@ -23,14 +24,34 @@ export async function sendAppointmentRequest(formData: formData) {
   //   setTimeout(() => resolve(1), 3000);
   // });
 
+  const { firstName, lastName, email, phone, service, preferredTime, token } =
+    formData;
+
+  const turnstileData = {
+    // Refer: https://developers.cloudflare.com/turnstile/reference/testing/
+    secret: process.env.TURNSTILE_SECRET_KEY,
+    response: token,
+  };
+  const turnstileRes = await axios
+    .post(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      turnstileData,
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    )
+    .then((res) => res.data);
+
+  if (!turnstileRes.success) {
+    return { success: false, message: "Could not verify human" };
+  }
+
   const inputValidation = FormSchema.safeParse(formData);
 
   if (!inputValidation.success) {
     return { success: false, error: inputValidation.error.format() };
   }
 
-  const { firstName, lastName, email, phone, service, preferredTime } =
-    formData;
   try {
     const mailOptions: Object = {
       from: senderEmail,

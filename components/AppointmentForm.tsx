@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 import { sendAppointmentRequest } from "@/app/actions/request-appointment";
-import captchaTurnstileVerify from "@/app/actions/verify";
 import {
   Form,
   FormControl,
@@ -27,6 +26,8 @@ import { useState } from "react";
 import SubmitButton from "./SubmitButton";
 import TurnstileWidget from "./TurnstileWidget";
 import { Label } from "./ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { strBoolToBoo } from "@/lib/utils";
 
 type Props = {
   setFormSubmitted: (isSubbmitted: boolean) => void;
@@ -34,6 +35,7 @@ type Props = {
 
 function AppointmentForm({ setFormSubmitted }: Props) {
   const [pending, setPending] = useState(false);
+  const [hasReferral, setHasReferral] = useState(false);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -42,26 +44,23 @@ function AppointmentForm({ setFormSubmitted }: Props) {
       lastName: "",
       email: "",
       phone: "",
+      hasReferral: "false",
       token: "",
     },
   });
 
   async function onSubmit(values: z.infer<typeof FormSchema>) {
+    values.hasReferral = `${hasReferral}`;
+    console.log(values);
     setPending(true);
-    const turnstileResponse = await captchaTurnstileVerify({
-      token: values.token,
-    });
 
-    if (!turnstileResponse.success) {
-      alert("Failed verifying human");
-      setPending(false);
-      return;
-    }
+    const fileData = new FormData();
+
     const mailerResponse = await sendAppointmentRequest(values);
     if (mailerResponse.success) {
       setFormSubmitted(true);
     } else {
-      alert("Something went wrong when requesting an appointment");
+      alert(mailerResponse.message);
     }
     setPending(false);
   }
@@ -182,14 +181,58 @@ function AppointmentForm({ setFormSubmitted }: Props) {
             )}
           />
 
-          <div className="sm:col-span-2">
-            <Label htmlFor="referral">Upload a referral</Label>
-            <Input
-              id="referral"
-              type="file"
-              className="file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 file:border file:border-solid file:border-blue-700 file:rounded-md border-blue-600"
+          <FormField
+            control={form.control}
+            name="hasReferral"
+            render={({ field }) => (
+              <FormItem className="space-y-3">
+                <FormLabel>Would you like to upload a referral?</FormLabel>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={(e) => setHasReferral(strBoolToBoo(e))}
+                    defaultValue={field.value}
+                    className="flex space-x-1"
+                  >
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl>
+                        <RadioGroupItem value="true" />
+                      </FormControl>
+                      <FormLabel className="font-normal">Yes</FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl>
+                        <RadioGroupItem value="false" />
+                      </FormControl>
+                      <FormLabel className="font-normal">No</FormLabel>
+                    </FormItem>
+                  </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {hasReferral && (
+            <FormField
+              control={form.control}
+              name="referralFile"
+              render={({ field }) => (
+                <FormItem className="sm:col-span-2">
+                  <FormLabel>Upload a Referral </FormLabel>
+                  <FormControl>
+                    <Input
+                      type="file"
+                      accept=".pdf, .jpg, .jpeg, .png"
+                      required
+                      className="file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 file:border file:border-solid file:border-blue-700 file:rounded-md border-blue-600"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-          </div>
+          )}
         </div>
 
         <TurnstileWidget

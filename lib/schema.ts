@@ -17,5 +17,7 @@ export const RequestAppointmentFormDataSchema = z.object({
   preferredTime: z.string({
     required_error: "Please select a preferred time",
   }),
+  hasReferral: z.string(),
+  referralFile: z.string().optional(),
   token: z.string(),
 });
