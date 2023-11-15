@@ -62,7 +62,7 @@ export async function sendAppointmentRequest(
   let filePath;
   if (hasReferral) {
     const file = fileFormData?.get("referral") as File;
-    filePath = path.join("./tmp/", file.name);
+    filePath = path.join("/tmp/", file.name);
 
     const buffer = await file.arrayBuffer();
     await writeFile(filePath, Buffer.from(buffer));
