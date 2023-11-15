@@ -35,8 +35,12 @@ export async function sendAppointmentRequest(
   const { firstName, lastName, email, phone, service, preferredTime } =
     formData;
 
-  const file = fileFormData?.get('referral') as File;
-  // save file TODO  
+  const file = fileFormData?.get("referral") as File;
+  let filePath = '';
+  if (file) {
+    // save file TODO
+    // filePath = ...
+  }
 
   try {
     const mailOptions: Object = {
