@@ -1,7 +1,5 @@
-import App from './upload-demo.tsx';
+import UploadForm from './upload-form'
 
-export default function UploadDemoPage() {
-  return <>
-    <App />
-  </>
+export default function Home() {
+  return <UploadForm />
 }
