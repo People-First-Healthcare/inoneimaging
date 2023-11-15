@@ -77,6 +77,6 @@ export async function sendAppointmentRequest(formData: formData) {
     return { success: true };
   } catch (err) {
     console.error(err);
-    return { success: false, error: err };
+    return { success: false, message: err };
   }
 }
