@@ -7,6 +7,7 @@ import {
 import { Menu } from "@/typings";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import RequestAppointmentButton from "./RequestAppointmentButton";
 
 type Props = {
   menu: Menu[];
@@ -45,6 +46,9 @@ function SideNavContent({ menu, handleLeave }: Props) {
             </AccordionItem>
           </Accordion>
         ))}
+        <div className="flex justify-center" onClick={() => handleLeave()}>
+          <RequestAppointmentButton className="w-full mt-5" />
+        </div>
       </div>
     </motion.div>
   );
