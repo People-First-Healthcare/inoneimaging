@@ -30,7 +30,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { strBoolToBoo } from "@/lib/utils";
 
 type Props = {
-  setFormSubmitted: (isSubbmitted: boolean) => void;
+  setFormSubmitted: (isSubmitted: boolean) => void;
 };
 
 function AppointmentForm({ setFormSubmitted }: Props) {
@@ -52,7 +52,6 @@ function AppointmentForm({ setFormSubmitted }: Props) {
 
   async function onSubmit(values: z.infer<typeof FormSchema>) {
     values.hasReferral = `${hasReferral}`;
-    console.log(values);
     setPending(true);
 
     const fileFormData = new FormData();

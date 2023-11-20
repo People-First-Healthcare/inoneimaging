@@ -6,7 +6,7 @@ import AppointmentForm from "./AppointmentForm";
 export const revalidate = 0;
 
 function Appointment() {
-  const [isFormSubmitted, setIsFormSubbmitted] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   return (
     <>
@@ -27,7 +27,7 @@ function Appointment() {
             confirm the appointment time. Please remember to bring your referral
             to your appointment.
           </p>
-          <AppointmentForm setFormSubmitted={setIsFormSubbmitted} />
+          <AppointmentForm setFormSubmitted={setIsFormSubmitted} />
         </>
       )}
     </>
