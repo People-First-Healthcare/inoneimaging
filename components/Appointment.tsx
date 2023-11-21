@@ -3,8 +3,6 @@
 import { useState } from "react";
 import AppointmentForm from "./AppointmentForm";
 
-export const revalidate = 0;
-
 function Appointment() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
