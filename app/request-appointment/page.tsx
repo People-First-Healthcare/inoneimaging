@@ -1,4 +1,4 @@
-import Appointment from "@/components/Appointment";
+import AppointmentFormWrapper from "@/components/AppointmentFormWrapper";
 import Image from "next/image";
 
 function RequestAppointmentPage() {
@@ -21,7 +21,7 @@ function RequestAppointmentPage() {
         {/* Form */}
         <div className="flex flex-col gap-5 max-w-xl">
           <h2 className="text-2xl">Request an Appointment</h2>
-          <Appointment />
+          <AppointmentFormWrapper />
         </div>
 
         {/* Photo */}

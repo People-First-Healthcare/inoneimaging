@@ -3,7 +3,7 @@
 import { useState } from "react";
 import AppointmentForm from "./AppointmentForm";
 
-function Appointment() {
+function AppointmentFormWrapper() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   return (
@@ -31,4 +31,4 @@ function Appointment() {
     </>
   );
 }
-export default Appointment;
+export default AppointmentFormWrapper;
