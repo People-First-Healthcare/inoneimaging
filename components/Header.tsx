@@ -16,6 +16,10 @@ const menu: Menu[] = [
     subMenu: [
       { subMenuTitle: "CT scan", link: "/services/ct-scan" },
       { subMenuTitle: "Ultrasound", link: "/services/ultrasound" },
+      {
+        subMenuTitle: "Pregnancy ultrasound",
+        link: "/services/pregnancy-ultrasound",
+      },
       { subMenuTitle: "X-ray", link: "/services/x-ray" },
     ],
     link: "",

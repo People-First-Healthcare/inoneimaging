@@ -14,6 +14,7 @@ export type Service = {
   title: string;
   description: string[];
   subService?: SubService;
+  preparationInfo?: PreparationInfo;
   pregnancyInfo?: PregnancyInfo;
   faqs?: Faq[];
   image: string;
@@ -24,16 +25,18 @@ export type SubService = {
   item: string[];
 };
 
+export type PreparationInfo = {
+  header: string;
+  description: string[];
+  faqs: Faq[];
+};
+
 export type PregnancyInfo = {
-  description: string;
-  subServiceHeader: string;
+  header: string;
   subService: {
     name: string;
     description: string;
   }[];
-  preparationHeader: string;
-  preparationDescription: string[];
-  preperationFaqs: Faq[];
 };
 
 type Faq = {

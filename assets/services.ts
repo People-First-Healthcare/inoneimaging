@@ -77,7 +77,6 @@ export const services: Service[] = [
         question: "Are there alternatives to a CT scan?",
         answer: [
           "Depending on the specific medical condition, there may be alternative imaging tests available, such as MRI (magnetic resonance imaging) or ultrasound. Your healthcare provider will determine the most appropriate imaging modality based on your individual needs.",
-          "Please note that these FAQs are general in nature and may vary depending on the specific circumstances of your X-ray procedure. It's always best to consult with your healthcare provider for personalized information and guidance.",
         ],
       },
     ],
@@ -100,39 +99,14 @@ export const services: Service[] = [
         "All Doppler studies",
       ],
     },
-    pregnancyInfo: {
-      description:
-        "At In One Imaging, we offer pregnancy ultrasound scans as part of our full range of medical imaging services. These ultrasound scans are essential diagnostic tools used to monitor the baby’s development throughout pregnancy and detect any potential abnormalities or health issues. Our team of highly experienced medical professionals will provide you with the best quality care and make your ultrasound experience as comfortable as possible.",
-      subServiceHeader:
-        "Our Pregnancy Ultrasound services at In One Imaging include:",
-      subService: [
-        {
-          name: "Early pregnancy/Dating scan",
-          description:
-            "This ultrasound scan is used to accurately date a pregnancy, check for multiple pregnancies and confirm fetal activity. It is typically performed between 6-10 weeks of pregnancy.",
-        },
-        {
-          name: "Nuchal Translucency scan",
-          description:
-            "This scan is used to check the risk of your baby having any chromosomal abnormalities like down syndrome. It will not confirm any abnormalities but will tell you if the risk is high or low. It is typically performed between 11-14 weeks of pregnancy.",
-        },
-        {
-          name: "Structural/Morphology scan",
-          description:
-            "This scan helps to assess the size, shape and position of your baby’s organs and confirm the gender. It is performed between 18-20 weeks of pregnancy.",
-        },
-        {
-          name: "Growth scan",
-          description:
-            "This scan helps to monitor the growth and development of your baby. It is performed between 32-40 weeks of pregnancy.",
-        },
-      ],
-      preparationHeader: "Ultrasound patient preparation",
-      preparationDescription: [
+
+    preparationInfo: {
+      header: "Ultrasound patient preparation",
+      description: [
         "If your scan is not listed below, then you don’t need any special preparation. Simply arrive at your appointment time with your referral and our friendly staff will assist you.",
         "The following ultrasound scans require some preparation before your appointment:",
       ],
-      preperationFaqs: [
+      faqs: [
         {
           question: "Abdominal Ultrasound",
           answer: [
@@ -177,6 +151,176 @@ export const services: Service[] = [
         },
       ],
     },
+    faqs: [
+      {
+        question: "Why might I need an ultrasound?",
+        answer: [
+          "Ultrasounds are commonly used to examine various organs and tissues in the body, such as the abdomen, pelvis, heart, blood vessels, and reproductive organs. They can help diagnose and monitor conditions such as pregnancy, gallstones, kidney stones, tumours, and heart abnormalities.",
+        ],
+      },
+      {
+        question: "How should I prepare for an ultrasound?",
+        answer: [
+          "Preparation instructions may vary depending on the specific type of ultrasound you are having. Our team will advise you if you need any prior preparation at the time of booking. You can also view the preparation instruction for specific scans on our website under ‘Ultrasound patient preparation’.",
+        ],
+      },
+      {
+        question: "Is an ultrasound safe?",
+        answer: [
+          "Ultrasounds are considered safe and do not involve exposure to ionizing radiation, unlike X-rays or CT scans. The sound waves used in ultrasounds are not known to have any harmful effects on humans or developing foetuses.",
+        ],
+      },
+      {
+        question: "How long does an ultrasound take?",
+        answer: [
+          "The duration of an ultrasound can vary depending on the area being examined and the complexity of the case. Generally, an ultrasound can take anywhere from 15 minutes to an hour.",
+        ],
+      },
+      {
+        question: "Will the ultrasound be painful?",
+        answer: [
+          "Ultrasounds are typically painless. However, you may experience slight discomfort or pressure during the procedure, especially if the ultrasound probe needs to be pressed firmly against your skin.",
+        ],
+      },
+      {
+        question: "Who will perform the ultrasound?",
+        answer: [
+          "Ultrasounds are usually performed by a trained healthcare professional called a sonographer. They are skilled in operating the ultrasound equipment and interpreting the images.",
+        ],
+      },
+      {
+        question: "Will I receive the results immediately?",
+        answer: [
+          "The sonographer will capture the images during the ultrasound, but they are not authorized to provide a diagnosis. The images will be reviewed by a radiologist who will send a report to your healthcare provider. Your healthcare provider will communicate the results to you during a follow-up appointment.",
+        ],
+      },
+      {
+        question:
+          "Are there any risks or side effects associated with ultrasounds?",
+        answer: [
+          "Ultrasounds are generally considered safe and do not have any known risks or side effects. However, in rare cases, some individuals may experience an allergic reaction to the gel used during the procedure. If you have any concerns or specific medical conditions, it is best to discuss them with your healthcare provider beforehand.",
+        ],
+      },
+      {
+        question: "Can I bring someone with me to the ultrasound?",
+        answer: [
+          "In most cases, you are allowed to bring a support person with you to the ultrasound. Speak with your sonographer on the day as there are some cases where we cannot allow a second person in the room.",
+        ],
+      },
+    ],
+    image: "https://picsum.photos/id/400/1600/500",
+  },
+
+  {
+    id: "pregnancy-ultrasound",
+    title: "Pregnancy Ultrasound",
+    description: [
+      "At In One Imaging, we offer pregnancy ultrasound scans as part of our full range of medical imaging services. These ultrasound scans are essential diagnostic tools used to monitor the baby’s development throughout pregnancy and detect any potential abnormalities or health issues. Our team of highly experienced medical professionals will provide you with the best quality care and make your ultrasound experience as comfortable as possible.",
+    ],
+    pregnancyInfo: {
+      header: "Our Pregnancy Ultrasound services at In One Imaging include:",
+      subService: [
+        {
+          name: "Early pregnancy/Dating scan",
+          description:
+            "This ultrasound scan is used to accurately date a pregnancy, check for multiple pregnancies and confirm fetal activity. It is typically performed between 6-10 weeks of pregnancy.",
+        },
+        {
+          name: "Nuchal Translucency scan",
+          description:
+            "This scan is used to check the risk of your baby having any chromosomal abnormalities like down syndrome. It will not confirm any abnormalities but will tell you if the risk is high or low. It is typically performed between 11-14 weeks of pregnancy.",
+        },
+        {
+          name: "Structural/Morphology scan",
+          description:
+            "This scan helps to assess the size, shape and position of your baby’s organs and confirm the gender. It is performed between 18-20 weeks of pregnancy.",
+        },
+        {
+          name: "Growth scan",
+          description:
+            "This scan helps to monitor the growth and development of your baby. It is performed between 32-40 weeks of pregnancy.",
+        },
+      ],
+    },
+
+    preparationInfo: {
+      header: "Pregnancy Ultrasound patient preparation",
+      description: [
+        "If your scan is not listed below, then you don’t need any special preparation. Simply arrive at your appointment time with your referral and our friendly staff will assist you.",
+        "The following ultrasound scans require some preparation before your appointment:",
+      ],
+      faqs: [
+        {
+          question: "Early pregnancy/dating scan",
+          answer: [
+            "Drink 2-3 glasses of water 1 hour before your scan and hold your bladder. Do not use the bathroom.",
+          ],
+        },
+        {
+          question: "Morphology pregnancy scan",
+          answer: [
+            "Drink 2-3 glasses of water 1 hour before your scan. You don’t need to hold your bladder for this scan; you can use the bathroom.",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "Why might I need an ultrasound?",
+        answer: [
+          "Ultrasounds are commonly used to examine various organs and tissues in the body, such as the abdomen, pelvis, heart, blood vessels, and reproductive organs. They can help diagnose and monitor conditions such as pregnancy, gallstones, kidney stones, tumours, and heart abnormalities.",
+        ],
+      },
+      {
+        question: "How should I prepare for an ultrasound?",
+        answer: [
+          "Preparation instructions may vary depending on the specific type of ultrasound you are having. Our team will advise you if you need any prior preparation at the time of booking. You can also view the preparation instruction for specific scans on our website under ‘Ultrasound patient preparation’.",
+        ],
+      },
+      {
+        question: "Is an ultrasound safe?",
+        answer: [
+          "Ultrasounds are considered safe and do not involve exposure to ionizing radiation, unlike X-rays or CT scans. The sound waves used in ultrasounds are not known to have any harmful effects on humans or developing foetuses.",
+        ],
+      },
+      {
+        question: "How long does an ultrasound take?",
+        answer: [
+          "The duration of an ultrasound can vary depending on the area being examined and the complexity of the case. Generally, an ultrasound can take anywhere from 15 minutes to an hour.",
+        ],
+      },
+      {
+        question: "Will the ultrasound be painful?",
+        answer: [
+          "Ultrasounds are typically painless. However, you may experience slight discomfort or pressure during the procedure, especially if the ultrasound probe needs to be pressed firmly against your skin.",
+        ],
+      },
+      {
+        question: "Who will perform the ultrasound?",
+        answer: [
+          "Ultrasounds are usually performed by a trained healthcare professional called a sonographer. They are skilled in operating the ultrasound equipment and interpreting the images.",
+        ],
+      },
+      {
+        question: "Will I receive the results immediately?",
+        answer: [
+          "The sonographer will capture the images during the ultrasound, but they are not authorized to provide a diagnosis. The images will be reviewed by a radiologist who will send a report to your healthcare provider. Your healthcare provider will communicate the results to you during a follow-up appointment.",
+        ],
+      },
+      {
+        question:
+          "Are there any risks or side effects associated with ultrasounds?",
+        answer: [
+          "Ultrasounds are generally considered safe and do not have any known risks or side effects. However, in rare cases, some individuals may experience an allergic reaction to the gel used during the procedure. If you have any concerns or specific medical conditions, it is best to discuss them with your healthcare provider beforehand.",
+        ],
+      },
+      {
+        question: "Can I bring someone with me to the ultrasound?",
+        answer: [
+          "In most cases, you are allowed to bring a support person with you to the ultrasound. Speak with your sonographer on the day as there are some cases where we cannot allow a second person in the room.",
+        ],
+      },
+    ],
     image: "https://picsum.photos/id/400/1600/500",
   },
   {
@@ -208,7 +352,7 @@ export const services: Service[] = [
       {
         question: "How should I prepare for an X-ray?",
         answer: [
-          "In most cases, there is no special preparation required for an X-ray. However, you may be asked to remove any metallic objects such as jewellery or clothing with zippers and buttons that could interfere with the images. It's important to inform your healthcare provider about any existing medical conditions or allergies.In most cases, there is no special preparation required for an X-ray. However, you may be asked to remove any metallic objects such as jewellery or clothing with zippers and buttons that could interfere with the images. It's important to inform your healthcare provider about any existing medical conditions or allergies.",
+          "In most cases, there is no special preparation required for an X-ray. However, you may be asked to remove any metallic objects such as jewellery or clothing with zippers and buttons that could interfere with the images. It's important to inform your healthcare provider about any existing medical conditions or allergies.",
         ],
       },
       {
@@ -227,7 +371,6 @@ export const services: Service[] = [
         question: "What happens after the X-ray?",
         answer: [
           "Once the X-ray is complete, you can resume your normal activities unless instructed otherwise by your healthcare provider. They will discuss the results with you and recommend any necessary follow-up actions or treatments based on the findings.",
-          "Please note that these FAQs are general in nature and may vary depending on the specific circumstances of your X-ray procedure. It's always best to consult with your healthcare provider for personalized information and guidance.",
         ],
       },
     ],
