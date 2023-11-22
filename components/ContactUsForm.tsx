@@ -25,33 +25,38 @@ import {
 import { Label } from "./ui/label";
 import TurnstileWidget from "./TurnstileWidget";
 import { Textarea } from "./ui/textarea";
+import { useState } from "react";
+import { ContactUsFormDataSchema as FormSchema } from "@/lib/schema";
+import SubmitButton from "./SubmitButton";
+import { sendEnquiry } from "@/app/actions/send-enquiry";
 
-const formSchema = z.object({
-  name: z.string().min(1, {
-    message: "Name is required",
-  }),
-  email: z.string().email("Not a valid email address"),
-  phone: z.string().min(9, {
-    message: "Not a valid phone number",
-  }),
-  message: z.string().min(1, {
-    message: "Message is required",
-  }),
-});
+type Props = {
+  setFormSubmitted: (isSubmitted: boolean) => void;
+};
 
-function ContactUsForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+function ContactUsForm({ setFormSubmitted }: Props) {
+  const [pending, setPending] = useState(false);
+
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
     defaultValues: {
       name: "",
       email: "",
       phone: "",
       message: "",
+      token: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof FormSchema>) {
+    setPending(true);
+    const mailerResponse = await sendEnquiry(values);
+    if (mailerResponse.success) {
+      setFormSubmitted(true);
+    } else {
+      alert(mailerResponse.message);
+    }
+    setPending(false);
   }
 
   return (
@@ -88,6 +93,20 @@ function ContactUsForm() {
 
           <FormField
             control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone Number</FormLabel>
+                <FormControl>
+                  <Input type="tel" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
             name="message"
             render={({ field }) => (
               <FormItem>
@@ -101,9 +120,14 @@ function ContactUsForm() {
           />
         </div>
 
-        <TurnstileWidget sitekey="0x4AAAAAAAMNP5ZwMQ2wFh7d" />
+        <TurnstileWidget
+          sitekey="0x4AAAAAAAMNP5ZwMQ2wFh7d"
+          callback={(token) => {
+            form.setValue("token", token);
+          }}
+        />
 
-        <Button type="submit">Submit</Button>
+        <SubmitButton pending={pending}>Submit</SubmitButton>
       </form>
     </Form>
   );

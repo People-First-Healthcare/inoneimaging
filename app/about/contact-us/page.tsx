@@ -1,5 +1,6 @@
 import ContactUsContent from "@/components/ContactUsContent";
 import ContactUsForm from "@/components/ContactUsForm";
+import ContactUsFormWrapper from "@/components/ContactUsFormWrapper";
 import Image from "next/image";
 
 function ContactUs() {
@@ -38,7 +39,7 @@ function ContactUs() {
           <h3 className="text-center text-2xl lg:text-3xl p-5">
             Send us a message
           </h3>
-          <ContactUsForm />
+          <ContactUsFormWrapper />
         </div>
       </div>
     </section>

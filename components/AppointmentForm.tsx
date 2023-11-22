@@ -59,7 +59,7 @@ function AppointmentForm({ setFormSubmitted }: Props) {
     if (inputRef.current?.files?.[0]) {
       fileFormData.append("referral", inputRef.current?.files?.[0]);
     }
-    console.log(fileFormData);
+
     const mailerResponse = await sendAppointmentRequest(values, fileFormData);
     if (mailerResponse.success) {
       setFormSubmitted(true);

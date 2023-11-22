@@ -21,3 +21,17 @@ export const RequestAppointmentFormDataSchema = z.object({
   referralFile: z.string().optional(),
   token: z.string(),
 });
+
+export const ContactUsFormDataSchema = z.object({
+  name: z.string().min(1, {
+    message: "Name is required",
+  }),
+  email: z.string().email("Not a valid email address"),
+  phone: z.string().min(9, {
+    message: "Not a valid phone number",
+  }),
+  message: z.string().min(1, {
+    message: "Message is required",
+  }),
+  token: z.string(),
+});
