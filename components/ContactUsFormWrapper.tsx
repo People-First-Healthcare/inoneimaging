@@ -5,7 +5,7 @@ import ContactUsForm from "./ContactUsForm";
 import { CheckIcon } from "lucide-react";
 
 function ContactUsFormWrapper() {
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(true);
 
   return (
     <>
