@@ -1,5 +1,5 @@
 import ContactUsContent from "@/components/ContactUsContent";
-import ContactUsFormWrapper from "@/components/ContactUsFormWrapper";
+import ContactUsFormWrapper from "@/app/about/contact-us/components/ContactUsFormWrapper";
 import Image from "next/image";
 
 function ContactUs() {

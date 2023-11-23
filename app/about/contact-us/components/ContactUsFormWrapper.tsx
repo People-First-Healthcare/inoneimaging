@@ -5,7 +5,7 @@ import { useState } from "react";
 import ContactUsForm from "./ContactUsForm";
 
 function ContactUsFormWrapper() {
-  const [isFormSubmitted, setIsFormSubmitted] = useState(true);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   return (
     <>

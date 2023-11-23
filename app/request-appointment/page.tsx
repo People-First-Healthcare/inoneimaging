@@ -1,4 +1,4 @@
-import AppointmentFormWrapper from "@/components/AppointmentFormWrapper";
+import AppointmentFormWrapper from "@/app/request-appointment/components/AppointmentFormWrapper";
 import Image from "next/image";
 
 function RequestAppointmentPage() {

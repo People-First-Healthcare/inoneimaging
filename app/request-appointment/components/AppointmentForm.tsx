@@ -25,8 +25,8 @@ import {
 import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
 import { strBoolToBoo } from "@/lib/utils";
 import { useRef, useState } from "react";
-import SubmitButton from "./SubmitButton";
-import TurnstileWidget from "./TurnstileWidget";
+import SubmitButton from "../../../components/SubmitButton";
+import TurnstileWidget from "../../../components/TurnstileWidget";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;

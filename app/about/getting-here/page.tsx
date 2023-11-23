@@ -1,6 +1,6 @@
-import CopyAddressButton from "@/components/CopyAddressButton";
-import Map from "@/components/Map";
-import TradingHoursCard from "@/components/TradingHoursCard";
+import CopyAddressButton from "@/app/about/getting-here/components/CopyAddressButton";
+import Map from "@/app/about/getting-here/components/Map";
+import TradingHoursCard from "@/app/about/getting-here/components/TradingHoursCard";
 import {
   Accordion,
   AccordionContent,

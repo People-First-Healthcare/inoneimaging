@@ -16,9 +16,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { ContactUsFormDataSchema as FormSchema } from "@/lib/schema";
 import { useState } from "react";
-import SubmitButton from "./SubmitButton";
-import TurnstileWidget from "./TurnstileWidget";
-import { Textarea } from "./ui/textarea";
+import SubmitButton from "../../../../components/SubmitButton";
+import TurnstileWidget from "../../../../components/TurnstileWidget";
+import { Textarea } from "../../../../components/ui/textarea";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;

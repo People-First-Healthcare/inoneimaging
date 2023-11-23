@@ -2,10 +2,10 @@ import { services } from "@/assets/services";
 import BillingCard from "@/components/BillingCard";
 import ContactUsCard from "@/components/ContactUsCard";
 import HeroBanner from "@/components/HeroBanner";
-import PregnancyUltrasoundInfo from "@/components/PregnancyUltrasoundInfo";
-import PreparationInfo from "@/components/PreparationInfo";
+import PregnancyUltrasoundInfo from "@/app/services/components/PregnancyUltrasoundInfo";
+import PreparationInfo from "@/app/services/components/PreparationInfo";
 import RequestAppointmentButton from "@/components/RequestAppointmentButton";
-import SubService from "@/components/SubService";
+import SubService from "@/app/services/components/SubService";
 import {
   Accordion,
   AccordionContent,

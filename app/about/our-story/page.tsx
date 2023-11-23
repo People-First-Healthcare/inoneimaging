@@ -1,4 +1,4 @@
-import StorySection from "@/components/StorySection";
+import StorySection from "@/app/about/our-story/components/StorySection";
 
 function OurStoryPage() {
   return (
