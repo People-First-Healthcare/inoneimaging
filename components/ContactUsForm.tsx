@@ -4,31 +4,21 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { Button } from "@/components/ui/button";
+import { sendEnquiry } from "@/app/actions/send-enquiry";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Label } from "./ui/label";
+import { ContactUsFormDataSchema as FormSchema } from "@/lib/schema";
+import { useState } from "react";
+import SubmitButton from "./SubmitButton";
 import TurnstileWidget from "./TurnstileWidget";
 import { Textarea } from "./ui/textarea";
-import { useState } from "react";
-import { ContactUsFormDataSchema as FormSchema } from "@/lib/schema";
-import SubmitButton from "./SubmitButton";
-import { sendEnquiry } from "@/app/actions/send-enquiry";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;

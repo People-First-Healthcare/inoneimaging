@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Select,
   SelectContent,
@@ -22,12 +23,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
+import { strBoolToBoo } from "@/lib/utils";
 import { useRef, useState } from "react";
 import SubmitButton from "./SubmitButton";
 import TurnstileWidget from "./TurnstileWidget";
-import { Label } from "./ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { strBoolToBoo } from "@/lib/utils";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;

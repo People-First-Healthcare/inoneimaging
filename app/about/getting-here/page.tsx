@@ -1,16 +1,16 @@
 import CopyAddressButton from "@/components/CopyAddressButton";
 import Map from "@/components/Map";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import TradingHoursCard from "@/components/TradingHoursCard";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import TradingHoursCard from "@/components/TradingHoursCard";
-import roxburghlogo from "../../../public/images/roxburgh_village_logo.png";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import roxburghlogo from "../../../public/images/roxburgh_village_logo.png";
 
 function GettingHerePage() {
   return (

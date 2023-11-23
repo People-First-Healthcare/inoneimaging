@@ -19,13 +19,13 @@ export default function GoogleTransalteWidget() {
         const { google } = window as any;
         if (google.translate.TranslateElement) {
           new google.translate.TranslateElement(
-            { pageLanguage: Langs['English'] },
+            { pageLanguage: Langs["English"] },
             "google_translate_element"
           );
         } else {
           render();
         }
-      }, 100)
+      }, 100);
     }
 
     render();
@@ -38,7 +38,8 @@ export default function GoogleTransalteWidget() {
         src="https://translate.google.com/translate_a/element.js"
         onLoad={onLoad}
         defer
-        async></Script>
+        async
+      ></Script>
     </>
   );
 }

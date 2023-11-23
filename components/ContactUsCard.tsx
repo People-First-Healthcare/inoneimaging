@@ -5,10 +5,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import ContactUsContent from "./ContactUsContent";
-import { Button } from "./ui/button";
-import Link from "next/link";
 import ContactUsButton from "./ContactUsButton";
+import ContactUsContent from "./ContactUsContent";
 
 function ContactUsCard() {
   return (

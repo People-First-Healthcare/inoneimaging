@@ -1,8 +1,8 @@
 import { Menu } from "@/typings";
-import { DnaIcon } from "lucide-react";
-import BillingCard from "./BillingCard";
 import { motion } from "framer-motion";
+import { DnaIcon } from "lucide-react";
 import Link from "next/link";
+import BillingCard from "./BillingCard";
 
 type Props = {
   menu: Menu;

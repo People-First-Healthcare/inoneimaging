@@ -1,10 +1,10 @@
-import { PreparationInfo } from "@/typings";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { PreparationInfo } from "@/typings";
 
 type Props = {
   prepInfo: PreparationInfo;

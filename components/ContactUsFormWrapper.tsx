@@ -1,8 +1,8 @@
 "use client";
 
+import { CheckIcon } from "lucide-react";
 import { useState } from "react";
 import ContactUsForm from "./ContactUsForm";
-import { CheckIcon } from "lucide-react";
 
 function ContactUsFormWrapper() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(true);
