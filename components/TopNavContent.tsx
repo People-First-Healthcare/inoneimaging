@@ -20,7 +20,7 @@ function TopNavContent({ menu, handleLeave }: Props) {
     <motion.div
       key={"topNavAnimation"}
       {...topNavAnimation}
-      className="px-14 py-10  shadow-lg absolute top-20 z-10 bg-white w-full"
+      className="px-14 py-10  shadow-lg absolute z-10 bg-white w-full"
       onMouseLeave={() => handleLeave()}
     >
       <div className="flex justify-between space-x-5 max-w-6xl mx-auto">

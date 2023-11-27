@@ -9,6 +9,7 @@ import SideNav from "./SideNav";
 import SideNavContent from "./SideNavContent";
 import TopNav from "./TopNav";
 import TopNavContent from "./TopNavContent";
+import { FootprintsIcon, PiggyBankIcon, ScrollTextIcon } from "lucide-react";
 
 const menu: Menu[] = [
   {
@@ -86,6 +87,20 @@ function Header() {
 
   return (
     <header className="sticky top-0 bg-white z-50 shadow-md overflow-x-hidden lg:overflow-x-visible max-h-screen">
+      <div className="bg-purple-300 p-2">
+        <div className="bg-purple-800 text-slate-50 text-xs sm:text-base flex justify-around max-w-xl mx-auto p-1 rounded-md border-separate">
+          <span>
+            <FootprintsIcon className="inline" /> Walk-ins accepted
+          </span>
+          <span>
+            <ScrollTextIcon className="inline" /> Accept all referrals
+          </span>
+          <span className="">
+            <PiggyBankIcon className="inline" /> Bulk billing
+          </span>
+        </div>
+      </div>
+
       <div className="flex flex-col max-w-7xl mx-auto ">
         <div className="flex justify-between items-center px-6 md:px-14 py-6 lg:py-6">
           <div className="flex space-x-24 items-center">
