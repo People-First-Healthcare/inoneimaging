@@ -1,4 +1,5 @@
 import { services } from "@/assets/services";
+import Dashlines from "@/components/Dashlines";
 import FeatureCard from "@/components/FeatureCard";
 import ProcessCard from "@/components/ProcessCard";
 import RequestAppointmentButton from "@/components/RequestAppointmentButton";
@@ -63,32 +64,17 @@ export default function Home() {
       {/* Easy Process */}
       <section
         id="section-process"
-        className="flex flex-col items-center text-center bg-purple-50 px-5 py-12 space-y-7 sm:p-20 "
+        className="flex flex-col items-center text-center bg-purple-50 px-5 py-12 space-y-7 sm:p-20"
       >
         <h2 className="uppercase tracking-wider text-purple-800">Steps</h2>
         <p className="uppercase text-4xl font-medium max-w-lg lg:pb-12">
           How does it work?
         </p>
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row relative lg:gap-10">
+          <Dashlines className="hidden lg:block absolute z-0 top-[75px] left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
           <ProcessCard step={1} desc="Request Appointment" />
-          <div className="hidden lg:flex lg:items-end">
-            <Image
-              src="https://assets.website-files.com/5fc4341651db5a6e16d9ead7/5fc571f6b429986492de81d7_line-arc-1.svg"
-              width={100}
-              height={100}
-              alt="arrow"
-            />
-          </div>
           <ProcessCard step={2} desc="Perform Examination" />
-          <div className="hidden lg:flex lg:items-start">
-            <Image
-              src="https://assets.website-files.com/5fc4341651db5a6e16d9ead7/5fc571f682f57cd28d76c4ca_line-arc-2.svg"
-              width={100}
-              height={100}
-              alt="arrow"
-            />
-          </div>
-          <ProcessCard step={3} desc="Results to Referrer" />
+          <ProcessCard step={3} desc="Results to Your Doctor" />
         </div>
       </section>
 
