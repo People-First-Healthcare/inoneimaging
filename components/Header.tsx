@@ -88,15 +88,18 @@ function Header() {
   return (
     <header className="sticky top-0 bg-white z-50 shadow-md overflow-x-hidden lg:overflow-x-visible max-h-screen">
       <div className="bg-purple-300 p-2">
-        <div className="bg-purple-800 text-slate-50 text-xs sm:text-base flex justify-around max-w-xl mx-auto p-1 rounded-md border-separate">
-          <span>
-            <FootprintsIcon className="inline" /> Walk-ins accepted
+        <div className="bg-purple-800 text-slate-50 text-xs sm:text-base flex justify-around max-w-xl mx-auto p-1 rounded-md">
+          <span className="flex justify-center items-center gap-1">
+            <FootprintsIcon className="inline h-4 w-4" />
+            Walk-ins accepted
           </span>
-          <span>
-            <ScrollTextIcon className="inline" /> Accept all referrals
+          <span className="flex justify-center items-center gap-1">
+            <ScrollTextIcon className="inline h-4 w-4" />
+            Accept all referrals
           </span>
-          <span className="">
-            <PiggyBankIcon className="inline" /> Bulk billing
+          <span className="flex justify-center items-center gap-1">
+            <PiggyBankIcon className="inline h-4 w-4" />
+            Bulk billing
           </span>
         </div>
       </div>
