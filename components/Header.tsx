@@ -41,7 +41,7 @@ const menu: Menu[] = [
     subMenu: [
       {
         subMenuTitle: "Access Images",
-        link: "https://patient.northwestradiology.com/",
+        link: "/referrers/access-patient-images",
       },
       { subMenuTitle: "e-Referral", link: "/referrers/e-referral" },
     ],

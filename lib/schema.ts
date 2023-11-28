@@ -35,3 +35,28 @@ export const ContactUsFormDataSchema = z.object({
   }),
   token: z.string(),
 });
+
+export const RequestLoginFormDataSchema = z.object({
+  patientName: z.string().min(1, {
+    message: "Patient name is required",
+  }),
+  patientDOB: z.date({
+    required_error: "Patient DOB is required",
+    invalid_type_error: "Invalid date",
+  }),
+  service: z.string({
+    required_error: "Please select a service",
+  }),
+  providerNum: z
+    .string()
+    .min(1, {
+      message: "Provider number is required",
+    })
+    .min(8, {
+      message: "Invalid provider number",
+    }),
+  clinicName: z.string().min(1, {
+    message: "Clinic name is required",
+  }),
+  token: z.string(),
+});
