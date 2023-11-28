@@ -1,7 +1,6 @@
 export type Menu = {
   menuTitle: string;
   subMenu: SubMenu[];
-  link: string;
 };
 
 export type SubMenu = {

@@ -23,7 +23,6 @@ const menu: Menu[] = [
       },
       { subMenuTitle: "X-ray", link: "/services/x-ray" },
     ],
-    link: "",
   },
   {
     menuTitle: "Patient Information",
@@ -34,7 +33,6 @@ const menu: Menu[] = [
       },
       { subMenuTitle: "FAQ", link: "/patient-information/faq" },
     ],
-    link: "",
   },
   {
     menuTitle: "Referrers",
@@ -45,7 +43,6 @@ const menu: Menu[] = [
       },
       { subMenuTitle: "e-Referral", link: "/referrers/e-referral" },
     ],
-    link: "",
   },
   {
     menuTitle: "About",
@@ -54,7 +51,6 @@ const menu: Menu[] = [
       { subMenuTitle: "Getting Here", link: "/about/getting-here" },
       { subMenuTitle: "Contact Us", link: "/about/contact-us" },
     ],
-    link: "",
   },
 ];
 
