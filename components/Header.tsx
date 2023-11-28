@@ -9,19 +9,47 @@ import SideNav from "./SideNav";
 import SideNavContent from "./SideNavContent";
 import TopNav from "./TopNav";
 import TopNavContent from "./TopNavContent";
-import { FootprintsIcon, PiggyBankIcon, ScrollTextIcon } from "lucide-react";
+import {
+  FootprintsIcon,
+  PiggyBankIcon,
+  ScrollTextIcon,
+  WebcamIcon,
+  SatelliteDishIcon,
+  HeartHandshakeIcon,
+  ScanFaceIcon,
+  ReceiptIcon,
+  LibraryBigIcon,
+  ScanSearchIcon,
+  UsersIcon,
+  BabyIcon,
+  MapIcon,
+  LampDeskIcon,
+} from "lucide-react";
 
 const menu: Menu[] = [
   {
     menuTitle: "Services",
     subMenu: [
-      { subMenuTitle: "CT scan", link: "/services/ct-scan" },
-      { subMenuTitle: "Ultrasound", link: "/services/ultrasound" },
+      {
+        subMenuTitle: "CT scan",
+        link: "/services/ct-scan",
+        icon: <WebcamIcon />,
+      },
+      {
+        subMenuTitle: "Ultrasound",
+        link: "/services/ultrasound",
+        icon: <SatelliteDishIcon />,
+      },
       {
         subMenuTitle: "Pregnancy ultrasound",
         link: "/services/pregnancy-ultrasound",
+        icon: <BabyIcon />,
       },
-      { subMenuTitle: "X-ray", link: "/services/x-ray" },
+      {
+        subMenuTitle: "X-ray",
+        link: "/services/x-ray",
+        icon: <ScanFaceIcon />,
+      },
     ],
   },
   {
@@ -30,8 +58,13 @@ const menu: Menu[] = [
       {
         subMenuTitle: "Fees & Billing",
         link: "/patient-information/fees-billing",
+        icon: <ReceiptIcon />,
       },
-      { subMenuTitle: "FAQ", link: "/patient-information/faq" },
+      {
+        subMenuTitle: "FAQ",
+        link: "/patient-information/faq",
+        icon: <LibraryBigIcon />,
+      },
     ],
   },
   {
@@ -40,16 +73,33 @@ const menu: Menu[] = [
       {
         subMenuTitle: "Access Images",
         link: "/referrers/access-patient-images",
+        icon: <ScanSearchIcon />,
       },
-      { subMenuTitle: "e-Referral", link: "/referrers/e-referral" },
+      {
+        subMenuTitle: "e-Referral",
+        link: "/referrers/e-referral",
+        icon: <UsersIcon />,
+      },
     ],
   },
   {
     menuTitle: "About",
     subMenu: [
-      { subMenuTitle: "Our Story", link: "/about/our-story" },
-      { subMenuTitle: "Getting Here", link: "/about/getting-here" },
-      { subMenuTitle: "Contact Us", link: "/about/contact-us" },
+      {
+        subMenuTitle: "Our Story",
+        link: "/about/our-story",
+        icon: <HeartHandshakeIcon />,
+      },
+      {
+        subMenuTitle: "Getting Here",
+        link: "/about/getting-here",
+        icon: <MapIcon />,
+      },
+      {
+        subMenuTitle: "Contact Us",
+        link: "/about/contact-us",
+        icon: <LampDeskIcon />,
+      },
     ],
   },
 ];

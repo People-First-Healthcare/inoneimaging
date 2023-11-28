@@ -6,6 +6,7 @@ export type Menu = {
 export type SubMenu = {
   subMenuTitle: string;
   link: string;
+  icon: React.ReactNode;
 };
 
 export type Service = {

@@ -1,6 +1,5 @@
 import { Menu } from "@/typings";
 import { motion } from "framer-motion";
-import { DnaIcon } from "lucide-react";
 import Link from "next/link";
 import BillingCard from "./BillingCard";
 
@@ -32,7 +31,7 @@ function TopNavContent({ menu, handleLeave }: Props) {
               className="flex items-center space-x-5 p-3 hover:bg-slate-50"
               onClick={() => handleLeave()}
             >
-              <DnaIcon width={30} height={30} />
+              <div>{subMenuItem.icon}</div>
               <div className="pl-10">
                 <p className="text-xl">{subMenuItem.subMenuTitle}</p>
                 <p>Description</p>
