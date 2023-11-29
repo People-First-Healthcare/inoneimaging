@@ -36,6 +36,7 @@ export default function Home() {
           />
         </div>
       </section>
+
       {/* Feature */}
       <section
         id="section-feature"
@@ -47,6 +48,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
+      <div className="bg-wave-purple-bottom aspect-[1280/100] w-full bg-no-repeat bg-center bg-cover"></div>
       <section
         id="section-services"
         className="flex flex-col px-5 py-12 items-center text-center space-y-7 sm:p-20 max-w-7xl mx-auto"
@@ -62,6 +64,7 @@ export default function Home() {
         </div>
       </section>
       {/* Easy Process */}
+      <div className="bg-wave-pink-top aspect-[1280/100] w-full bg-no-repeat bg-center bg-cover"></div>
       <section
         id="section-process"
         className="flex flex-col items-center text-center bg-purple-50 px-5 py-12 space-y-7 sm:p-20"
@@ -77,6 +80,7 @@ export default function Home() {
           <ProcessCard step={3} desc="Results to Your Doctor" />
         </div>
       </section>
+      <div className="bg-wave-pink-bottom aspect-[1280/100] w-full bg-no-repeat bg-center bg-cover"></div>
 
       {/* CTA */}
       <section

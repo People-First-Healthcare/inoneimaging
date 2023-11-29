@@ -16,6 +16,12 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "wave-purple-top": "url('../public/images/wave-1.1.svg')",
+        "wave-purple-bottom": "url('../public/images/wave-1.2.svg')",
+        "wave-pink-top": "url('../public/images/wave-2.1.svg')",
+        "wave-pink-bottom": "url('../public/images/wave-2.2.svg')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
