@@ -7,18 +7,14 @@ function OurStoryPage() {
       <StorySection
         title="Our Story"
         mainDescription="In One Imaging"
-        secondaryDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed unde
-            numquam soluta autem aspernatur suscipit error tempora voluptates."
+        secondaryDescription="opened in November of 2022 with the hope of providing exceptional imaging services to our community. Our goal is to make imaging more accessible to the community, as everyone has the right to quality healthcare."
         image="https://picsum.photos/id/511/1200/1000"
       />
       {/* mission, values, technology */}
       <StorySection
         title="Our Mission"
         mainDescription="We are in the mission of making healthcare more accessible"
-        secondaryDescription="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
-        commodi nam eius ullam quisquam, inventore quaerat eum reiciendis
-        animi repellendus, est saepe recusandae fugiat, totam voluptatem.
-        Architecto facilis aspernatur pariatur."
+        secondaryDescription="We are a community focused organisation providing exceptional care to support and enhance the lives of the people we serve."
         image="https://picsum.photos/id/513/1200/1000"
         bgColor="bg-purple-50"
         imageOnLeft
@@ -26,10 +22,16 @@ function OurStoryPage() {
       <StorySection
         title="Our Values"
         mainDescription="The core values that shape our culture"
-        secondaryDescription="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
-        commodi nam eius ullam quisquam, inventore quaerat eum reiciendis
-        animi repellendus, est saepe recusandae fugiat, totam voluptatem.
-        Architecto facilis aspernatur pariatur."
+        values={[
+          "We do what we say",
+          "When things get tough, we get going",
+          "We look to improve",
+        ]}
+        valuesDescription={[
+          "Our team has an honest and transparent approach with our patients. By delivering exceptional patient care and high-quality imaging services, our clients know we are here for them and that we look after them, every step of the way.",
+          "Even when things don’t go to plan, the team at In One Imaging will show genuine compassion and care. We work with you to the best of our ability to find a solution.",
+          "In order to best serve our patients, we recognise the importance of continuous improvement, striving to be better every day. We embrace change and we are always open to your feedback.",
+        ]}
         image="https://picsum.photos/id/514/1200/1000"
       />
     </section>

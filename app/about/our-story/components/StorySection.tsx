@@ -3,7 +3,9 @@ import Image from "next/image";
 type Props = {
   title: string;
   mainDescription: string;
-  secondaryDescription: string;
+  secondaryDescription?: string;
+  values?: string[];
+  valuesDescription?: string[];
   image: string;
   imageOnLeft?: boolean;
   bgColor?: string;
@@ -13,6 +15,8 @@ function StorySection({
   title,
   mainDescription,
   secondaryDescription,
+  values,
+  valuesDescription,
   image,
   imageOnLeft = false,
   bgColor = "bg-white",
@@ -27,6 +31,13 @@ function StorySection({
           {mainDescription}
         </h1>
         <p className="text-lg">{secondaryDescription}</p>
+        {values &&
+          values.map((value, i) => (
+            <div key={i}>
+              <h2 className="text-xl md:text-2xl font-medium">{value}</h2>
+              <p>{valuesDescription?.[i]}</p>
+            </div>
+          ))}
       </div>
       <div className={`relative min-h-[480px] ${imageOnLeft && "lg:-order-1"}`}>
         <Image
