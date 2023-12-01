@@ -157,7 +157,11 @@ function Header() {
               <Logo />
             </div>
 
-            <TopNav menu={menu} handleHover={handleTopNavHover} />
+            <TopNav
+              menu={menu}
+              activeMenu={activeTopNav}
+              handleHover={handleTopNavHover}
+            />
           </div>
 
           <div className="flex items-center space-x-8">
