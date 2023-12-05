@@ -2,7 +2,7 @@ import StorySection from "@/app/about/our-story/components/StorySection";
 
 function OurStoryPage() {
   return (
-    <section id="our-story">
+    <section id="our-story" className="overflow-x-hidden">
       {/* hero (our story) */}
       <StorySection
         title="Our Story"
