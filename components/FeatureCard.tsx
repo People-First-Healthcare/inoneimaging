@@ -1,8 +1,18 @@
 import { GemIcon } from "lucide-react";
+import { motion } from "framer-motion";
+
+const bottomupAnimation = {
+  initial: { y: "20%", opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  viewport: { once: true },
+};
 
 function FeatureCard() {
   return (
-    <div className="flex space-x-5 p-6 lg:max-w-md">
+    <motion.div
+      {...bottomupAnimation}
+      className="flex space-x-5 p-6 lg:max-w-md"
+    >
       <div className="flex items-center bg-purple-50 px-2">
         <GemIcon />
       </div>
@@ -12,7 +22,7 @@ function FeatureCard() {
           Lorem ipsum dolor sit amet, consectetur adipiscing.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 export default FeatureCard;

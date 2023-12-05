@@ -2,22 +2,17 @@ import { Menu } from "@/typings";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import BillingCard from "./BillingCard";
+import { appearAnimation } from "@/lib/animation";
 
 type Props = {
   menu: Menu;
   handleLeave: () => void;
 };
 
-const topNavAnimation = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-};
-
 function TopNavContent({ menu, handleLeave }: Props) {
   return (
     <motion.div
-      key={"topNavAnimation"}
-      {...topNavAnimation}
+      {...appearAnimation}
       className="px-14 py-10 shadow-lg absolute z-10 bg-white w-full"
       onMouseLeave={() => handleLeave()}
     >

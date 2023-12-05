@@ -1,10 +1,13 @@
+import { appearOnceAnimation } from "@/lib/animation";
+import { motion } from "framer-motion";
+
 type Props = {
   className: string;
 };
 
 function Dashlines({ className }: Props) {
   return (
-    <div className={className}>
+    <motion.div {...appearOnceAnimation} className={className}>
       <svg
         width="1431"
         height="105"
@@ -19,7 +22,7 @@ function Dashlines({ className }: Props) {
           strokeDasharray="6 14"
         />
       </svg>
-    </div>
+    </motion.div>
   );
 }
 export default Dashlines;
