@@ -32,7 +32,7 @@ function GettingHerePage() {
         <CopyAddressButton classname="absolute top-[82%] left-1/2 transform -translate-x-1/2 w-72" />
       </div>
       <h1 className="text-4xl text-center">
-        We are located in{" "}
+        We are located at{" "}
         <span>
           <Image
             src={roxburghlogo}
