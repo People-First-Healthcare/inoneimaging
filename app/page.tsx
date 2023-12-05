@@ -75,9 +75,9 @@ export default function Home() {
         >
           Using our latest technology
         </motion.p>
-        <div className="flex flex-col space-y-7 lg:space-y-0 lg:flex-row lg:space-x-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
           {services.map((service, i) => (
-            <ServiceCard key={i} service={service} />
+            <ServiceCard key={i} service={service} order={i} />
           ))}
         </div>
       </section>

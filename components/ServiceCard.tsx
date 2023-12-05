@@ -1,22 +1,32 @@
 import { Service } from "@/typings";
-import { MicroscopeIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { appearOnceAnimation } from "@/lib/animation";
 
 type Props = {
   service: Service;
+  order: number;
 };
 
-function ServiceCard({ service: { id, title } }: Props) {
+function ServiceCard({ service: { id, title, image }, order }: Props) {
   return (
-    <Link
-      href={`/services/${id}`}
-      className="flex flex-col items-center text-center space-y-5 border-[0.5px] border-purple-100 rounded-sm px-8 py-10 max-w-md hover:translate-x-1 hover:-translate-y-1 hover:shadow-md"
-    >
-      <div className="p-5 bg-gray-50 rounded-full">
-        <MicroscopeIcon size="40" />
-      </div>
-      <p className="text-xl font-semibold">{title}</p>
-    </Link>
+    <motion.div {...appearOnceAnimation} transition={{ delay: order * 0.08 }}>
+      <Link
+        href={`/services/${id}`}
+        className="flex flex-col group items-center"
+      >
+        <div className="relative flex items-center justify-center shadow-xl w-52 h-52 rounded-xl overflow-hidden">
+          <Image
+            src={image}
+            fill
+            alt={title}
+            className="absolute group-hover:scale-110 transition-all duration-500 ease-in-out object-cover"
+          />
+        </div>
+        <p className="text-lg py-2">{title}</p>
+      </Link>
+    </motion.div>
   );
 }
 export default ServiceCard;
