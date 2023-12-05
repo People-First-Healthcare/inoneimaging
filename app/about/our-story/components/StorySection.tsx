@@ -1,4 +1,12 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  appearOnceAnimation,
+  ltrAnimation,
+  rtlAnimation,
+} from "@/lib/animation";
 
 type Props = {
   title: string;
@@ -25,7 +33,11 @@ function StorySection({
     <div
       className={`grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-0 px-6 lg:px-0 lg:h-[calc(100vh-80px)] py-14 lg:py-0 ${bgColor}`}
     >
-      <div className="flex flex-col gap-3 lg:justify-center lg:max-w-xl mx-auto lg:px-10">
+      <motion.div
+        {...(imageOnLeft ? { ...rtlAnimation } : { ...ltrAnimation })}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col gap-3 lg:justify-center lg:max-w-xl mx-auto lg:px-10"
+      >
         <p className="tracking-widest">{title}</p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium">
           {mainDescription}
@@ -38,15 +50,18 @@ function StorySection({
               <p>{valuesDescription?.[i]}</p>
             </div>
           ))}
-      </div>
-      <div className={`relative min-h-[480px] ${imageOnLeft && "lg:-order-1"}`}>
+      </motion.div>
+      <motion.div
+        {...appearOnceAnimation}
+        className={`relative min-h-[480px] ${imageOnLeft && "lg:-order-1"}`}
+      >
         <Image
           src={image}
           alt="sample-photo"
           fill
           className="absolute object-cover"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
