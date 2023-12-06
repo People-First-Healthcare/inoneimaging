@@ -40,11 +40,11 @@ const menu: Menu[] = [
         link: "/services/ultrasound",
         icon: <SatelliteDishIcon />,
       },
-      {
-        subMenuTitle: "Pregnancy ultrasound",
-        link: "/services/pregnancy-ultrasound",
-        icon: <BabyIcon />,
-      },
+      // {
+      //   subMenuTitle: "Pregnancy ultrasound",
+      //   link: "/services/pregnancy-ultrasound",
+      //   icon: <BabyIcon />,
+      // },
       {
         subMenuTitle: "X-ray",
         link: "/services/x-ray",

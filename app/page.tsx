@@ -77,10 +77,12 @@ export default function Home() {
         >
           Using our latest technology
         </motion.p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
-          {services.map((service, i) => (
-            <ServiceCard key={i} service={service} order={i} />
-          ))}
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-8">
+          {services
+            .filter((service) => service.id !== "pregnancy-ultrasound")
+            .map((service, i) => (
+              <ServiceCard key={i} service={service} order={i} />
+            ))}
         </div>
       </section>
       {/* Easy Process */}
