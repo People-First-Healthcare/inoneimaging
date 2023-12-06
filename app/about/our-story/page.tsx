@@ -1,4 +1,5 @@
 import StorySection from "@/app/about/our-story/components/StorySection";
+import { InfiniteSlider } from "@/components/InfiniteSlider";
 
 function OurStoryPage() {
   return (
@@ -34,6 +35,10 @@ function OurStoryPage() {
         ]}
         image="https://picsum.photos/id/514/1200/1000"
       />
+
+      <div id="partners" className="pt-20">
+        <InfiniteSlider />
+      </div>
     </section>
   );
 }
