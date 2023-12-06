@@ -114,17 +114,22 @@ export default function Home() {
         id="cta"
         className="flex flex-col items-center py-16 text-center"
       >
-        <motion.h2 {...bottomupAnimation} className="text-4xl text-center p-5">
-          Book your next appointment now
-        </motion.h2>
-        <motion.p {...bottomupAnimation} className="p-10 max-w-5xl">
-          Complete our booking form and one of our friendly staff will contact
-          you &#45; it&#39;s quick, and easy. Click on the below link and follow
-          the simple steps. Remember to have your referral handy.
-        </motion.p>
-        <motion.div {...bottomupAnimation}>
-          <RequestAppointmentButton />
-        </motion.div>
+        <div className="bg-cta-bg text-white p-10 rounded-3xl mx-4">
+          <motion.h2
+            {...bottomupAnimation}
+            className="text-4xl text-center p-5"
+          >
+            Book your next appointment now
+          </motion.h2>
+          <motion.p {...bottomupAnimation} className="p-10 max-w-5xl">
+            Complete our booking form and one of our friendly staff will contact
+            you &#45; it&#39;s quick, and easy. Click on the below link and
+            follow the simple steps. Remember to have your referral handy.
+          </motion.p>
+          <motion.div {...bottomupAnimation}>
+            <RequestAppointmentButton variant="secondary" />
+          </motion.div>
+        </div>
       </section>
 
       <section id="partners" className="py-6">

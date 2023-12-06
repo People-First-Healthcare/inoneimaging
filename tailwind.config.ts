@@ -26,6 +26,7 @@ module.exports = {
         "wave-purple-bottom": "url('../public/images/wave-1.2.svg')",
         "wave-pink-top": "url('../public/images/wave-2.1.svg')",
         "wave-pink-bottom": "url('../public/images/wave-2.2.svg')",
+        "cta-bg": "url('../public/images/cta-bg.svg')",
       },
       borderRadius: {
         lg: "var(--radius)",
