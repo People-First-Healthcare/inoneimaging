@@ -9,6 +9,7 @@ import ServiceCard from "@/components/ServiceCard";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ltrAnimation, rtlAnimation, bottomupAnimation } from "@/lib/animation";
+import { InfiniteSlider } from "@/components/InfiniteSlider";
 
 export default function Home() {
   return (
@@ -124,6 +125,10 @@ export default function Home() {
         <motion.div {...bottomupAnimation}>
           <RequestAppointmentButton />
         </motion.div>
+      </section>
+
+      <section id="partners" className="py-6">
+        <InfiniteSlider />
       </section>
     </main>
   );

@@ -16,11 +16,21 @@ module.exports = {
       },
     },
     extend: {
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "infinite-slider": "infiniteSlider 20s linear infinite",
+      },
       backgroundImage: {
         "wave-purple-top": "url('../public/images/wave-1.1.svg')",
         "wave-purple-bottom": "url('../public/images/wave-1.2.svg')",
         "wave-pink-top": "url('../public/images/wave-2.1.svg')",
         "wave-pink-bottom": "url('../public/images/wave-2.2.svg')",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -57,11 +67,6 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -71,10 +76,12 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        infiniteSlider: {
+          "0%": { transform: "translateX(0)" },
+          "100%": {
+            transform: "translateX(calc(-300px * 4))",
+          },
+        },
       },
     },
   },
