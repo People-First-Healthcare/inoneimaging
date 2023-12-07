@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import roxburghlogo from "../../../public/images/roxburgh_village_logo.png";
+import roxburghlogo from "../../../public/images/logos/roxburgh_village_logo.png";
 
 function GettingHerePage() {
   return (

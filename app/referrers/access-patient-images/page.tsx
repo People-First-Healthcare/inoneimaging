@@ -1,5 +1,3 @@
-import ContactUsFormWrapper from "@/app/about/contact-us/components/ContactUsFormWrapper";
-import ContactUsContent from "@/components/ContactUsContent";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,18 +7,16 @@ function AccessPatientImagesPage() {
   return (
     <section id="e-referral" className="flex flex-col">
       {/* Image, title */}
-      <div className="relative flex flex-col justify-center items-center h-80 lg:h-96">
+      <div className="relative flex justify-center items-center h-96">
         <Image
           src={"https://picsum.photos/id/507/1600/500"}
           alt={"sample background"}
           fill
-          className="absolute object-cover opacity-50 -z-10"
+          className="absolute object-cover opacity-80 -z-10"
         />
-        <div className="flex flex-col items-center gap-2 bg-white p-3">
-          <h1 className="text-3xl lg:text-5xl text-gray-950">
-            Access Patient Images
-          </h1>
-        </div>
+        <h1 className="text-3xl lg:text-5xl text-gray-950 bg-white bg-opacity-80 p-3">
+          Access Patient Images
+        </h1>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 p-20 px-5 md:px-20 gap-10 max-w-7xl mx-auto">

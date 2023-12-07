@@ -14,7 +14,7 @@ function HeroBanner({ title, image }: Props) {
         fill
         className="absolute object-cover opacity-80 -z-10"
       />
-      <h1 className="text-3xl lg:text-5xl text-gray-950 bg-white p-3">
+      <h1 className="text-3xl lg:text-5xl text-gray-950 bg-white bg-opacity-80 p-3">
         {title}
       </h1>
     </div>
