@@ -22,11 +22,12 @@ module.exports = {
         "infinite-slider": "infiniteSlider 20s linear infinite",
       },
       backgroundImage: {
-        "wave-purple-top": "url('../public/images/wave-1.1.svg')",
-        "wave-purple-bottom": "url('../public/images/wave-1.2.svg')",
-        "wave-pink-top": "url('../public/images/wave-2.1.svg')",
-        "wave-pink-bottom": "url('../public/images/wave-2.2.svg')",
-        "cta-bg": "url('../public/images/cta-bg.svg')",
+        "wave-purple-top": "url('../public/images/backgrounds/wave-1.1.svg')",
+        "wave-purple-bottom":
+          "url('../public/images/backgrounds/wave-1.2.svg')",
+        "wave-pink-top": "url('../public/images/backgrounds/wave-2.1.svg')",
+        "wave-pink-bottom": "url('../public/images/backgrounds/wave-2.2.svg')",
+        "cta-bg": "url('../public/images/backgrounds/cta-bg.svg')",
       },
       borderRadius: {
         lg: "var(--radius)",

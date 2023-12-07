@@ -80,7 +80,7 @@ export const services: Service[] = [
         ],
       },
     ],
-    image: "/images/ctscan-1.jpeg",
+    image: "/images/contents/ctscan-1.jpeg",
   },
   {
     id: "ultrasound",
@@ -208,7 +208,7 @@ export const services: Service[] = [
         ],
       },
     ],
-    image: "/images/ultrasound-1.jpeg",
+    image: "/images/contents/ultrasound-1.jpeg",
   },
 
   {
@@ -321,7 +321,7 @@ export const services: Service[] = [
         ],
       },
     ],
-    image: "/images/ultrasound-2.jpeg",
+    image: "/images/contents/ultrasound-2.jpeg",
   },
   {
     id: "x-ray",
@@ -374,6 +374,6 @@ export const services: Service[] = [
         ],
       },
     ],
-    image: "/images/xray-1.jpeg",
+    image: "/images/contents/xray-1.jpeg",
   },
 ];
