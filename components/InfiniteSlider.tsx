@@ -3,14 +3,14 @@ import Image from "next/image";
 // https://www.julienthibeaut.xyz/blog/create-infinite-slider-with-tailwind-css
 
 const LOGOS = [
-  "/images/siemens-logo.jpeg",
-  "/images/ge_healthcare-logo.jpeg",
-  "/images/diagnostic-imaging-service-accredited-logo.jpeg",
-  "/images/intelepacs-logo.jpeg",
-  "/images/college-of-radiologists-new-zealand-logo.jpeg",
-  "/images/asa-logo.jpeg",
-  "/images/canon-logo.jpeg",
-  "/images/aice-logo.jpeg",
+  "/images/logos/siemens-logo.jpeg",
+  "/images/logos/ge_healthcare-logo.jpeg",
+  "/images/logos/diagnostic-imaging-service-accredited-logo.jpeg",
+  "/images/logos/intelepacs-logo.jpeg",
+  "/images/logos/college-of-radiologists-new-zealand-logo.jpeg",
+  "/images/logos/asa-logo.jpeg",
+  "/images/logos/canon-logo.jpeg",
+  "/images/logos/aice-logo.jpeg",
 ];
 
 export const InfiniteSlider = () => {
