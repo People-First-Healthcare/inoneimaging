@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { SubService } from "@/typings";
-import { ArrowRight } from "lucide-react";
+import { InfoIcon } from "lucide-react";
 import Link from "next/link";
 
 type Props = {
@@ -16,14 +16,15 @@ function SubService({ subService }: Props) {
           <li key={i} className="list-disc list-inside">
             {item}
             {item === "Pregnancy scans for all stages" && (
-              <Link href={"/services/pregnancy-ultrasound"} className="p-2">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="italic underline gap-1"
-                >
-                  More info <ArrowRight size={"18px"} />
-                </Button>
+              <Link href={"/services/pregnancy-ultrasound"}>
+                <Alert className="ml-4 my-2 hover:bg-purple-50 hover:border-white">
+                  <InfoIcon className="h-4 w-4" />
+                  <AlertTitle>Heads up!</AlertTitle>
+                  <AlertDescription>
+                    Click here for more information on pregnancy ultrasounds we
+                    offer
+                  </AlertDescription>
+                </Alert>
               </Link>
             )}
           </li>
