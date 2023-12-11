@@ -208,7 +208,7 @@ export const services: Service[] = [
         ],
       },
     ],
-    image: "/images/contents/ultrasound-2.jpeg",
+    image: "/images/contents/ultrasound-1.jpeg",
   },
 
   {
