@@ -12,7 +12,7 @@ function TopNav({ menu, activeMenu, handleHover }: Props) {
       {menu.map((menuItem, i) => (
         <div key={i} className="flex flex-col relative">
           <button
-            className={`w-full whitespace-nowrap px-5 py-1`}
+            className="w-full whitespace-nowrap px-5 py-1 hover:cursor-default"
             onMouseOver={() => handleHover(menuItem)}
           >
             {menuItem.menuTitle}
