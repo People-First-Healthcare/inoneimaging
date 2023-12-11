@@ -29,6 +29,8 @@ module.exports = {
         "wave-pink-bottom": "url('../public/images/backgrounds/wave-2.2.svg')",
         "cta-bg": "url('../public/images/backgrounds/cta-bg.svg')",
         "hero-bg": "url('../public/images/backgrounds/hero-bg.svg')",
+        "hero-small-bg":
+          "url('../public/images/backgrounds/hero-small-bg.svg')",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -11,7 +11,7 @@ function HeroBanner({ title, image }: Props) {
       <div className="relative flex-1 md:order-2">
         <Image src={image} alt={title} fill className="absolute object-cover" />
       </div>
-      <div className="bg-hero-bg md:flex-1 flex items-center justify-center">
+      <div className="bg-hero-small-bg md:bg-hero-bg md:flex-1 flex items-center justify-center">
         <h1 className="text-3xl md:text-5xl lg:text-7xl text-white p-6 text-center">
           {title}
         </h1>
