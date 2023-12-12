@@ -79,10 +79,12 @@
   @apply hidden;
 }
 
-body > .skiptranslate {
-  display: none;
-}
+/* Hide Google banners */
 
 body {
   top: 0px !important;
+}
+
+body > .skiptranslate {
+  display: none;
 }
