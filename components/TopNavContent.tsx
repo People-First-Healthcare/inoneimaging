@@ -22,14 +22,11 @@ function TopNavContent({ menu, handleLeave }: Props) {
             <Link
               href={subMenuItem.link}
               key={i}
-              className="flex items-center space-x-5 p-3 hover:bg-slate-50"
+              className="flex items-center gap-16 p-5 hover:bg-slate-50"
               onClick={() => handleLeave()}
             >
               <div>{subMenuItem.icon}</div>
-              <div className="pl-10">
-                <p className="text-xl">{subMenuItem.subMenuTitle}</p>
-                <p>Description</p>
-              </div>
+              <p className="text-xl">{subMenuItem.subMenuTitle}</p>
             </Link>
           ))}
         </div>
