@@ -20,7 +20,7 @@ function HeroBanner({ title, image }: Props) {
         <Image src={image} alt={title} fill className="absolute object-cover" />
       </div>
       <div className="bg-hero-small-bg md:bg-hero-bg md:flex-1 flex md:flex-col items-center justify-center">
-        <h1 className="text-3xl md:text-5xl lg:text-7xl text-white p-6 text-center max-w-sm">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl text-white p-6 text-center max-w-lg">
           {title}
         </h1>
         {servicesTitle.includes(title) && (

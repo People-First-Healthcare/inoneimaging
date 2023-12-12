@@ -2,22 +2,16 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import RequestLoginFormWrapper from "./components/RequestLoginFormWrapper";
+import HeroBanner from "@/components/HeroBanner";
 
 function AccessPatientImagesPage() {
   return (
     <section id="e-referral" className="flex flex-col">
       {/* Image, title */}
-      <div className="relative flex justify-center items-center h-96">
-        <Image
-          src={"https://picsum.photos/id/507/1600/500"}
-          alt={"sample background"}
-          fill
-          className="absolute object-cover opacity-80 -z-10"
-        />
-        <h1 className="text-3xl lg:text-5xl text-gray-950 bg-white bg-opacity-80 p-3">
-          Access Patient Images
-        </h1>
-      </div>
+      <HeroBanner
+        title={"Access Patient Images"}
+        image={"https://picsum.photos/id/507/1600/500"}
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 p-20 px-5 md:px-20 gap-10 max-w-7xl mx-auto">
         <div className="flex flex-col space-y-7 lg:justify-center">
