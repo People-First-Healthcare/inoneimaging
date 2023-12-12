@@ -50,7 +50,8 @@ function GettingHerePage() {
               <AccordionTrigger>Travelling by Car</AccordionTrigger>
               <AccordionContent>
                 Parking at Roxburgh Village couldn’t be simpler. With over 880
-                open car spaces, it can be easily accessed via Somerton Road.
+                open car spaces, it can be easily accessed via Somerton Road,
+                David Munroe Dr, and Thomas Brunton Parade.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -84,7 +85,7 @@ function GettingHerePage() {
                   <p>
                     There are many bus lines that service Roxburgh Village so
                     getting here is a breeze. The current bus lines, all
-                    operated by Metlink include:
+                    operated by PTV include:
                   </p>
                   <ul className="list-disc list-inside">
                     <li>484 - Broadmeadows - Roxburgh Park</li>

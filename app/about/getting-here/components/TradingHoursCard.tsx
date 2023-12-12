@@ -7,13 +7,12 @@ const tradingHours = [
   { day: "Thursday", open: "09:00", close: "17:00" },
   { day: "Friday", open: "09:00", close: "17:00" },
   { day: "Saturday", open: "09:00", close: "17:00" },
-  { day: "Sunday", open: "09:00", close: "17:00" },
 ];
 
 function TradingHoursCard() {
   return (
     <div className="border border-black p-4 h-fit col-span-3 lg:col-span-1">
-      <div className="flex flex-row justify-center py-5">
+      <div className="flex flex-row justify-center py-5 gap-2">
         <TimerIcon />
         <p>Our trading hours</p>
       </div>
@@ -25,6 +24,10 @@ function TradingHoursCard() {
           </p>
         </div>
       ))}
+      <div className="grid grid-cols-2 p-2 text-center border-b">
+        <p>Sunday</p>
+        <p>Close</p>
+      </div>
       <div className="grid grid-cols-2 p-2 text-center">
         <p>Holidays</p>
         <p>Close</p>
