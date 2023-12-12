@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Langs, changeLangauge } from "./GoogleTranslate";
 
 const languages = [
@@ -22,7 +22,14 @@ const languages = [
 ];
 
 export default function ChangeLanguage() {
-  const [language, setLanguage] = useState(Langs.English);
+  const [language, setLanguage] = useState<Langs | string>(Langs.English);
+
+  useEffect(() => {
+    const savedLanguage = document.cookie.split(";")[2].split("/")[2];
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
 
   return (
     <select

@@ -88,3 +88,8 @@ body {
 body > .skiptranslate {
   display: none;
 }
+
+#goog-gt-original-text,
+#goog-gt-tt {
+  display: none !important;
+}
