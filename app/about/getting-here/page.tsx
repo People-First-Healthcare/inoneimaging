@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import roxburghlogo from "../../../public/images/logos/roxburgh_village_logo.png";
+import CTA from "@/components/CTA";
 
 function GettingHerePage() {
   return (
@@ -104,7 +105,9 @@ function GettingHerePage() {
         <TradingHoursCard />
       </div>
 
-      {/* more info */}
+      <div className="max-w-7xl mx-auto">
+        <CTA />
+      </div>
     </section>
   );
 }

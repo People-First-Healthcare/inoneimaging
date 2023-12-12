@@ -6,6 +6,13 @@ type Props = {
   image: string;
 };
 
+const servicesTitle = [
+  "CT scan",
+  "Ultrasound",
+  "Pregnancy Ultrasound",
+  "X-ray",
+];
+
 function HeroBanner({ title, image }: Props) {
   return (
     <div className="flex flex-col md:flex-row h-[500px]">
@@ -16,7 +23,12 @@ function HeroBanner({ title, image }: Props) {
         <h1 className="text-3xl md:text-5xl lg:text-7xl text-white p-6 text-center max-w-sm">
           {title}
         </h1>
-        <RequestAppointmentButton variant="outline" />
+        {servicesTitle.includes(title) && (
+          <RequestAppointmentButton
+            variant="outline"
+            className="bg-transparent text-white"
+          />
+        )}
       </div>
     </div>
   );

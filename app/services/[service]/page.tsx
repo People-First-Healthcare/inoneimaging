@@ -79,7 +79,6 @@ function ServicePage({ params }: { params: { service: string } }) {
           </p>
         </div>
         <div className="flex flex-col h-fit basis-1/3 gap-5 sticky top-56">
-          <RequestAppointmentButton />
           <BillingCard />
           <ContactUsCard />
         </div>

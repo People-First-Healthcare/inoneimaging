@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { Faq } from "@/typings";
 import HeroBanner from "./HeroBanner";
+import CTA from "./CTA";
 
 type Props = {
   sectionId: string;
@@ -59,6 +60,9 @@ function CustomTemplate({
           {billingCard && <BillingCard />}
           {contactUsCard && <ContactUsCard />}
         </div>
+      </div>
+      <div className="max-w-7xl mx-auto">
+        <CTA />
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import ContactUsContent from "@/components/ContactUsContent";
 import ContactUsFormWrapper from "@/app/about/contact-us/components/ContactUsFormWrapper";
 import Image from "next/image";
+import CTA from "@/components/CTA";
 
 function ContactUs() {
   return (
@@ -40,6 +41,9 @@ function ContactUs() {
           </h3>
           <ContactUsFormWrapper />
         </div>
+      </div>
+      <div className="max-w-7xl mx-auto">
+        <CTA />
       </div>
     </section>
   );
