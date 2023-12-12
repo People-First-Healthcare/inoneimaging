@@ -1,6 +1,7 @@
 import { SocialIcon } from "react-social-icons";
 import ChangeLanguage from "./ChangeLanguage";
 import Logo from "./Logo";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -17,19 +18,22 @@ function Footer() {
           </p>
           <div className="flex justify-center space-x-5 sm:justify-normal">
             <SocialIcon
-              url="https://facebook.com"
+              url="https://www.facebook.com/inonehealthcare"
               style={{
                 width: "24px",
                 height: "24px",
               }}
+              target="_blank"
             />
             <SocialIcon
-              url="https://instagram.com"
+              url="https://www.instagram.com/inonehealthcare/"
               style={{ width: "24px", height: "24px" }}
+              target="_blank"
             />
             <SocialIcon
-              url="https://linkedin.com"
+              url="https://www.linkedin.com/company/in-one-healthcare/"
               style={{ width: "24px", height: "24px" }}
+              target="_blank"
             />
 
             <ChangeLanguage />
@@ -39,27 +43,52 @@ function Footer() {
           <p className="text-xs uppercase text-purple-300 font-medium">
             Services
           </p>
-          <p>CT Scan</p>
-          <p>Ultrasound</p>
-          <p>X-Ray</p>
+          <Link href={"/services/ct-scan"}>
+            <p>CT Scan</p>
+          </Link>
+          <Link href={"/services/ultrasound"}>
+            <p>Ultrasound</p>
+          </Link>
+          <Link href={"/services/x-ray"}>
+            <p>X-Ray</p>
+          </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">
           <p className="text-xs uppercase text-purple-300 font-medium">
             Partners
           </p>
-          <p>In One Vision</p>
-          <p>In One Allied Health</p>
+          <Link
+            href={"https://www.inonehealthcare.com.au/vision-clinic/"}
+            target="_blank"
+          >
+            <p>In One Vision</p>
+          </Link>
+          <Link
+            href={"https://www.inonehealthcare.com.au/allied-health/"}
+            target="_blank"
+          >
+            <p>In One Allied Health</p>
+          </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">
           <p className="text-xs uppercase text-purple-300 font-medium">
             Contact
           </p>
-          <p>
-            Shop RP25E Roxburgh Village, 250 Somerton Road, Roxburgh Park, VIC
-            3064
-          </p>
-          <p>info@inoneimaging.com.au</p>
-          <p>+61 3 9063 0200</p>
+          <Link
+            href={"https://maps.app.goo.gl/RBscTfw1Kbzy9Gfm8"}
+            target="_blank"
+          >
+            <p>
+              Shop RP25E Roxburgh Village, 250 Somerton Road, Roxburgh Park, VIC
+              3064
+            </p>
+          </Link>
+          <Link href={`mailto:${"info@inoneimaging.com.au"}`}>
+            <p>info@inoneimaging.com.au</p>
+          </Link>
+          <Link href={`tel:${+61390630200}`}>
+            <p>+61 3 9063 0200</p>
+          </Link>
         </div>
       </div>
     </footer>
