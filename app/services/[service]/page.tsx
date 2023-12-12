@@ -13,6 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import a from "indefinite";
+import CTA from "@/components/CTA";
 
 function ServicePage({ params }: { params: { service: string } }) {
   const currService = services.filter(
@@ -82,6 +83,9 @@ function ServicePage({ params }: { params: { service: string } }) {
           <BillingCard />
           <ContactUsCard />
         </div>
+      </div>
+      <div className="max-w-7xl mx-auto">
+        <CTA />
       </div>
     </section>
   );
