@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Host
+Host: https://inoneimaging.vercel.app/
+
+# Sitemaps
+Sitemap: https://inoneimaging.vercel.app/sitemap.xml
