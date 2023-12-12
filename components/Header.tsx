@@ -75,11 +75,11 @@ const menu: Menu[] = [
         link: "/referrers/access-patient-images",
         icon: <ScanSearchIcon />,
       },
-      {
-        subMenuTitle: "e-Referral",
-        link: "/referrers/e-referral",
-        icon: <UsersIcon />,
-      },
+      // {
+      //   subMenuTitle: "e-Referral",
+      //   link: "/referrers/e-referral",
+      //   icon: <UsersIcon />,
+      // },
     ],
   },
   {
