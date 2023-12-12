@@ -35,7 +35,7 @@ export default function Home() {
 
         <motion.div
           {...rtlAnimation}
-          className="bg-purple-300 relative min-h-[400px] lg:w-1/3"
+          className="bg-purple-300 relative min-h-[350px] lg:w-1/3"
         >
           <Image
             src={
