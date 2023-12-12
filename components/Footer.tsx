@@ -5,10 +5,8 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="bg-purple-800">
-      <div className="bg-wave-purple-top aspect-[1280/100] w-full bg-no-repeat bg-center bg-cover"></div>
-
-      <div className="grid sm:grid-cols-3 lg:grid-cols-5 text-center  text-white py-14 sm:py-16 space-y-8 lg:space-y-0 sm:text-left max-w-7xl mx-auto w-11/12">
+    <footer className="bg-footer-bg bg-bottom bg-no-repeat mt-10 border-t-[0.5px]">
+      <div className="grid sm:grid-cols-3 lg:grid-cols-5 text-center py-14 sm:py-16 space-y-8 lg:space-y-0 sm:text-left max-w-7xl mx-auto w-11/12">
         <div className="sm:col-span-3 lg:col-span-2 flex flex-col space-y-5">
           <div className="flex justify-center sm:justify-normal">
             <Logo />
@@ -40,7 +38,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col text-sm space-y-3">
-          <p className="text-xs uppercase text-purple-300 font-medium">
+          <p className="text-xs uppercase text-purple-500 font-medium">
             Services
           </p>
           <Link href={"/services/ct-scan"}>
@@ -54,7 +52,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">
-          <p className="text-xs uppercase text-purple-300 font-medium">
+          <p className="text-xs uppercase text-purple-500 font-medium">
             Partners
           </p>
           <Link
@@ -71,7 +69,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">
-          <p className="text-xs uppercase text-purple-300 font-medium">
+          <p className="text-xs uppercase text-purple-500 font-medium">
             Contact
           </p>
           <Link

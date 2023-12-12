@@ -31,6 +31,7 @@ module.exports = {
         "hero-bg": "url('../public/images/backgrounds/hero-bg.svg')",
         "hero-small-bg":
           "url('../public/images/backgrounds/hero-small-bg.svg')",
+        "footer-bg": "url('../public/images/backgrounds/footer-bg.svg')",
       },
       borderRadius: {
         lg: "var(--radius)",
