@@ -6,7 +6,7 @@ function FeesAndBillingPage() {
     <CustomFAQTemplate
       sectionId="fees-billing"
       heroTitle="Fees & Billing"
-      heroBackground="https://picsum.photos/id/370/1600/500"
+      heroBackground="https://picsum.photos/id/371/1600/500"
       faqs={feesBillingFaq}
       contactUsCard
     />
