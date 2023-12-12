@@ -1,7 +1,7 @@
+import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import ChangeLanguage from "./ChangeLanguage";
 import Logo from "./Logo";
-import Link from "next/link";
 
 function Footer() {
   return (
