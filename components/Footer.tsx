@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 function Footer() {
   return (
-    <footer className="bg-footer-bg bg-bottom bg-no-repeat mt-10 border-t-[0.5px] border-purple-100">
+    <footer className="mt-10 bg-purple-50">
       <div className="grid sm:grid-cols-3 lg:grid-cols-5 text-center py-14 sm:py-16 space-y-8 lg:space-y-0 sm:text-left max-w-7xl mx-auto w-11/12">
         <div className="sm:col-span-3 lg:col-span-2 flex flex-col space-y-5">
           <div className="flex justify-center sm:justify-normal">
