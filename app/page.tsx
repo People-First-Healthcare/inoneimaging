@@ -35,7 +35,7 @@ export default function Home() {
 
         <motion.div
           {...rtlAnimation}
-          className="bg-purple-300 relative min-h-[350px] lg:w-1/3"
+          className="bg-purple-300 relative min-h-[200px] lg:w-1/3"
         >
           <Image
             src={
@@ -44,7 +44,7 @@ export default function Home() {
             alt="healthcare worker photo"
             width={500}
             height={500}
-            className="absolute max-w-md bottom-0 right-0"
+            className="absolute max-w-xs md:max-w-md bottom-0 right-0"
           />
         </motion.div>
       </section>
