@@ -1,5 +1,12 @@
 import StorySection from "@/app/about/our-story/components/StorySection";
 import { InfiniteSlider } from "@/components/InfiniteSlider";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Story, Mission and Values",
+  description:
+    "In One Imaging aims to provide exceptional imaging services to our community at Roxburgh Park in Melbourne. Our friendly team are always here to help.",
+};
 
 function OurStoryPage() {
   return (

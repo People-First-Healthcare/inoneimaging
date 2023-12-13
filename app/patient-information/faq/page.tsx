@@ -1,6 +1,12 @@
 import { generalFaq } from "@/assets/general-faq";
 import CustomFAQTemplate from "@/components/CustomFAQTemplate";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Frequently Asked Questions",
+  description:
+    "We are here to help. Check out our FAQs or contact our friendly team for more information.",
+};
 function FeesAndBillingPage() {
   return (
     <CustomFAQTemplate

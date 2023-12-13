@@ -12,6 +12,13 @@ import Image from "next/image";
 import Link from "next/link";
 import roxburghlogo from "../../../public/images/logos/roxburgh_village_logo.png";
 import CTA from "@/components/CTA";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Getting Here is Easy",
+  description:
+    "In One Imaging is located at Roxburgh Village Shopping Centre with plenty of parking spaces. There are also train and bus services just next to Roxburgh Village.",
+};
 
 function GettingHerePage() {
   return (

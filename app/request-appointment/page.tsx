@@ -1,6 +1,13 @@
 import AppointmentFormWrapper from "@/app/request-appointment/components/AppointmentFormWrapper";
 import HeroBanner from "@/components/HeroBanner";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Request an Appointment With Us Now",
+  description:
+    "You can easily fill out the form and our friendly team will contact you to confirm the appointment time. Please remember to bring your referral to your appointment.",
+};
 
 function RequestAppointmentPage() {
   return (

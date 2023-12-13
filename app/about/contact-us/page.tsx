@@ -2,6 +2,13 @@ import ContactUsContent from "@/components/ContactUsContent";
 import ContactUsFormWrapper from "@/app/about/contact-us/components/ContactUsFormWrapper";
 import CTA from "@/components/CTA";
 import HeroBanner from "@/components/HeroBanner";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "We are here to help. If you have any questions, please call us on 03 9063 0200 or fill out the form and we will get back to you.",
+};
 
 function ContactUs() {
   return (
