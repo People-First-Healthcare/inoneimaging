@@ -33,7 +33,7 @@ export default function ChangeLanguage() {
 
   return (
     <select
-      className="text-black"
+      className="text-black rounded-sm"
       value={language}
       onChange={(e) => {
         setLanguage(e.target.value as Langs);
