@@ -25,7 +25,7 @@ function SideNavContent({ menu, handleLeave }: Props) {
     <motion.div
       key={"sideNav"}
       {...sideNavAnimation}
-      className="flex flex-col space-y-24 px-14 pb-36 h-screen w-full bg-white z-10 overflow-y-scroll"
+      className="flex flex-col space-y-24 px-14 pb-36 h-screen w-full bg-white z-10"
     >
       <div className="space-y-5">
         {menu.map((menuItem, i) => (
