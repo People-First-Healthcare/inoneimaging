@@ -4,7 +4,6 @@ import ContactUsCard from "@/components/ContactUsCard";
 import HeroBanner from "@/components/HeroBanner";
 import PregnancyUltrasoundInfo from "@/app/services/components/PregnancyUltrasoundInfo";
 import PreparationInfo from "@/app/services/components/PreparationInfo";
-import RequestAppointmentButton from "@/components/RequestAppointmentButton";
 import SubService from "@/app/services/components/SubService";
 import {
   Accordion,
@@ -14,8 +13,24 @@ import {
 } from "@/components/ui/accordion";
 import a from "indefinite";
 import CTA from "@/components/CTA";
+import { Metadata } from "next";
 
-function ServicePage({ params }: { params: { service: string } }) {
+type Props = {
+  params: { service: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const currService = services.filter(
+    (service) => service.id === params.service
+  )[0];
+
+  return {
+    title: `${currService.title}s in Roxburgh Park`,
+    description: `At In One Imaging, we offer ranges of ${currService.title} services using state-of-the-art technologies in Roxburgh Park. Book an appointment with us today or contact our friendly team if you have any questions. `,
+  };
+}
+
+function ServicePage({ params }: Props) {
   const currService = services.filter(
     (service) => service.id === params.service
   )[0];
