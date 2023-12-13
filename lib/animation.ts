@@ -2,19 +2,21 @@ export const ltrAnimation = {
   initial: { x: "-20%", opacity: 0 },
   whileInView: { x: 0, opacity: 1 },
   viewport: { once: true },
+  transition: { duration: 0.6, ease: "easeInOut" },
 };
 
 export const rtlAnimation = {
   initial: { x: "20%", opacity: 0 },
   whileInView: { x: 0, opacity: 1 },
   viewport: { once: true },
+  transition: { duration: 0.6, ease: "easeInOut" },
 };
 
 export const bottomupAnimation = {
   initial: { y: "50%", opacity: 0 },
   whileInView: { y: 0, opacity: 1 },
   viewport: { once: true },
-  transition: { duration: 0.4, ease: "easeInOut" },
+  transition: { duration: 0.6, ease: "easeInOut" },
 };
 
 export const appearAnimation = {
@@ -26,4 +28,5 @@ export const appearOnceAnimation = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
   viewport: { once: true },
+  transition: { duration: 0.6, ease: "easeInOut" },
 };
