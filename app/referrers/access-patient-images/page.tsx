@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Access Patient Images",
   description:
     "Referrers can conveniently access patient images through Northwest Radiology Portal. Follow the steps and request for access now.",
+  alternates: {
+    canonical: "/referrers/access-patient-images",
+  },
 };
 
 function AccessPatientImagesPage() {

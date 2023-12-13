@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
     "We are here to help. Check out our FAQs or contact our friendly team for more information.",
+  alternates: {
+    canonical: "/patient-information/faq",
+  },
 };
 function FeesAndBillingPage() {
   return (

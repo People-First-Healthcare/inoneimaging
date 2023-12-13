@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Getting Here is Easy",
   description:
     "In One Imaging is located at Roxburgh Village Shopping Centre with plenty of parking spaces. There are also train and bus services just next to Roxburgh Village.",
+  alternates: {
+    canonical: "/about/getting-here",
+  },
 };
 
 function GettingHerePage() {

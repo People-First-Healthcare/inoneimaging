@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${currService.title}s in Roxburgh Park`,
     description: `At In One Imaging, we offer ranges of ${currService.title} services using state-of-the-art technologies in Roxburgh Park. Book an appointment with us today or contact our friendly team if you have any questions. `,
+    alternates: {
+      canonical: `/services/${currService.id}`,
+    },
   };
 }
 

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Request an Appointment With Us Now",
   description:
     "You can easily fill out the form and our friendly team will contact you to confirm the appointment time. Please remember to bring your referral to your appointment.",
+  alternates: {
+    canonical: "/request-appointment",
+  },
 };
 
 function RequestAppointmentPage() {

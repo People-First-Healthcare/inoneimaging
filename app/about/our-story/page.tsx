@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Our Story, Mission and Values",
   description:
     "In One Imaging aims to provide exceptional imaging services to our community at Roxburgh Park in Melbourne. Our friendly team are always here to help.",
+  alternates: {
+    canonical: "/about/our-story",
+  },
 };
 
 function OurStoryPage() {

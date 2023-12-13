@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   },
   description:
     "In One Imaging specialises in providing high quality medical imaging, scanning and ultrasounds. Book an appointment with us today.",
+  metadataBase: new URL("https://inoneimaging.vercel.app/"),
 };
 
 export default function RootLayout({
