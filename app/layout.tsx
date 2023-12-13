@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    title: "Medical Imaging Services in Roxburgh Park | In One Imaging",
+    description:
+      "In One Imaging specialises in providing high quality medical imaging, scanning and ultrasounds. Book an appointment with us today.",
+  },
 };
 
 export default function RootLayout({
