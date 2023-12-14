@@ -70,7 +70,7 @@ export async function sendAppointmentRequest(
 
   try {
     let mailOptions: any = {
-      from: `"In One Imaging" <${senderEmail}>`,
+      from: `"In One Imaging" example@inoneimaging.com.au`,
       to: "hendry.kosasih@yahoo.com",
       subject: `New Appointment Request for ${firstName}`,
       html: `<h1>New Appointment Request</h1>
