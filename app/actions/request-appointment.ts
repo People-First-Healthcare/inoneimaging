@@ -98,7 +98,7 @@ export async function sendAppointmentRequest(
         },
       ];
     }
-    transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions);
     return { success: true };
   } catch (err) {
     console.error(err);
