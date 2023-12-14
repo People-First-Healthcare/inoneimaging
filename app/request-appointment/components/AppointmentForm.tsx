@@ -46,8 +46,11 @@ function AppointmentForm({ setFormSubmitted }: Props) {
       phone: "",
       hasReferral: "false",
       token: "",
+      referral: undefined,
     },
   });
+
+  const fileRef = form.register("referral");
 
   async function onSubmit(values: z.infer<typeof FormSchema>) {
     values.hasReferral = `${hasReferral}`;
@@ -214,19 +217,24 @@ function AppointmentForm({ setFormSubmitted }: Props) {
               </FormItem>
             )}
           />
-
-          {hasReferral && (
-            <div className="sm:col-span-2">
-              <Input
-                ref={inputRef}
-                type="file"
-                accept=".pdf, .jpg, .jpeg, .png"
-                required
-                className="file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 file:border file:border-solid file:border-blue-700 file:rounded-md border-blue-600"
-              />
-            </div>
-          )}
         </div>
+
+        <FormField
+          control={form.control}
+          name="referral"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input
+                  type="file"
+                  accept=".pdf, .jpg, .jpeg, .png"
+                  {...fileRef}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
         <TurnstileWidget
           sitekey="0x4AAAAAAAMNP5ZwMQ2wFh7d"
