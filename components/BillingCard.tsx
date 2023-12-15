@@ -16,8 +16,8 @@ function BillingCard() {
       </CardHeader>
       <CardContent>
         <p>
-          In most instances, we bulk bill to Medicare, but it is important to
-          check with your individual practice prior to your service.
+          We are a bulk-billing clinic for Medicare eligible patients for most
+          examinations. Please give us a call for more information.
         </p>
       </CardContent>
       <CardFooter>

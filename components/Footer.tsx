@@ -12,7 +12,7 @@ function Footer() {
             <Logo />
           </div>
           <p className="max-w-[30ch] mx-auto sm:mx-0">
-            We follow a holistic approach to healthcare.
+            Visit us today for comprehensive radiology services.
           </p>
           <div className="flex justify-center space-x-5 sm:justify-normal">
             <SocialIcon
