@@ -84,7 +84,7 @@ module.exports = {
         infiniteSlider: {
           "0%": { transform: "translateX(0)" },
           "100%": {
-            transform: "translateX(calc(-300px * 4))",
+            transform: "translateX(calc(-400px * 4))",
           },
         },
       },
