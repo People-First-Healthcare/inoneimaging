@@ -14,7 +14,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Select,
   SelectContent,
@@ -23,8 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
-import { strBoolToBoo } from "@/lib/utils";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import SubmitButton from "../../../components/SubmitButton";
 import TurnstileWidget from "../../../components/TurnstileWidget";
 
@@ -34,8 +32,6 @@ type Props = {
 
 function AppointmentForm({ setFormSubmitted }: Props) {
   const [pending, setPending] = useState(false);
-  const [hasReferral, setHasReferral] = useState(false);
-  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -44,25 +40,14 @@ function AppointmentForm({ setFormSubmitted }: Props) {
       lastName: "",
       email: "",
       phone: "",
-      hasReferral: "false",
       token: "",
-      referral: undefined,
     },
   });
 
-  const fileRef = form.register("referral");
-
   async function onSubmit(values: z.infer<typeof FormSchema>) {
-    values.hasReferral = `${hasReferral}`;
     setPending(true);
 
-    const fileFormData = new FormData();
-
-    if (inputRef.current?.files?.[0]) {
-      fileFormData.append("referral", inputRef.current?.files?.[0]);
-    }
-
-    const mailerResponse = await sendAppointmentRequest(values, fileFormData);
+    const mailerResponse = await sendAppointmentRequest(values);
     if (mailerResponse.success) {
       setFormSubmitted(true);
     } else {
@@ -186,55 +171,7 @@ function AppointmentForm({ setFormSubmitted }: Props) {
               </FormItem>
             )}
           />
-
-          <FormField
-            control={form.control}
-            name="hasReferral"
-            render={({ field }) => (
-              <FormItem className="space-y-3">
-                <FormLabel>Would you like to upload a referral?</FormLabel>
-                <FormControl>
-                  <RadioGroup
-                    onValueChange={(e) => setHasReferral(strBoolToBoo(e))}
-                    defaultValue={field.value}
-                    className="flex space-x-1"
-                  >
-                    <FormItem className="flex items-center space-x-3 space-y-0">
-                      <FormControl>
-                        <RadioGroupItem value="true" />
-                      </FormControl>
-                      <FormLabel className="font-normal">Yes</FormLabel>
-                    </FormItem>
-                    <FormItem className="flex items-center space-x-3 space-y-0">
-                      <FormControl>
-                        <RadioGroupItem value="false" />
-                      </FormControl>
-                      <FormLabel className="font-normal">No</FormLabel>
-                    </FormItem>
-                  </RadioGroup>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
         </div>
-
-        <FormField
-          control={form.control}
-          name="referral"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  type="file"
-                  accept=".pdf, .jpg, .jpeg, .png"
-                  {...fileRef}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
 
         <TurnstileWidget
           sitekey="0x4AAAAAAAMNP5ZwMQ2wFh7d"

@@ -1,7 +1,5 @@
 import { z } from "zod";
 
-const MAX_FILE_SIZE = 1000000;
-
 export const RequestAppointmentFormDataSchema = z.object({
   firstName: z.string().min(1, {
     message: "First name is required",
@@ -19,16 +17,7 @@ export const RequestAppointmentFormDataSchema = z.object({
   preferredTime: z.string({
     required_error: "Please select a preferred time",
   }),
-  hasReferral: z.string(),
-  referralFile: z.string().optional(),
   token: z.string(),
-  referral: z
-    .any()
-    .refine((val) => val.length > 0, "File is required")
-    .refine(
-      (file) => file?.[0]?.size < MAX_FILE_SIZE,
-      `Max image size is 1MB.`
-    ),
 });
 
 export const ContactUsFormDataSchema = z.object({

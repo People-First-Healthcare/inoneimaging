@@ -1,11 +1,8 @@
 "use server";
 
 import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
-import { strBoolToBoo } from "@/lib/utils";
 import axios from "axios";
-import { writeFile } from "fs/promises";
 import nodemailer from "nodemailer";
-import path from "path";
 import { z } from "zod";
 
 const senderEmail = process.env.NODEMAILER_EMAIL;
@@ -21,18 +18,9 @@ const transporter = nodemailer.createTransport({
 
 type formData = z.infer<typeof FormSchema>;
 
-export async function sendAppointmentRequest(
-  formData: formData,
-  fileFormData: FormData
-) {
-  // simulate delay
-  // await new Promise((resolve) => {
-  //   setTimeout(() => resolve(1), 3000);
-  // });
-
+export async function sendAppointmentRequest(formData: formData) {
   const { firstName, lastName, email, phone, service, preferredTime, token } =
     formData;
-  const hasReferral = strBoolToBoo(formData.hasReferral); // sent hasReferral is in string
 
   const turnstileData = {
     // Refer: https://developers.cloudflare.com/turnstile/reference/testing/
@@ -59,15 +47,6 @@ export async function sendAppointmentRequest(
     return { success: false, error: inputValidation.error.format() };
   }
 
-  let filePath;
-  if (hasReferral) {
-    const file = fileFormData?.get("referral") as File;
-    filePath = path.join("/tmp/", file.name);
-
-    const buffer = await file.arrayBuffer();
-    await writeFile(filePath, Buffer.from(buffer));
-  }
-
   try {
     let mailOptions: any = {
       from: `"In One Imaging" example@inoneimaging.com.au`,
@@ -85,19 +64,10 @@ export async function sendAppointmentRequest(
       </ul>
       <p><strong>Imaging Service Requested:</strong> ${service}</p>
       <p><strong>Preferred Appointment Time:</strong> ${preferredTime}</p>
-      <p><strong>Referral: </strong>${hasReferral ? "Attached" : "None"}</p>
       <p>Thank you for your consideration.</p>
       <p>Sincerely,</p>
       <p>${firstName} ${lastName}</p>`,
     };
-
-    if (hasReferral) {
-      mailOptions["attachments"] = [
-        {
-          path: filePath,
-        },
-      ];
-    }
     await transporter.sendMail(mailOptions);
     return { success: true };
   } catch (err) {
