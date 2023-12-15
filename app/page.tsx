@@ -2,7 +2,6 @@
 
 import { services } from "@/assets/services";
 import Dashlines from "@/components/Dashlines";
-import FeatureCard from "@/components/FeatureCard";
 import ProcessCard from "@/components/ProcessCard";
 import RequestAppointmentButton from "@/components/RequestAppointmentButton";
 import ServiceCard from "@/components/ServiceCard";
@@ -16,6 +15,7 @@ import {
   ScanFaceIcon,
   StethoscopeIcon,
 } from "lucide-react";
+import FeatureCard from "@/components/FeatureCard";
 
 export default function Home() {
   return (
