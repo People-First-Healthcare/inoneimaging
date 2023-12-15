@@ -1,4 +1,3 @@
-import { GemIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
 const bottomupAnimation = {
@@ -8,20 +7,24 @@ const bottomupAnimation = {
   transition: { duration: 0.6, ease: "easeInOut" },
 };
 
-function FeatureCard() {
+type Props = {
+  title: string;
+  desc: string;
+  icon: React.ReactNode;
+};
+
+function FeatureCard({ title, desc, icon }: Props) {
   return (
     <motion.div
       {...bottomupAnimation}
       className="flex space-x-5 p-6 lg:max-w-md"
     >
-      <div className="flex items-center bg-purple-50 px-2">
-        <GemIcon />
+      <div className="flex items-center bg-purple-50 px-2 rounded-md">
+        <div>{icon}</div>
       </div>
-      <div className="flex flex-col">
-        <p className="text-xl font-semibold text-white">24 hour service</p>
-        <p className="text-gray-50">
-          Lorem ipsum dolor sit amet, consectetur adipiscing.
-        </p>
+      <div className="flex flex-col justify-center gap-2">
+        <p className="text-xl font-semibold text-white">{title}</p>
+        <p className="text-gray-50">{desc}</p>
       </div>
     </motion.div>
   );

@@ -11,6 +11,11 @@ import { motion } from "framer-motion";
 import { ltrAnimation, rtlAnimation, bottomupAnimation } from "@/lib/animation";
 import { InfiniteSlider } from "@/components/InfiniteSlider";
 import CTA from "@/components/CTA";
+import {
+  HeartHandshakeIcon,
+  ScanFaceIcon,
+  StethoscopeIcon,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -28,7 +33,7 @@ export default function Home() {
             We follow a holistic approach to health care.
           </h1>
           <h2 className="text-lg w-1/2">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Visit us today for comprehensive radiology services.
           </h2>
           <RequestAppointmentButton />
         </motion.div>
@@ -54,9 +59,21 @@ export default function Home() {
         id="section-feature"
         className="flex flex-col p-10 bg-purple-800 lg:flex-row justify-center lg:py-14"
       >
-        <FeatureCard />
-        <FeatureCard />
-        <FeatureCard />
+        <FeatureCard
+          title="Cutting Edge Imaging Technology"
+          desc="We use state-of-the-art CT, X-Ray and Ultrasound Machines for all your imaging needs."
+          icon={<ScanFaceIcon />}
+        />
+        <FeatureCard
+          title="​Expert Radiology Team"
+          desc="Our highly-skilled technologists bring in a wealth of knowledge to ensure the highest standard of care when taking your scans."
+          icon={<StethoscopeIcon />}
+        />
+        <FeatureCard
+          title="Patient-Centric Approach"
+          desc="We prioritise your comfort with a welcoming waiting area, efficient processes to reduce wait times and transparent communication."
+          icon={<HeartHandshakeIcon />}
+        />
       </section>
 
       {/* Services */}
