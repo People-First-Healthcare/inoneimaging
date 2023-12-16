@@ -19,6 +19,7 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "infinite-slider-sm": "infiniteSliderSmall 20s linear infinite",
         "infinite-slider": "infiniteSlider 20s linear infinite",
       },
       backgroundImage: {
@@ -80,6 +81,12 @@ module.exports = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
+        },
+        infiniteSliderSmall: {
+          "0%": { transform: "translateX(0)" },
+          "100%": {
+            transform: "translateX(calc(-200px * 4))",
+          },
         },
         infiniteSlider: {
           "0%": { transform: "translateX(0)" },

@@ -16,10 +16,10 @@ const LOGOS = [
 export const InfiniteSlider = () => {
   return (
     <div className="relative m-auto w-5/6 lg:w-4/6 overflow-hidden bg-white before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] after:content-['']">
-      <div className="animate-infinite-slider flex w-[calc(400px*8)]">
+      <div className="animate-infinite-slider-sm md:animate-infinite-slider flex w-[calc(200px*8)] md:w-[calc(400px*8)]">
         {LOGOS.map((logo, index) => (
           <div
-            className="slide flex w-[250px] items-center justify-center p-5"
+            className="slide flex w-[100px] md:w-[250px] items-center justify-center px-2"
             key={index}
           >
             <Image
@@ -32,7 +32,7 @@ export const InfiniteSlider = () => {
         ))}
         {LOGOS.map((logo, index) => (
           <div
-            className="slide flex w-[250px] items-center justify-center p-5"
+            className="slide flex w-[100px] md:w-[250px] items-center justify-center px-2"
             key={index}
           >
             <Image
