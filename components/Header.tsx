@@ -2,6 +2,20 @@
 
 import { Menu } from "@/typings";
 import { AnimatePresence } from "framer-motion";
+import {
+  FootprintsIcon,
+  HeartHandshakeIcon,
+  LampDeskIcon,
+  LibraryBigIcon,
+  MapIcon,
+  PiggyBankIcon,
+  ReceiptIcon,
+  SatelliteDishIcon,
+  ScanFaceIcon,
+  ScanSearchIcon,
+  ScrollTextIcon,
+  WebcamIcon,
+} from "lucide-react";
 import { useState } from "react";
 import Logo from "./Logo";
 import RequestAppointmentButton from "./RequestAppointmentButton";
@@ -9,22 +23,6 @@ import SideNav from "./SideNav";
 import SideNavContent from "./SideNavContent";
 import TopNav from "./TopNav";
 import TopNavContent from "./TopNavContent";
-import {
-  FootprintsIcon,
-  PiggyBankIcon,
-  ScrollTextIcon,
-  WebcamIcon,
-  SatelliteDishIcon,
-  HeartHandshakeIcon,
-  ScanFaceIcon,
-  ReceiptIcon,
-  LibraryBigIcon,
-  ScanSearchIcon,
-  UsersIcon,
-  BabyIcon,
-  MapIcon,
-  LampDeskIcon,
-} from "lucide-react";
 
 const menu: Menu[] = [
   {
@@ -40,11 +38,6 @@ const menu: Menu[] = [
         link: "/services/ultrasound",
         icon: <SatelliteDishIcon />,
       },
-      // {
-      //   subMenuTitle: "Pregnancy ultrasound",
-      //   link: "/services/pregnancy-ultrasound",
-      //   icon: <BabyIcon />,
-      // },
       {
         subMenuTitle: "X-ray",
         link: "/services/x-ray",
@@ -75,11 +68,6 @@ const menu: Menu[] = [
         link: "/referrers/access-patient-images",
         icon: <ScanSearchIcon />,
       },
-      // {
-      //   subMenuTitle: "e-Referral",
-      //   link: "/referrers/e-referral",
-      //   icon: <UsersIcon />,
-      // },
     ],
   },
   {
@@ -133,7 +121,10 @@ function Header() {
 
   return (
     <header className="sticky top-0 bg-white z-50 shadow-md overflow-x-hidden lg:overflow-x-visible max-h-screen">
-      <div className="bg-purple-300 p-2">
+      <div
+        className="bg-purple-300 p-2"
+        onMouseOver={() => handleTopNavLeave()}
+      >
         <div className="bg-purple-800 text-slate-50 text-xs font-light sm:text-base lg:text-lg flex justify-around max-w-3xl mx-auto p-1 rounded-md">
           <span className="flex justify-center items-center gap-1">
             <FootprintsIcon className="inline h-4 w-4 lg:h-6 lg:w-6" />
