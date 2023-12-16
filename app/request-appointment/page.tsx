@@ -33,7 +33,7 @@ function RequestAppointmentPage() {
           src={"https://picsum.photos/id/511/1000/1280"}
           width={400}
           height={500}
-          alt="sample-photo"
+          alt="A happy patient waiting for an appointment"
           className="rounded-xl"
         />
       </div>

@@ -47,7 +47,7 @@ function GettingHerePage() {
         <span>
           <Image
             src={roxburghlogo}
-            alt="roxburghvillage-logo"
+            alt="Roxburgh Village logo"
             width={200}
             className="inline-block -translate-y-3"
           />

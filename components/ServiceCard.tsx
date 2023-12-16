@@ -20,7 +20,7 @@ function ServiceCard({ service: { id, title, image }, order }: Props) {
           <Image
             src={image}
             fill
-            alt={title}
+            alt={`Using state-of-the-art ${title} technology to provide the best care for our patients`}
             className="absolute group-hover:scale-110 transition-all duration-500 ease-in-out object-cover"
           />
         </div>

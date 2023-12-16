@@ -22,7 +22,12 @@ export const InfiniteSlider = () => {
             className="slide flex w-[250px] items-center justify-center p-5"
             key={index}
           >
-            <Image src={logo} alt={logo} width={165} height={90} />
+            <Image
+              src={logo}
+              alt={"Our Partner logo"}
+              width={165}
+              height={90}
+            />
           </div>
         ))}
         {LOGOS.map((logo, index) => (
@@ -30,7 +35,12 @@ export const InfiniteSlider = () => {
             className="slide flex w-[250px] items-center justify-center p-5"
             key={index}
           >
-            <Image src={logo} alt={logo} width={165} height={90} />
+            <Image
+              src={logo}
+              alt={"Our Partner logo"}
+              width={165}
+              height={90}
+            />
           </div>
         ))}
       </div>

@@ -57,7 +57,7 @@ function StorySection({
       >
         <Image
           src={image}
-          alt="sample-photo"
+          alt="Friendly team at In One Imaging"
           fill
           className="absolute object-cover"
         />
