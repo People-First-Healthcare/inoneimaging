@@ -46,7 +46,7 @@ export default function Home() {
             src={
               "https://assets.website-files.com/62444c22812cca0a6e05b335/62444c9c770af7c8b7b23c16_Healthcare%20Worker.png"
             }
-            alt="healthcare worker photo"
+            alt="Friendly team at In One Imaging"
             width={500}
             height={500}
             className="absolute max-w-xs md:max-w-md bottom-0 right-0"
