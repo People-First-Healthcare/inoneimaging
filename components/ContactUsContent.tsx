@@ -16,7 +16,7 @@ function ContactUsContent() {
       </div>
       <div className="flex gap-3 items-center">
         <Phone className="w-10 basis-1/12" />
-        <p className="basis-11/12">+61 3 9063 0200</p>
+        <p className="basis-11/12">(03) 9063 0200</p>
       </div>
     </div>
   );

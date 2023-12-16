@@ -84,8 +84,8 @@ function Footer() {
           <Link href={`mailto:${"info@inoneimaging.com.au"}`}>
             <p>info@inoneimaging.com.au</p>
           </Link>
-          <Link href={`tel:${+61390630200}`}>
-            <p>+61 3 9063 0200</p>
+          <Link href={`tel:0390630200`}>
+            <p>(03) 9063 0200</p>
           </Link>
         </div>
       </div>
