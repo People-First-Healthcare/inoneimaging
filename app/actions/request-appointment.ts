@@ -47,10 +47,11 @@ export async function sendAppointmentRequest(formData: formData) {
     return { success: false, error: inputValidation.error.format() };
   }
 
+// Add real email and direct when emails are set up for Imaging - Fatima
   try {
     let mailOptions: any = {
       from: `"In One Imaging" example@inoneimaging.com.au`,
-      to: "hendry.kosasih@yahoo.com",
+      to: formData.email,
       subject: `New Appointment Request for ${firstName}`,
       html: `<h1>New Appointment Request</h1>
       <p>Dear In One Imaging,</p>
