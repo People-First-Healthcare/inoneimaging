@@ -65,7 +65,7 @@ function Footer() {
             href={"https://www.inonehealthcare.com.au/allied-health/"}
             target="_blank"
           >
-            <p>In One Allied Health</p>
+            <p>In One Healthcare</p>
           </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">

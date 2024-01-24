@@ -18,7 +18,7 @@ function RequestAppointmentPage() {
       {/* Image, title */}
       <HeroBanner
         title={"Request Appointment"}
-        image={"https://picsum.photos/id/600/1600/500"}
+        image={"/images/contents/reception.png"}
       />
 
       <div className="flex flex-col lg:flex-row items-center px-4 py-10 gap-10 lg:gap-16 mx-auto">
@@ -30,7 +30,7 @@ function RequestAppointmentPage() {
 
         {/* Photo */}
         <Image
-          src={"https://picsum.photos/id/511/1000/1280"}
+          src={"/images/contents/penpaper.png"}
           width={400}
           height={500}
           alt="A happy patient waiting for an appointment"
