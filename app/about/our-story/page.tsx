@@ -26,7 +26,7 @@ function OurStoryPage() {
         title="Our Mission"
         mainDescription="We are in the mission of making healthcare more accessible"
         secondaryDescription="We are a community focused organisation providing exceptional care to support and enhance the lives of the people we serve."
-        image="https://picsum.photos/id/513/1200/1000"
+        image="/images/contents/pregnantwomen.png"
         bgColor="bg-purple-50"
         imageOnLeft
       />
@@ -43,7 +43,7 @@ function OurStoryPage() {
           "Even when things don’t go to plan, the team at In One Imaging will show genuine compassion and care. We work with you to the best of our ability to find a solution.",
           "In order to best serve our patients, we recognise the importance of continuous improvement, striving to be better every day. We embrace change and we are always open to your feedback.",
         ]}
-        image="https://picsum.photos/id/514/1200/1000"
+        image="/images/logos/InOneImagingS.png"
       />
 
       <div id="partners" className="pt-20">
