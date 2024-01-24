@@ -20,7 +20,7 @@ function AccessPatientImagesPage() {
       {/* Image, title */}
       <HeroBanner
         title={"Access Patient Images"}
-        image={"https://picsum.photos/id/507/1600/500"}
+        image={"/images/contents/doctor.png"}
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 p-20 px-5 md:px-20 gap-10 max-w-7xl mx-auto">
