@@ -28,7 +28,7 @@ function GettingHerePage() {
     <section id="getting-here" className="flex flex-col gap-16 pb-10">
       {/* map */}
       <div className="relative">
-        <Map />
+        <Map>
         <Link
           href={
             "https://www.google.com/maps/place/In+One+Healthcare/@-37.6389671,144.9328315,15z/data=!4m5!3m4!1s0x0:0xf504418d6c371f23!8m2!3d-37.6389671!4d144.9328315?sa=X&ved=2ahUKEwjl9_vJs_z2AhWuldgFHVjwCaQQ_BJ6BAhSEAU&shorturl=1"
@@ -39,6 +39,7 @@ function GettingHerePage() {
             Get Directions
           </Button>
         </Link>
+        </Map>
 
         <CopyAddressButton classname="absolute top-[82%] left-1/2 transform -translate-x-1/2 w-72" />
       </div>
