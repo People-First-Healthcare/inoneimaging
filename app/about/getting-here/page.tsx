@@ -33,13 +33,12 @@ function GettingHerePage() {
           href={
             "https://maps.app.goo.gl/RBscTfw1Kbzy9Gfm8"
           }
-           target="_blank"
         >
           <Button className="absolute top-[70%] left-1/2 transform -translate-x-1/2 w-72">
             Get Directions
           </Button>
         </Link>
-          </Map>
+        </Map>
 
         <CopyAddressButton classname="absolute top-[82%] left-1/2 transform -translate-x-1/2 w-72" />
       </div>
