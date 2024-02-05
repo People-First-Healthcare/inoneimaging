@@ -28,10 +28,13 @@ function GettingHerePage() {
     <section id="getting-here" className="flex flex-col gap-16 pb-10">
       {/* Map */}
       <div className="relative">
-        <link src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12637.741516028012!2d144.9328315!3d-37.6389671!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65179eb7531d9%3A0xf504418d6c371f23!2sIn%20One%20Healthcare!5e0!3m2!1sen!2sau!4v1707095513026!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <Button className="absolute top-[70%] left-1/2 transform -translate-x-1/2 w-72">
+      <map />
+        <link
+          href="https://maps.app.goo.gl/RBscTfw1Kbzy9Gfm8"
+        <Button className="absolute top-[70%] left-1/2 transform -translate-x-1/2 w-72">
             Get Directions
           </Button>
+        </link>
 
         <CopyAddressButton classname="absolute top-[82%] left-1/2 transform -translate-x-1/2 w-72" />
       </div>
