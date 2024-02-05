@@ -6,7 +6,7 @@ import { useMemo } from "react";
 const Map = () => {
   // laod script for google map
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
+    googleMapsApiKey: process.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
   });
 
   const center = useMemo(
