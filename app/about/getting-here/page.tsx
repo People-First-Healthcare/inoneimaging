@@ -31,7 +31,7 @@ function GettingHerePage() {
         <Map />
         <Link
           href={
-            "https://maps.app.goo.gl/RBscTfw1Kbzy9Gfm8"
+            "https://www.google.com/maps/place/In+One+Healthcare/@-37.6389671,144.9328315,15z/data=!4m6!3m5!1s0x6ad65179eb7531d9:0xf504418d6c371f23!8m2!3d-37.6389671!4d144.9328315!16s%2Fg%2F11rhrvzk1m?entry=tts"
           }
           target="_blank"
         >
