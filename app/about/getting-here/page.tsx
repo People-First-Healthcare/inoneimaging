@@ -26,19 +26,23 @@ export const metadata: Metadata = {
 function GettingHerePage() {
   return (
     <section id="getting-here" className="flex flex-col gap-16 pb-10">
-      {/* Map */}
+      {/* map */}
       <div className="relative">
-      <map />
-      <link
-      href="https://maps.app.goo.gl/RBscTfw1Kbzy9Gfm8"
-        <Button className="absolute top-[70%] left-1/2 transform -translate-x-1/2 w-72">
+        <Map />
+        <Link
+          href={
+            "https://www.google.com/maps/place/In+One+Healthcare/@-37.6389671,144.9328315,15z/data=!4m5!3m4!1s0x0:0xf504418d6c371f23!8m2!3d-37.6389671!4d144.9328315?sa=X&ved=2ahUKEwjl9_vJs_z2AhWuldgFHVjwCaQQ_BJ6BAhSEAU&shorturl=1"
+          }
+          target="_blank"
+        >
+          <Button className="absolute top-[70%] left-1/2 transform -translate-x-1/2 w-72">
             Get Directions
-        </Button>
+          </Button>
+        </Link>
+        
 
         <CopyAddressButton classname="absolute top-[82%] left-1/2 transform -translate-x-1/2 w-72" />
       </div>
-      </link>
-      
       <h1 className="text-4xl text-center">
         We are located at{" "}
         <span>
@@ -46,11 +50,9 @@ function GettingHerePage() {
             src={roxburghlogo}
             alt="Roxburgh Village logo"
             width={200}
-            className="inline-block -translate-y-3"
-          />
+            className="inline-block -translate-y-3" />
         </span>
-      </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 px-5 w-full max-w-7xl mx-auto gap-10">
+      </h1><div className="grid grid-cols-1 lg:grid-cols-3 px-5 w-full max-w-7xl mx-auto gap-10">
         <div className="md:col-span-2">
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
@@ -111,9 +113,7 @@ function GettingHerePage() {
           </Accordion>
         </div>
         <TradingHoursCard />
-      </div>
-
-      <div className="max-w-7xl mx-auto">
+      </div><div className="max-w-7xl mx-auto">
         <CTA />
       </div>
     </section>
