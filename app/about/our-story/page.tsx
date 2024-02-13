@@ -18,7 +18,7 @@ function OurStoryPage() {
       <StorySection
         title="Our Story"
         mainDescription="In One Imaging"
-        secondaryDescription="Opened in November of 2022 with the hope of providing exceptional imaging services to our community. Our goal is to make imaging more accessible to the community, as everyone has the right to quality healthcare."
+        secondaryDescription="Opened in November of 2022 with the hope of providing exceptional imaging services. Our goal is to make imaging more accessible to the community, as everyone has the right to quality healthcare."
         image="/images/contents/nurse-elderly.png"
       />
       {/* mission, values, technology */}
