@@ -18,7 +18,7 @@ function TopNav({ menu, activeMenu, handleHover }: Props) {
             {menuItem.menuTitle}
           </button>
           <span
-            className={`bg-purple-800 h-[6px] rounded-bl-full rounded-tr-full absolute top-10 transition-all duration-300 ease-in-out ${
+            className={`bg-blue-neutral h-[6px] rounded-bl-full rounded-tr-full absolute top-10 transition-all duration-300 ease-in-out ${
               menuItem.menuTitle === activeMenu?.menuTitle ? "w-full" : "w-0"
             }`}
           ></span>

@@ -72,6 +72,20 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        purple: {
+          light: "#b891fd",
+          neutral: "#7e40e3",
+          dark: "#4c2799",
+        },
+        blue: {
+          light: "#6dbbff",
+          neutral: "#006ecf",
+          dark: "#003a6d",
+        },
+        grey: {
+          light: "#bebebe",
+          dark: "#4d4d4d",
+        },
       },
       keyframes: {
         "accordion-down": {

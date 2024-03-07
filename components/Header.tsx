@@ -122,10 +122,10 @@ function Header() {
   return (
     <header className="sticky top-0 bg-white z-50 shadow-md overflow-x-hidden lg:overflow-x-visible max-h-screen">
       <div
-        className="bg-purple-300 p-2"
+        className="bg-purple-light p-2"
         onMouseOver={() => handleTopNavLeave()}
       >
-        <div className="bg-purple-800 text-slate-50 text-xs font-light sm:text-base lg:text-lg flex justify-around max-w-3xl mx-auto p-1 rounded-md">
+        <div className="bg-purple-neutral text-slate-50 text-xs font-light sm:text-base lg:text-lg flex justify-around max-w-3xl mx-auto p-1 rounded-md">
           <span className="flex justify-center items-center gap-1">
             <FootprintsIcon className="inline h-4 w-4 lg:h-6 lg:w-6" />
             Walk-ins accepted

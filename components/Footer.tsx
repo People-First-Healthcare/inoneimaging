@@ -38,7 +38,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col text-sm space-y-3">
-          <p className="text-xs uppercase text-purple-500 font-medium">
+          <p className="text-xs uppercase text-purple-neutral font-medium">
             Services
           </p>
           <Link href={"/services/ct-scan"}>
@@ -52,7 +52,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">
-          <p className="text-xs uppercase text-purple-500 font-medium">
+          <p className="text-xs uppercase text-purple-neutral font-medium">
             Partners
           </p>
           <Link
@@ -69,7 +69,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">
-          <p className="text-xs uppercase text-purple-500 font-medium">
+          <p className="text-xs uppercase text-purple-neutral font-medium">
             Contact
           </p>
           <Link

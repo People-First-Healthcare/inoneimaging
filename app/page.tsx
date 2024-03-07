@@ -40,7 +40,7 @@ export default function Home() {
 
         <motion.div
           {...rtlAnimation}
-          className="bg-purple-300 relative min-h-[200px] lg:w-1/3"
+          className="bg-purple-light relative min-h-[200px] lg:w-1/3"
         >
           <Image
             src={
@@ -57,7 +57,7 @@ export default function Home() {
       {/* Feature */}
       <section
         id="section-feature"
-        className="flex flex-col p-10 bg-purple-800 lg:flex-row justify-center lg:py-14"
+        className="flex flex-col p-10 bg-purple-dark lg:flex-row justify-center lg:py-14"
       >
         <FeatureCard
           title="Cutting Edge Imaging Technology"
@@ -84,7 +84,7 @@ export default function Home() {
       >
         <motion.h2
           {...bottomupAnimation}
-          className="uppercase tracking-wider text-purple-800"
+          className="uppercase tracking-wider text-purple-neutral"
         >
           Services
         </motion.h2>
@@ -110,7 +110,7 @@ export default function Home() {
       >
         <motion.h2
           {...bottomupAnimation}
-          className="uppercase tracking-wider text-purple-800"
+          className="uppercase tracking-wider text-purple-neutral"
         >
           Steps
         </motion.h2>
