@@ -15,7 +15,7 @@ function FeesAndBillingPage() {
     <CustomFAQTemplate
       sectionId="faq"
       heroTitle="Frequently Asked Questions"
-      heroBackground="/images/contents/receptionist.png"
+      heroBackground="/images/contents/FAQ.JPG"
       faqs={generalFaq}
       contactUsCard
       billingCard
