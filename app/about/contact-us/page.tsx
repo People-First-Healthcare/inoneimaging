@@ -19,7 +19,7 @@ function ContactUs() {
       {/* Image, title */}
       <HeroBanner
         title={"Contact Us"}
-        image={"/public/images/contents/contact us.JPG"}
+        image={"/images/contents/contact us.JPG"}
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 p-20 px-5 md:px-20 gap-10 max-w-7xl mx-auto">
         <div className="flex flex-col space-y-7 lg:justify-center">
