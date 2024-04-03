@@ -26,7 +26,7 @@ function OurStoryPage() {
         title="Our Mission"
         mainDescription="We are in the mission of making healthcare more accessible"
         secondaryDescription="We are a community focused organisation providing exceptional care to support and enhance the lives of the people we serve."
-        image="/images/contents/pregnant.png"
+        image="/images/contents/0A2A7029.JPG"
         bgColor="bg-purple-50"
         imageOnLeft
       />
