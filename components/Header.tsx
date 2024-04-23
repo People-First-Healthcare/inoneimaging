@@ -26,6 +26,26 @@ import TopNavContent from "./TopNavContent";
 
 const menu: Menu[] = [
   {
+    menuTitle: "About",
+    subMenu: [
+      {
+        subMenuTitle: "Our Story",
+        link: "/about/our-story",
+        icon: <HeartHandshakeIcon />,
+      },
+      {
+        subMenuTitle: "Getting Here",
+        link: "/about/getting-here",
+        icon: <MapIcon />,
+      },
+      {
+        subMenuTitle: "Contact Us",
+        link: "/about/contact-us",
+        icon: <LampDeskIcon />,
+      },
+    ],
+  },
+  {
     menuTitle: "Services",
     subMenu: [
       {
@@ -67,26 +87,6 @@ const menu: Menu[] = [
         subMenuTitle: "Access Images",
         link: "/referrers/access-patient-images",
         icon: <ScanSearchIcon />,
-      },
-    ],
-  },
-  {
-    menuTitle: "About",
-    subMenu: [
-      {
-        subMenuTitle: "Our Story",
-        link: "/about/our-story",
-        icon: <HeartHandshakeIcon />,
-      },
-      {
-        subMenuTitle: "Getting Here",
-        link: "/about/getting-here",
-        icon: <MapIcon />,
-      },
-      {
-        subMenuTitle: "Contact Us",
-        link: "/about/contact-us",
-        icon: <LampDeskIcon />,
       },
     ],
   },
