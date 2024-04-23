@@ -49,6 +49,11 @@ const menu: Menu[] = [
     menuTitle: "Services",
     subMenu: [
       {
+        subMenuTitle: "X-ray",
+        link: "/services/x-ray",
+        icon: <ScanFaceIcon />,
+      },
+      {
         subMenuTitle: "CT scan",
         link: "/services/ct-scan",
         icon: <WebcamIcon />,
@@ -57,11 +62,6 @@ const menu: Menu[] = [
         subMenuTitle: "Ultrasound",
         link: "/services/ultrasound",
         icon: <SatelliteDishIcon />,
-      },
-      {
-        subMenuTitle: "X-ray",
-        link: "/services/x-ray",
-        icon: <ScanFaceIcon />,
       },
     ],
   },

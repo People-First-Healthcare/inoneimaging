@@ -41,14 +41,14 @@ function Footer() {
           <p className="text-xs uppercase text-purple-neutral font-medium">
             Services
           </p>
+          <Link href={"/services/x-ray"}>
+            <p>X-Ray</p>
+          </Link>
           <Link href={"/services/ct-scan"}>
             <p>CT Scan</p>
           </Link>
           <Link href={"/services/ultrasound"}>
             <p>Ultrasound</p>
-          </Link>
-          <Link href={"/services/x-ray"}>
-            <p>X-Ray</p>
           </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">
@@ -84,8 +84,11 @@ function Footer() {
           <Link href={`mailto:${"info@inoneimaging.com.au"}`}>
             <p>info@inoneimaging.com.au</p>
           </Link>
-          <Link href={`tel:0390630200`}>
-            <p>(03) 9063 0200</p>
+          <Link href={`tel:1300765456`}>
+            <p>Phone: 1300 765 456</p>
+          </Link>
+          <Link href={`tel:0394923652`}>
+            <p>Fax: 03 9492 3652</p>
           </Link>
         </div>
       </div>

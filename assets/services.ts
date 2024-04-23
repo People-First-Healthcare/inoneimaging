@@ -2,6 +2,59 @@ import { Service } from "@/typings";
 
 export const services: Service[] = [
   {
+    id: "x-ray",
+    title: "X-ray",
+    description: [
+      "At InOne Imaging, we have state-of-the-art medical imaging equipment that allows us to take quality x-ray images at the lowest possible radiation doses. All appointments are carried out by our fully qualified and highly experienced team.",
+      "X-rays are used to diagnose many different medical conditions including broken/fractured bones, abnormal lung activity, digestive system issues, heart problems, and more. They are best for looking at bony injuries. During your x-ray appointment, our highly trained radiographer will take multiple pictures of your injured area in different positions to provide a comprehensive evaluation. These x-rays are very low dose and we take utmost care to minimise any radiation as much as possible.",
+    ],
+    faqs: [
+      {
+        question: "What can I expect during my X-ray appointment?",
+        answer: [
+          "During an X-ray, you will be asked to position yourself while standing or lie down on an x-ray table. The X-ray technician will then position the X-ray machine and may ask you to hold your breath for a few seconds to capture clear images. The process is quick and painless.",
+        ],
+      },
+      {
+        question: "Is an X-ray safe?",
+        answer: [
+          "X-rays are generally considered safe, as the amount of radiation used is minimal. However, it's important to inform your healthcare provider if you are pregnant or suspect you might be, as precautions may need to be taken.",
+        ],
+      },
+      {
+        question: "Are there any risks or side effects associated with X-rays?",
+        answer: [
+          "The risks associated with X-rays are minimal. However, excessive exposure to radiation over time may have potential health risks. Your healthcare provider will ensure that the benefits of the X-ray outweigh any potential risks.",
+        ],
+      },
+      {
+        question: "How should I prepare for an X-ray?",
+        answer: [
+          "In most cases, there is no special preparation required for an X-ray. However, you may be asked to remove any metallic objects such as jewellery or clothing with zippers and buttons that could interfere with the images. It's important to inform your healthcare provider about any existing medical conditions or allergies.",
+        ],
+      },
+      {
+        question: "How will I get the results?",
+        answer: [
+          "A radiologist, who is a specialized doctor trained in interpreting medical images, will review and interpret your X-ray images. They will provide a detailed report to your healthcare provider, who will then discuss the results with you.",
+        ],
+      },
+      {
+        question: "How long do the results take?",
+        answer: [
+          "In most cases, results should be available 24-28 hours after your examination.",
+        ],
+      },
+      {
+        question: "What happens after the X-ray?",
+        answer: [
+          "Once the X-ray is complete, you can resume your normal activities unless instructed otherwise by your healthcare provider. They will discuss the results with you and recommend any necessary follow-up actions or treatments based on the findings.",
+        ],
+      },
+    ],
+    image: "/images/contents/xray-1.jpeg",
+  },
+  {
     id: "ct-scan",
     title: "CT scan",
     description: [
@@ -322,58 +375,5 @@ export const services: Service[] = [
       },
     ],
     image: "/images/contents/ultrasound-2.jpeg",
-  },
-  {
-    id: "x-ray",
-    title: "X-ray",
-    description: [
-      "At InOne Imaging, we have state-of-the-art medical imaging equipment that allows us to take quality x-ray images at the lowest possible radiation doses. All appointments are carried out by our fully qualified and highly experienced team.",
-      "X-rays are used to diagnose many different medical conditions including broken/fractured bones, abnormal lung activity, digestive system issues, heart problems, and more. They are best for looking at bony injuries. During your x-ray appointment, our highly trained radiographer will take multiple pictures of your injured area in different positions to provide a comprehensive evaluation. These x-rays are very low dose and we take utmost care to minimise any radiation as much as possible.",
-    ],
-    faqs: [
-      {
-        question: "What can I expect during my X-ray appointment?",
-        answer: [
-          "During an X-ray, you will be asked to position yourself while standing or lie down on an x-ray table. The X-ray technician will then position the X-ray machine and may ask you to hold your breath for a few seconds to capture clear images. The process is quick and painless.",
-        ],
-      },
-      {
-        question: "Is an X-ray safe?",
-        answer: [
-          "X-rays are generally considered safe, as the amount of radiation used is minimal. However, it's important to inform your healthcare provider if you are pregnant or suspect you might be, as precautions may need to be taken.",
-        ],
-      },
-      {
-        question: "Are there any risks or side effects associated with X-rays?",
-        answer: [
-          "The risks associated with X-rays are minimal. However, excessive exposure to radiation over time may have potential health risks. Your healthcare provider will ensure that the benefits of the X-ray outweigh any potential risks.",
-        ],
-      },
-      {
-        question: "How should I prepare for an X-ray?",
-        answer: [
-          "In most cases, there is no special preparation required for an X-ray. However, you may be asked to remove any metallic objects such as jewellery or clothing with zippers and buttons that could interfere with the images. It's important to inform your healthcare provider about any existing medical conditions or allergies.",
-        ],
-      },
-      {
-        question: "How will I get the results?",
-        answer: [
-          "A radiologist, who is a specialized doctor trained in interpreting medical images, will review and interpret your X-ray images. They will provide a detailed report to your healthcare provider, who will then discuss the results with you.",
-        ],
-      },
-      {
-        question: "How long do the results take?",
-        answer: [
-          "In most cases, results should be available 24-28 hours after your examination.",
-        ],
-      },
-      {
-        question: "What happens after the X-ray?",
-        answer: [
-          "Once the X-ray is complete, you can resume your normal activities unless instructed otherwise by your healthcare provider. They will discuss the results with you and recommend any necessary follow-up actions or treatments based on the findings.",
-        ],
-      },
-    ],
-    image: "/images/contents/xray-1.jpeg",
   },
 ];

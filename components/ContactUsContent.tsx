@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, PrinterIcon } from "lucide-react";
 import Link from "next/link";
 
 function ContactUsContent() {
@@ -25,9 +25,14 @@ function ContactUsContent() {
         <p className="basis-11/12">info@inoneimaging.com.au</p>
       </Link>
 
-      <Link href={`tel:0390630200`} className="flex gap-3 items-center">
+      <Link href={`tel:1300765456`} className="flex gap-3 items-center">
         <Phone className="w-10 basis-1/12" />
-        <p className="basis-11/12">(03) 9063 0200</p>
+        <p className="basis-11/12">1300 765 456</p>
+      </Link>
+
+      <Link href={`tel:0394923652`} className="flex gap-3 items-center">
+        <PrinterIcon className="w-10 basis-1/12" />
+        <p className="basis-11/12">03 9492 3652</p>
       </Link>
     </div>
   );
