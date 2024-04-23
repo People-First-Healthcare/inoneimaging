@@ -46,7 +46,7 @@ const menu: Menu[] = [
     ],
   },
   {
-    menuTitle: "Patient Information",
+    menuTitle: "Payment and Fees",
     subMenu: [
       {
         subMenuTitle: "Fees & Billing",
