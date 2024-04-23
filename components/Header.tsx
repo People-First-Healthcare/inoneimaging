@@ -50,16 +50,22 @@ const menu: Menu[] = [
     subMenu: [
       {
         subMenuTitle: "X-ray",
+        description:
+          "At In One Imaging, we have state-of-the-art medical imaging equipment that allows us to take quality x-ray images at the lowest possible radiation doses.",
         link: "/services/x-ray",
         icon: <ScanFaceIcon />,
       },
       {
         subMenuTitle: "CT scan",
+        description:
+          "CT scans take detailed 3D images of internal structures in your body using rotating x-ray tubes and computers.",
         link: "/services/ct-scan",
         icon: <WebcamIcon />,
       },
       {
         subMenuTitle: "Ultrasound",
+        description:
+          "Ultrasound is a type of medical imaging used to assess internal organs in the body using sound waves.",
         link: "/services/ultrasound",
         icon: <SatelliteDishIcon />,
       },
@@ -85,6 +91,8 @@ const menu: Menu[] = [
     subMenu: [
       {
         subMenuTitle: "Access Images",
+        description:
+          "Referrers can now conveniently access patient reports and images online using the login details provided by us.",
         link: "/referrers/access-patient-images",
         icon: <ScanSearchIcon />,
       },

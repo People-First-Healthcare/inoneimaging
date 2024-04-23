@@ -1,8 +1,10 @@
-import { Menu } from "@/typings";
+import { useState } from "react";
+import { Menu, SubMenu } from "@/typings";
 import { motion } from "framer-motion";
+import { appearAnimation } from "@/lib/animation";
 import Link from "next/link";
 import BillingCard from "./BillingCard";
-import { appearAnimation } from "@/lib/animation";
+import DynamicCard from "./DynamicCard";
 
 type Props = {
   menu: Menu;
@@ -10,6 +12,29 @@ type Props = {
 };
 
 function TopNavContent({ menu, handleLeave }: Props) {
+  const [hoveredSubMenu, setHoveredSubMenu] = useState("");
+
+  const handleSubMenuHover = (subMenuItem: SubMenu) => {
+    setHoveredSubMenu(subMenuItem.subMenuTitle);
+  };
+
+  const getActiveSubMenu = () => {
+    if (hoveredSubMenu) {
+      return menu.subMenu.find((item) => item.subMenuTitle === hoveredSubMenu);
+    }
+    // Default to the first submenu item if none hovered
+    return menu.subMenu[0];
+  };
+
+  const renderDynamicCard = () => {
+    if (menu.menuTitle === "Services" || menu.menuTitle === "Referrers") {
+      const activeSubMenu = getActiveSubMenu();
+      return activeSubMenu ? <DynamicCard subMenu={activeSubMenu} /> : null;
+    } else {
+      return <BillingCard />;
+    }
+  };
+
   return (
     <motion.div
       {...appearAnimation}
@@ -24,6 +49,7 @@ function TopNavContent({ menu, handleLeave }: Props) {
               key={i}
               className="flex items-center gap-16 p-5 hover:bg-slate-50"
               onClick={() => handleLeave()}
+              onMouseOver={() => handleSubMenuHover(subMenuItem)}
             >
               <div>{subMenuItem.icon}</div>
               <p className="text-xl">{subMenuItem.subMenuTitle}</p>
@@ -31,10 +57,11 @@ function TopNavContent({ menu, handleLeave }: Props) {
           ))}
         </div>
         <div className="flex-1 lg:flex-[0.7]" onClick={() => handleLeave()}>
-          <BillingCard />
+          {renderDynamicCard()}
         </div>
       </div>
     </motion.div>
   );
 }
+
 export default TopNavContent;

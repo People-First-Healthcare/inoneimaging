@@ -5,6 +5,7 @@ export type Menu = {
 
 export type SubMenu = {
   subMenuTitle: string;
+  description?: string;
   link: string;
   icon: React.ReactNode;
 };
