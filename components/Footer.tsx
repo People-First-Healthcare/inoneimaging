@@ -59,13 +59,13 @@ function Footer() {
             href={"https://www.inonehealthcare.com.au/vision-clinic/"}
             target="_blank"
           >
-            <p>In One Vision</p>
+            <p>InOne Vision</p>
           </Link>
           <Link
             href={"https://www.inonehealthcare.com.au/allied-health/"}
             target="_blank"
           >
-            <p>In One Healthcare</p>
+            <p>InOne Healthcare</p>
           </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">

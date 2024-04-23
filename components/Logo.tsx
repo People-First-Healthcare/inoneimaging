@@ -5,7 +5,7 @@ import logo from "../public/images/logos/InOneImaging.png";
 function Logo() {
   return (
     <Link href={"/"}>
-      <Image src={logo} alt="In One Imaging logo" width={230} />
+      <Image src={logo} alt="InOne Imaging logo" width={230} />
     </Link>
   );
 }

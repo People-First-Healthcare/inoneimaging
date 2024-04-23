@@ -10,7 +10,7 @@ export const services: Service[] = [
       "Our highly trained radiographer will guide you through the procedure and ensure you feel safe and comfortable at all times.",
     ],
     subService: {
-      header: "At In One Imaging, we currently offer the following CT scans:",
+      header: "At InOne Imaging, we currently offer the following CT scans:",
       item: [
         "CT Brain",
         "CT Facial Bones/Orbits",
@@ -89,7 +89,7 @@ export const services: Service[] = [
       "Ultrasound is a type of medical imaging used to assess internal organs in the body using sound waves. No radiation is involved which makes this a very safe and accessible scan. The sonographer will run a transducer (like a small probe shaped camera) along your body that delivers the sound waves to produce a live picture of your internal structures.",
     ],
     subService: {
-      header: "Our Ultrasound services at In One Imaging include:",
+      header: "Our Ultrasound services at InOne Imaging include:",
       item: [
         "Pregnancy scans for all stages",
         "Abdomen, Pelvis, Kidneys",
@@ -215,10 +215,10 @@ export const services: Service[] = [
     id: "pregnancy-ultrasound",
     title: "Pregnancy Ultrasound",
     description: [
-      "At In One Imaging, we offer pregnancy ultrasound scans as part of our full range of medical imaging services. These ultrasound scans are essential diagnostic tools used to monitor the baby’s development throughout pregnancy and detect any potential abnormalities or health issues. Our team of highly experienced medical professionals will provide you with the best quality care and make your ultrasound experience as comfortable as possible.",
+      "At InOne Imaging, we offer pregnancy ultrasound scans as part of our full range of medical imaging services. These ultrasound scans are essential diagnostic tools used to monitor the baby’s development throughout pregnancy and detect any potential abnormalities or health issues. Our team of highly experienced medical professionals will provide you with the best quality care and make your ultrasound experience as comfortable as possible.",
     ],
     pregnancyInfo: {
-      header: "Our Pregnancy Ultrasound services at In One Imaging include:",
+      header: "Our Pregnancy Ultrasound services at InOne Imaging include:",
       subService: [
         {
           name: "Early pregnancy/Dating scan",
@@ -327,7 +327,7 @@ export const services: Service[] = [
     id: "x-ray",
     title: "X-ray",
     description: [
-      "At In One Imaging, we have state-of-the-art medical imaging equipment that allows us to take quality x-ray images at the lowest possible radiation doses. All appointments are carried out by our fully qualified and highly experienced team.",
+      "At InOne Imaging, we have state-of-the-art medical imaging equipment that allows us to take quality x-ray images at the lowest possible radiation doses. All appointments are carried out by our fully qualified and highly experienced team.",
       "X-rays are used to diagnose many different medical conditions including broken/fractured bones, abnormal lung activity, digestive system issues, heart problems, and more. They are best for looking at bony injuries. During your x-ray appointment, our highly trained radiographer will take multiple pictures of your injured area in different positions to provide a comprehensive evaluation. These x-rays are very low dose and we take utmost care to minimise any radiation as much as possible.",
     ],
     faqs: [

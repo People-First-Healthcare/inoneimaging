@@ -11,7 +11,7 @@ function AppointmentFormWrapper() {
       {isFormSubmitted ? (
         <div className="flex flex-col gap-5">
           <h2 className="text-4xl">
-            Thank you for requesting an appointment at In One Imaging.
+            Thank you for requesting an appointment at InOne Imaging.
           </h2>
           <p>
             Our friendly team will be in touch with you soon to confirm your

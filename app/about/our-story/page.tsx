@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Story, Mission and Values",
   description:
-    "In One Imaging aims to provide exceptional imaging services to our community at Roxburgh Park in Melbourne. Our friendly team are always here to help.",
+    "InOne Imaging aims to provide exceptional imaging services to our community at Roxburgh Park in Melbourne. Our friendly team are always here to help.",
   alternates: {
     canonical: "/about/our-story",
   },
@@ -17,7 +17,7 @@ function OurStoryPage() {
       {/* hero (our story) */}
       <StorySection
         title="Our Story"
-        mainDescription="In One Imaging"
+        mainDescription="InOne Imaging"
         secondaryDescription="Opened in November of 2022 with the hope of providing exceptional imaging services. Our goal is to make imaging more accessible to the community, as everyone has the right to quality healthcare."
         image="/images/contents/nurse-elderly.png"
       />
@@ -40,7 +40,7 @@ function OurStoryPage() {
         ]}
         valuesDescription={[
           "Our team has an honest and transparent approach with our patients. By delivering exceptional patient care and high-quality imaging services, our clients know we are here for them and that we look after them, every step of the way.",
-          "Even when things don’t go to plan, the team at In One Imaging will show genuine compassion and care. We work with you to the best of our ability to find a solution.",
+          "Even when things don’t go to plan, the team at InOne Imaging will show genuine compassion and care. We work with you to the best of our ability to find a solution.",
           "In order to best serve our patients, we recognise the importance of continuous improvement, striving to be better every day. We embrace change and we are always open to your feedback.",
         ]}
         image="/images/contents/field.png"

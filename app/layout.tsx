@@ -9,19 +9,19 @@ const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Medical Imaging Services in Roxburgh Park | In One Imaging",
-    template: "%s | In One Imaging",
+    default: "Medical Imaging Services in Roxburgh Park | InOne Imaging",
+    template: "%s | InOne Imaging",
   },
   description:
-    "In One Imaging specialises in providing high quality medical imaging, scanning and ultrasounds. Book an appointment with us today.",
+    "InOne Imaging specialises in providing high quality medical imaging, scanning and ultrasounds. Book an appointment with us today.",
   metadataBase: new URL("https://inoneimaging.vercel.app/"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Medical Imaging Services in Roxburgh Park | In One Imaging",
+    title: "Medical Imaging Services in Roxburgh Park | InOne Imaging",
     description:
-      "In One Imaging specialises in providing high quality medical imaging, scanning and ultrasounds. Book an appointment with us today.",
+      "InOne Imaging specialises in providing high quality medical imaging, scanning and ultrasounds. Book an appointment with us today.",
   },
 };
 

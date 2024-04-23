@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 // Image metadata
-export const alt = "In One Imaging";
+export const alt = "InOne Imaging";
 export const size = {
   width: 1200,
   height: 630,
@@ -20,7 +20,7 @@ export default async function Image() {
         <div tw="bg-gray-50 flex w-full">
           <div tw="flex flex-col md:flex-row w-full py-12 px-4 md:items-center justify-between p-8">
             <h2 tw="flex flex-col text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 text-left">
-              <span>In One Imaging</span>
+              <span>InOne Imaging</span>
               <span tw="text-purple-700">
                 Get your imaging done with our experts.
               </span>

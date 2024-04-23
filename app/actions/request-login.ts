@@ -59,7 +59,7 @@ export async function requestLogin(formData: formData) {
       to: "hendry.kosasih@yahoo.com",
       subject: `New Access Images Request from ${clinicName}`,
       html: `<h1>Request Patient Image Access</h1>
-      <p>Dear In One Imaging,</p>
+      <p>Dear InOne Imaging,</p>
       <p>I am writing to request access to patient images for the following patient:</p>
       <p><strong>Patient Information</strong></p>
       <ul>

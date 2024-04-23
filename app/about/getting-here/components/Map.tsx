@@ -22,7 +22,7 @@ const Map = () => {
       mapContainerClassName="map-container"
       mapContainerStyle={{ width: "100%", height: "400px", margin: "auto" }}
     >
-      <MarkerF position={center} title="In One Imaging" />
+      <MarkerF position={center} title="InOne Imaging" />
     </GoogleMap>
   );
 };

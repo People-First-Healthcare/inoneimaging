@@ -17,7 +17,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Getting Here is Easy",
   description:
-    "In One Imaging is located at Roxburgh Village Shopping Centre with plenty of parking spaces. There are also train and bus services just next to Roxburgh Village.",
+    "InOne Imaging is located at Roxburgh Village Shopping Centre with plenty of parking spaces. There are also train and bus services just next to Roxburgh Village.",
   alternates: {
     canonical: "/about/getting-here",
   },
@@ -39,7 +39,6 @@ function GettingHerePage() {
             Get Directions
           </Button>
         </Link>
-        
 
         <CopyAddressButton classname="absolute top-[82%] left-1/2 transform -translate-x-1/2 w-72" />
       </div>
@@ -50,9 +49,11 @@ function GettingHerePage() {
             src={roxburghlogo}
             alt="Roxburgh Village logo"
             width={200}
-            className="inline-block -translate-y-3" />
+            className="inline-block -translate-y-3"
+          />
         </span>
-      </h1><div className="grid grid-cols-1 lg:grid-cols-3 px-5 w-full max-w-7xl mx-auto gap-10">
+      </h1>
+      <div className="grid grid-cols-1 lg:grid-cols-3 px-5 w-full max-w-7xl mx-auto gap-10">
         <div className="md:col-span-2">
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
@@ -113,7 +114,8 @@ function GettingHerePage() {
           </Accordion>
         </div>
         <TradingHoursCard />
-      </div><div className="max-w-7xl mx-auto">
+      </div>
+      <div className="max-w-7xl mx-auto">
         <CTA />
       </div>
     </section>

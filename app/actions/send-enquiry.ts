@@ -57,8 +57,8 @@ export async function sendEnquiry(formData: formData) {
       to: "hendry.kosasih@yahoo.com",
       subject: `New Enquiry from ${name}`,
       html: `<h1>New Enquiry</h1>
-      <p>Dear In One Imaging,</p>
-      <p>I am writing to you to enquire about your services at In One Imaging.</p>
+      <p>Dear InOne Imaging,</p>
+      <p>I am writing to you to enquire about your services at InOne Imaging.</p>
       <p><strong>Patient Information</strong></p>
       <ul>
         <li>Name: ${name}</li>
