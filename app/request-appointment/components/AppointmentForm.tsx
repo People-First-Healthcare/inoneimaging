@@ -130,9 +130,9 @@ function AppointmentForm({ setFormSubmitted }: Props) {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
+                    <SelectItem value="X-ray">X-Ray</SelectItem>
                     <SelectItem value="CT Scan">CT Scan</SelectItem>
                     <SelectItem value="Ultrasound">Ultrasound</SelectItem>
-                    <SelectItem value="X-ray">X-Ray</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
