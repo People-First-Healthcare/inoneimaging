@@ -56,7 +56,7 @@ export async function requestLogin(formData: formData) {
   try {
     let mailOptions: any = {
       from: senderEmail,
-      to: "hendry.kosasih@yahoo.com",
+      to: "info@inoneimaging.com.au",
       subject: `New Access Images Request from ${clinicName}`,
       html: `<h1>Request Patient Image Access</h1>
       <p>Dear InOne Imaging,</p>

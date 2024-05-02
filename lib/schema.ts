@@ -58,3 +58,13 @@ export const RequestLoginFormDataSchema = z.object({
   }),
   token: z.string(),
 });
+
+export const RequestReferralPadsFormDataSchema = z.object({
+  clinicName: z.string().min(1, {
+    message: "Clinic name is required",
+  }),
+  clinicAddress: z.string().min(1, {
+    message: "Clinic address is required",
+  }),
+  token: z.string(),
+});
