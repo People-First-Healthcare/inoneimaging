@@ -1,6 +1,6 @@
 "use server";
 
-import { ContactUsFormDataSchema as FormSchema } from "@/lib/schema";
+import { RequestReferralPadsFormDataSchema as FormSchema } from "@/lib/schema";
 import axios from "axios";
 import nodemailer from "nodemailer";
 import { z } from "zod";
@@ -18,13 +18,13 @@ const transporter = nodemailer.createTransport({
 
 type formData = z.infer<typeof FormSchema>;
 
-export async function sendEnquiry(formData: formData) {
+export async function requestReferralPads(formData: formData) {
   // simulate delay
   // await new Promise((resolve) => {
   //   setTimeout(() => resolve(1), 3000);
   // });
 
-  const { name, email, phone, message, token } = formData;
+  const { clinicName, clinicAddress, token } = formData;
 
   const turnstileData = {
     // Refer: https://developers.cloudflare.com/turnstile/reference/testing/
@@ -55,23 +55,19 @@ export async function sendEnquiry(formData: formData) {
     let mailOptions: any = {
       from: senderEmail,
       to: "info@inoneimaging.com.au",
-      subject: `New Enquiry from ${name}`,
-      html: `<h1>New Enquiry</h1>
-      <p>Dear InOne Imaging,</p>
-      <p>I am writing to you to enquire about your services at InOne Imaging.</p>
-      <p><strong>Patient Information</strong></p>
-      <ul>
-        <li>Name: ${name}</li>
-        <li>Email: ${email}</li>
-        <li>Phone Number: ${phone}</li>
-      </ul>
-      <p><strong>Enquiry</strong></p>
-      <p style="font-size:16px; border-style:ridge; padding:8px;">${message}</p>
-
-      <p>Thank you for your time and I look forward to hearing from you soon.</p>
-
-      <p>Sincerely,</p>
-      <p>${name}</p>`,
+      subject: `Request for InOne Imaging Referral Pads from ${clinicName}`,
+      html: `<h1>Request for InOne Imaging Referral Pads</h1>
+  <p>Dear InOne Imaging,</p>
+  <p>I am writing to request referral pads for our clinic:</p>
+  <p><strong>Clinic Information</strong></p>
+  <ul>
+    <li>Clinic Name: ${clinicName}</li>
+    <li>Clinic Address: ${clinicAddress}</li>
+  </ul>
+  <p>Please send us a supply of referral pads at your earliest convenience.</p>
+  <p>Thank you for your assistance.</p>
+  <p>Sincerely,</p>
+  <p>${clinicName}</p>`,
     };
 
     await transporter.sendMail(mailOptions);

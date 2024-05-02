@@ -3,7 +3,9 @@
 import { Menu } from "@/typings";
 import { AnimatePresence } from "framer-motion";
 import {
+  FileTextIcon,
   FootprintsIcon,
+  FormInputIcon,
   HeartHandshakeIcon,
   LampDeskIcon,
   LibraryBigIcon,
@@ -95,6 +97,13 @@ const menu: Menu[] = [
           "Referrers can now conveniently access patient reports and images online using the login details provided by us.",
         link: "/referrers/access-patient-images",
         icon: <ScanSearchIcon />,
+      },
+      {
+        subMenuTitle: "Request Referral Pads",
+        description:
+          "Referring doctors and allied health professionals may fill out our online form to order InOne Imaging Referral Pads.",
+        link: "/referrers/request-referral-pads",
+        icon: <FileTextIcon />,
       },
     ],
   },
