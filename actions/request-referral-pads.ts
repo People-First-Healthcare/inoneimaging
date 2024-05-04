@@ -7,6 +7,7 @@ import { z } from "zod";
 
 const senderEmail = process.env.NODEMAILER_EMAIL;
 const password = process.env.NODEMAILER_PWD;
+const receiverEmail = process.env.RECEIVER_EMAIL;
 
 const transporter = nodemailer.createTransport({
   service: "Gmail",
@@ -54,7 +55,7 @@ export async function requestReferralPads(formData: formData) {
   try {
     let mailOptions: any = {
       from: senderEmail,
-      to: "info@inoneimaging.com.au",
+      to: receiverEmail,
       subject: `Request for InOne Imaging Referral Pads from ${clinicName}`,
       html: `<h1>Request for InOne Imaging Referral Pads</h1>
   <p>Dear InOne Imaging,</p>
