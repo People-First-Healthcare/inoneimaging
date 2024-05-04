@@ -27,6 +27,7 @@ import TopNav from "./TopNav";
 import TopNavContent from "./TopNavContent";
 
 const menu: Menu[] = [
+  { menuTitle: "Home", link: "/", subMenu: [] },
   {
     menuTitle: "About",
     subMenu: [
@@ -182,7 +183,7 @@ function Header() {
         </div>
       </div>
       <AnimatePresence>
-        {activeTopNav && (
+        {activeTopNav?.subMenu.length && (
           <TopNavContent menu={activeTopNav} handleLeave={handleTopNavLeave} />
         )}
       </AnimatePresence>
