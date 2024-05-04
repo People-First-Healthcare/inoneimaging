@@ -1,4 +1,5 @@
 import { Menu } from "@/typings";
+import { useRouter } from "next/navigation";
 
 type Props = {
   menu: Menu[];
@@ -7,6 +8,12 @@ type Props = {
 };
 
 function TopNav({ menu, activeMenu, handleHover }: Props) {
+  const router = useRouter();
+  const handleClick = () => {
+    if (activeMenu?.link) {
+      router.push(activeMenu.link);
+    }
+  };
   return (
     <nav className="hidden lg:flex top-full">
       {menu.map((menuItem, i) => (
@@ -14,6 +21,7 @@ function TopNav({ menu, activeMenu, handleHover }: Props) {
           <button
             className="w-full whitespace-nowrap px-5 py-1 hover:cursor-default"
             onMouseOver={() => handleHover(menuItem)}
+            onClick={() => handleClick()}
           >
             {menuItem.menuTitle}
           </button>
