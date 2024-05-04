@@ -8,6 +8,7 @@ import format from "date-fns/format";
 
 const senderEmail = process.env.NODEMAILER_EMAIL;
 const password = process.env.NODEMAILER_PWD;
+const receiverEmail = process.env.RECEIVER_EMAIL;
 
 const transporter = nodemailer.createTransport({
   service: "Gmail",
@@ -56,7 +57,7 @@ export async function requestLogin(formData: formData) {
   try {
     let mailOptions: any = {
       from: senderEmail,
-      to: "info@inoneimaging.com.au",
+      to: receiverEmail,
       subject: `New Access Images Request from ${clinicName}`,
       html: `<h1>Request Patient Image Access</h1>
       <p>Dear InOne Imaging,</p>

@@ -7,6 +7,7 @@ import { z } from "zod";
 
 const senderEmail = process.env.NODEMAILER_EMAIL;
 const password = process.env.NODEMAILER_PWD;
+const receiverEmail = process.env.RECEIVER_EMAIL;
 
 const transporter = nodemailer.createTransport({
   service: "Gmail",
@@ -50,8 +51,8 @@ export async function sendAppointmentRequest(formData: formData) {
   // Add real email and direct when emails are set up for Imaging - Fatima
   try {
     let mailOptions: any = {
-      from: `"InOne Imaging" example@inoneimaging.com.au`,
-      to: formData.email,
+      from: senderEmail,
+      to: receiverEmail,
       subject: `New Appointment Request for ${firstName}`,
       html: `<h1>New Appointment Request</h1>
       <p>Dear InOne Imaging,</p>

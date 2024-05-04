@@ -183,7 +183,6 @@ function RequestLoginForm({ setFormSubmitted }: Props) {
         </div>
 
         <TurnstileWidget
-          sitekey="0x4AAAAAAAOy3IZPepzP3jTD"
           callback={(token) => {
             form.setValue("token", token);
           }}

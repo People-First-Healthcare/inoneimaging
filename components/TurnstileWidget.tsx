@@ -39,7 +39,7 @@ function TurnstileWidget(
     try {
       widgetID.current = turnstile.render("#captcha-container", {
         ...rest,
-        sitekey: sitekey || process.env.NEXT_PUBLIC_TURNSLITE_SITE_KEY || "",
+        sitekey: sitekey || process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "",
         "error-callback": onError,
         "expired-callback": expiredCallback,
       });

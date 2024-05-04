@@ -110,7 +110,6 @@ function ContactUsForm({ setFormSubmitted }: Props) {
         </div>
 
         <TurnstileWidget
-          sitekey="0x4AAAAAAAMNP5ZwMQ2wFh7d"
           callback={(token) => {
             form.setValue("token", token);
           }}
