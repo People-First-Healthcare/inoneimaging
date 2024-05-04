@@ -1,6 +1,8 @@
 import HeroBanner from "@/components/HeroBanner";
 import { Metadata } from "next";
 import RequestReferralPadsFormWrapper from "./components/RequestReferralPadsFormWrapper";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Order Referral Pads",
@@ -34,6 +36,18 @@ function RequestReferralPads() {
         </div>
         <div className="flex flex-col p-5 rounded-md bg-slate-50 my-auto">
           <RequestReferralPadsFormWrapper />
+        </div>
+        <div className="flex flex-col gap-5 text-center lg:text-left">
+          <h2 className="text-2xl lg:text-3xl lg:w-[70%]">Referral Form PDF</h2>
+          <Link
+            href="/files/InOneImaging_Referral_Form.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="text-lg"
+          >
+            <Button variant="outline">Download Referral Form</Button>
+          </Link>
         </div>
       </div>
     </section>
