@@ -25,7 +25,7 @@ import {
 import { RequestLoginFormDataSchema as FormSchema } from "@/lib/schema";
 import { useState } from "react";
 
-import { requestLogin } from "@/app/actions/request-login";
+import { requestLogin } from "@/actions/request-login";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import {
