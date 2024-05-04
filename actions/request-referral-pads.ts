@@ -56,7 +56,7 @@ export async function requestReferralPads(formData: formData) {
     let mailOptions: any = {
       from: senderEmail,
       to: receiverEmail,
-      subject: `Request for InOne Imaging Referral Pads from ${clinicName}`,
+      subject: `New Referral Pads Order Request from ${clinicName}`,
       html: `<h1>Request for InOne Imaging Referral Pads</h1>
   <p>Dear InOne Imaging,</p>
   <p>I am writing to request referral pads for our clinic:</p>
