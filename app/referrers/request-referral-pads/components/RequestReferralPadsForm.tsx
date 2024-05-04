@@ -32,6 +32,8 @@ function RequestReferralPadsForm({ setFormSubmitted }: Props) {
     defaultValues: {
       clinicName: "",
       clinicAddress: "",
+      name: "",
+      phone: "",
       token: "",
     },
   });
@@ -70,9 +72,35 @@ function RequestReferralPadsForm({ setFormSubmitted }: Props) {
             name="clinicAddress"
             render={({ field }) => (
               <FormItem className="flex flex-col gap-1">
-                <FormLabel>Clinic Address</FormLabel>
+                <FormLabel>Address</FormLabel>
                 <FormControl>
                   <Input {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem className="flex flex-col gap-1">
+                <FormLabel>Contact Name</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem className="flex flex-col gap-1">
+                <FormLabel>Phone</FormLabel>
+                <FormControl>
+                  <Input type="tel" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
