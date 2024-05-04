@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { sendAppointmentRequest } from "@/app/actions/request-appointment";
+import { sendAppointmentRequest } from "@/actions/request-appointment";
 import {
   Form,
   FormControl,

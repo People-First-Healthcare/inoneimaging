@@ -59,6 +59,7 @@ function StorySection({
           src={image}
           alt="Friendly team at InOne Imaging"
           fill
+          priority
           className="absolute object-cover"
         />
       </motion.div>

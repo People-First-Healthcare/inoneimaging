@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-
+import { requestReferralPads } from "@/actions/request-referral-pads";
 import SubmitButton from "@/components/SubmitButton";
 import TurnstileWidget from "@/components/TurnstileWidget";
 import {
@@ -17,8 +17,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { RequestReferralPadsFormDataSchema as FormSchema } from "@/lib/schema";
 import { useState } from "react";
-
-import { requestReferralPads } from "@/app/actions/request-referral-pads";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;

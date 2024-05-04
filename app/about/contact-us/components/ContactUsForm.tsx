@@ -3,8 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-
-import { sendEnquiry } from "@/app/actions/send-enquiry";
 import {
   Form,
   FormControl,
@@ -19,6 +17,7 @@ import { useState } from "react";
 import SubmitButton from "../../../../components/SubmitButton";
 import TurnstileWidget from "../../../../components/TurnstileWidget";
 import { Textarea } from "../../../../components/ui/textarea";
+import { sendEnquiry } from "@/actions/send-enquiry";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;
