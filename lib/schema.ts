@@ -66,5 +66,11 @@ export const RequestReferralPadsFormDataSchema = z.object({
   clinicAddress: z.string().min(1, {
     message: "Clinic address is required",
   }),
+  name: z.string().min(1, {
+    message: "Name is required",
+  }),
+  phone: z.string().min(9, {
+    message: "Not a valid phone number",
+  }),
   token: z.string(),
 });

@@ -24,7 +24,7 @@ export async function requestReferralPads(formData: formData) {
   //   setTimeout(() => resolve(1), 3000);
   // });
 
-  const { clinicName, clinicAddress, token } = formData;
+  const { clinicName, clinicAddress, name, phone, token } = formData;
 
   const turnstileData = {
     // Refer: https://developers.cloudflare.com/turnstile/reference/testing/
@@ -62,12 +62,14 @@ export async function requestReferralPads(formData: formData) {
   <p><strong>Clinic Information</strong></p>
   <ul>
     <li>Clinic Name: ${clinicName}</li>
-    <li>Clinic Address: ${clinicAddress}</li>
+    <li>Address: ${clinicAddress}</li>
+    <li>Contact name: ${name}</li>
+    <li>Phone: ${phone}</li>
   </ul>
   <p>Please send us a supply of referral pads at your earliest convenience.</p>
   <p>Thank you for your assistance.</p>
   <p>Sincerely,</p>
-  <p>${clinicName}</p>`,
+  <p>${name} from ${clinicName}</p>`,
     };
 
     await transporter.sendMail(mailOptions);
