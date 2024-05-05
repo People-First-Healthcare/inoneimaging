@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { RequestReferralPadsFormDataSchema as FormSchema } from "@/lib/schema";
 import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;
@@ -24,6 +25,7 @@ type Props = {
 
 function RequestReferralPadsForm({ setFormSubmitted }: Props) {
   const [pending, setPending] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -42,9 +44,11 @@ function RequestReferralPadsForm({ setFormSubmitted }: Props) {
     if (mailerResponse.success) {
       setFormSubmitted(true);
     } else {
-      alert(mailerResponse.message);
+      toast({
+        description: mailerResponse.message,
+        variant: "destructive",
+      });
     }
-    console.log(values);
     setPending(false);
   }
   return (

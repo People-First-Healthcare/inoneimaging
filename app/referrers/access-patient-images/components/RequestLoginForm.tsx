@@ -35,6 +35,7 @@ import {
 } from "@/components/ui/popover";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;
@@ -43,6 +44,7 @@ type Props = {
 function RequestLoginForm({ setFormSubmitted }: Props) {
   const [pending, setPending] = useState(false);
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -62,9 +64,11 @@ function RequestLoginForm({ setFormSubmitted }: Props) {
     if (mailerResponse.success) {
       setFormSubmitted(true);
     } else {
-      alert(mailerResponse.message);
+      toast({
+        description: mailerResponse.message,
+        variant: "destructive",
+      });
     }
-    console.log(values);
     setPending(false);
   }
   return (

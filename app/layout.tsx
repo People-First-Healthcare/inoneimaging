@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <GoogleTransalteWidget />
+        <Toaster />
       </body>
     </html>
   );

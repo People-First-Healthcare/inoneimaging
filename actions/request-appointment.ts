@@ -73,7 +73,10 @@ export async function sendAppointmentRequest(formData: formData) {
     await transporter.sendMail(mailOptions);
     return { success: true };
   } catch (err) {
-    console.error(err);
-    return { success: false, message: err };
+    console.error("Error sending email:", err);
+    return {
+      success: false,
+      message: "Failed to submit request. Please try again later.",
+    };
   }
 }
