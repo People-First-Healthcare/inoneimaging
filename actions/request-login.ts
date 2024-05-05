@@ -21,11 +21,6 @@ const transporter = nodemailer.createTransport({
 type formData = z.infer<typeof FormSchema>;
 
 export async function requestLogin(formData: formData) {
-  // simulate delay
-  // await new Promise((resolve) => {
-  //   setTimeout(() => resolve(1), 3000);
-  // });
-
   const { patientName, patientDOB, service, providerNum, clinicName, token } =
     formData;
 
@@ -85,7 +80,10 @@ export async function requestLogin(formData: formData) {
     await transporter.sendMail(mailOptions);
     return { success: true };
   } catch (err) {
-    console.error(err);
-    return { success: false, message: err };
+    console.error("Error sending email:", err);
+    return {
+      success: false,
+      message: "Failed to submit request. Please try again later.",
+    };
   }
 }

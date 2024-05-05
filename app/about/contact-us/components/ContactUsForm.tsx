@@ -18,6 +18,7 @@ import SubmitButton from "../../../../components/SubmitButton";
 import TurnstileWidget from "../../../../components/TurnstileWidget";
 import { Textarea } from "../../../../components/ui/textarea";
 import { sendEnquiry } from "@/actions/send-enquiry";
+import { useToast } from "@/components/ui/use-toast";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;
@@ -25,6 +26,7 @@ type Props = {
 
 function ContactUsForm({ setFormSubmitted }: Props) {
   const [pending, setPending] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -43,7 +45,10 @@ function ContactUsForm({ setFormSubmitted }: Props) {
     if (mailerResponse.success) {
       setFormSubmitted(true);
     } else {
-      alert(mailerResponse.message);
+      toast({
+        description: mailerResponse.message,
+        variant: "destructive",
+      });
     }
     setPending(false);
   }

@@ -25,6 +25,7 @@ import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
 import { useState } from "react";
 import SubmitButton from "../../../components/SubmitButton";
 import TurnstileWidget from "../../../components/TurnstileWidget";
+import { useToast } from "@/components/ui/use-toast";
 
 type Props = {
   setFormSubmitted: (isSubmitted: boolean) => void;
@@ -32,6 +33,7 @@ type Props = {
 
 function AppointmentForm({ setFormSubmitted }: Props) {
   const [pending, setPending] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -51,7 +53,10 @@ function AppointmentForm({ setFormSubmitted }: Props) {
     if (mailerResponse.success) {
       setFormSubmitted(true);
     } else {
-      alert(mailerResponse.message);
+      toast({
+        description: mailerResponse.message,
+        variant: "destructive",
+      });
     }
     setPending(false);
   }
