@@ -8,6 +8,7 @@ import {
   FormInputIcon,
   HeartHandshakeIcon,
   LampDeskIcon,
+  LaughIcon,
   LibraryBigIcon,
   MapIcon,
   PiggyBankIcon,
@@ -35,6 +36,11 @@ const menu: Menu[] = [
         subMenuTitle: "Our Story",
         link: "/about/our-story",
         icon: <HeartHandshakeIcon />,
+      },
+      {
+        subMenuTitle: "Our Team",
+        link: "/about/our-team",
+        icon: <LaughIcon />,
       },
       {
         subMenuTitle: "Getting Here",
