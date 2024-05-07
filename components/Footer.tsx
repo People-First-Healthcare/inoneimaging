@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import ChangeLanguage from "./ChangeLanguage";
 import Logo from "./Logo";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -11,9 +12,30 @@ function Footer() {
           <div className="flex justify-center sm:justify-normal">
             <Logo />
           </div>
-          <p className="max-w-[30ch] mx-auto sm:mx-0">
-            Visit us today for comprehensive radiology services.
+          <div className="flex justify-center sm:justify-normal gap-2">
+            <Image
+              src="/images/logos/Flag1-logo.png"
+              width={50}
+              height={50}
+              alt="Acknowledgement of Country Flag"
+            />
+            <Image
+              src="/images/logos/Flag2-logo.png"
+              width={50}
+              height={50}
+              alt="Acknowledgement of Country Flag"
+            />
+          </div>
+          <p className="text-sm md:max-w-sm">
+            InOne Imaging acknowledges the Traditional Owners of the lands on
+            which our services are located.
           </p>
+          <p className="text-sm md:max-w-sm">
+            We honour the strength and resilience of Aboriginal and Torres
+            Strait Islander peoples and pay our respects to all Elders, past and
+            present.
+          </p>
+
           <div className="flex justify-center space-x-5 sm:justify-normal">
             <SocialIcon
               url="https://www.facebook.com/inonehealthcare"
