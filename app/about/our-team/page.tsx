@@ -27,7 +27,7 @@ function OurTeam() {
       <HeroBanner title={"Our Team"} image={"/images/contents/contactus.png"} />
       <div className="flex flex-col max-w-7xl gap-10 px-6 py-10 mx-auto">
         {doctors.map((doctor, i) => (
-          <div className="flex flex-col md:flex-row shadow-md rounded">
+          <div key={i} className="flex flex-col md:flex-row shadow-md rounded">
             <div className="relative w-[300px] h-[500px] mx-auto shrink-0">
               <Image
                 src={doctor.image}
