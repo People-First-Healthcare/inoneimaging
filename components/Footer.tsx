@@ -7,8 +7,8 @@ import Image from "next/image";
 function Footer() {
   return (
     <footer className="mt-10 bg-purple-50">
-      <div className="grid sm:grid-cols-3 lg:grid-cols-5 text-center py-14 sm:py-16 space-y-8 lg:space-y-0 sm:text-left max-w-7xl mx-auto w-11/12">
-        <div className="sm:col-span-3 lg:col-span-2 flex flex-col space-y-5">
+      <div className="grid sm:grid-cols-4 lg:grid-cols-6 text-center py-14 sm:py-16 space-y-8 lg:space-y-0 sm:text-left max-w-7xl mx-auto w-11/12">
+        <div className="sm:col-span-4 lg:col-span-2 flex flex-col space-y-5">
           <div className="flex justify-center sm:justify-normal">
             <Logo />
           </div>
@@ -88,6 +88,20 @@ function Footer() {
             target="_blank"
           >
             <p>InOne Healthcare</p>
+          </Link>
+        </div>
+        <div className="flex flex-col text-sm space-y-3">
+          <p className="text-xs uppercase text-purple-neutral font-medium">
+            Our Team
+          </p>
+          <Link href={"/about/our-team"}>
+            <p>X-Ray</p>
+          </Link>
+          <Link href={"/about/our-team"}>
+            <p>CT Scan</p>
+          </Link>
+          <Link href={"/about/our-team"}>
+            <p>Ultrasound</p>
           </Link>
         </div>
         <div className="flex flex-col text-sm space-y-3">
