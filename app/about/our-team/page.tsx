@@ -1,4 +1,5 @@
 import HeroBanner from "@/components/HeroBanner";
+import { ConstructionIcon } from "lucide-react";
 import Image from "next/image";
 
 function OurTeam() {
@@ -23,29 +24,35 @@ function OurTeam() {
     },
   ];
   return (
-    <section id="our-team" className="flex flex-col">
-      <HeroBanner title={"Our Team"} image={"/images/contents/contactus.png"} />
-      <div className="flex flex-col max-w-7xl gap-10 px-6 py-10 mx-auto">
-        {doctors.map((doctor, i) => (
-          <div key={i} className="flex flex-col md:flex-row shadow-md rounded">
-            <div className="relative w-[300px] h-[500px] mx-auto shrink-0">
-              <Image
-                src={doctor.image}
-                alt={doctor.name}
-                sizes="300px"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="flex flex-col gap-2 p-4">
-              <h2 className="text-xl font-bold">{doctor.name}</h2>
-              <p className="text-gray-600 text-sm">{doctor.specialty}</p>
-              <p className="text-gray-700">{doctor.bio}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="h-screen flex flex-col justify-center items-center text-5xl">
+      <p>Under development</p>
+      <ConstructionIcon size={50} />
+    </div>
   );
+  // return (
+  //   <section id="our-team" className="flex flex-col">
+  //     <HeroBanner title={"Our Team"} image={"/images/contents/contactus.png"} />
+  //     <div className="flex flex-col max-w-7xl gap-10 px-6 py-10 mx-auto">
+  //       {doctors.map((doctor, i) => (
+  //         <div key={i} className="flex flex-col md:flex-row shadow-md rounded">
+  //           <div className="relative w-[300px] h-[500px] mx-auto shrink-0">
+  //             <Image
+  //               src={doctor.image}
+  //               alt={doctor.name}
+  //               sizes="300px"
+  //               fill
+  //               className="object-cover"
+  //             />
+  //           </div>
+  //           <div className="flex flex-col gap-2 p-4">
+  //             <h2 className="text-xl font-bold">{doctor.name}</h2>
+  //             <p className="text-gray-600 text-sm">{doctor.specialty}</p>
+  //             <p className="text-gray-700">{doctor.bio}</p>
+  //           </div>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   </section>
+  // );
 }
 export default OurTeam;

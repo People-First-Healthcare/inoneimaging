@@ -37,11 +37,11 @@ const menu: Menu[] = [
         link: "/about/our-story",
         icon: <HeartHandshakeIcon />,
       },
-      {
-        subMenuTitle: "Our Team",
-        link: "/about/our-team",
-        icon: <LaughIcon />,
-      },
+      // {
+      //   subMenuTitle: "Our Team",
+      //   link: "/about/our-team",
+      //   icon: <LaughIcon />,
+      // },
       {
         subMenuTitle: "Getting Here",
         link: "/about/getting-here",
