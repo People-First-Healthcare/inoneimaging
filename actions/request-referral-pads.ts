@@ -16,6 +16,7 @@ const transporter = nodemailer.createTransport({
     user: senderEmail,
     pass: password,
   },
+  secure: true,
 });
 
 type formData = z.infer<typeof FormSchema>;
