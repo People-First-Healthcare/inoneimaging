@@ -56,6 +56,7 @@ function AppointmentForm({ setFormSubmitted }: Props) {
       toast({
         description: mailerResponse.message,
         variant: "destructive",
+        duration: 3000,
       });
     }
     setPending(false);
