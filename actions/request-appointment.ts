@@ -5,12 +5,13 @@ import axios from "axios";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 
+const senderService = process.env.NODEMAILER_SERVICE;
 const senderEmail = process.env.NODEMAILER_EMAIL;
 const password = process.env.NODEMAILER_PWD;
 const receiverEmail = process.env.RECEIVER_EMAIL;
 
 const transporter = nodemailer.createTransport({
-  service: "Gmail",
+  service: senderService,
   auth: {
     user: senderEmail,
     pass: password,
