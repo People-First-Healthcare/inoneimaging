@@ -11,11 +11,19 @@ const password = process.env.NODEMAILER_PWD;
 const receiverEmail = process.env.RECEIVER_EMAIL;
 
 const transporter = nodemailer.createTransport({
-  service: senderService,
+  // service: senderService,
+  // auth: {
+  //   user: senderEmail,
+  //   pass: password,
+  // },
+  port: 587,
+  secure: false,
   auth: {
     user: senderEmail,
     pass: password,
   },
+  tls: { ciphers: "SSLv3" },
+  service: "Outlook365",
 });
 
 type formData = z.infer<typeof FormSchema>;
