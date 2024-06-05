@@ -5,17 +5,19 @@ import axios from "axios";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 
-const senderService = process.env.NODEMAILER_SERVICE;
 const senderEmail = process.env.NODEMAILER_EMAIL;
 const password = process.env.NODEMAILER_PWD;
 const receiverEmail = process.env.RECEIVER_EMAIL;
 
 const transporter = nodemailer.createTransport({
-  service: senderService,
+  service: "Outlook365",
+  port: 587,
+  secure: false,
   auth: {
     user: senderEmail,
     pass: password,
   },
+  tls: { ciphers: "SSLv3" },
 });
 
 type formData = z.infer<typeof FormSchema>;
