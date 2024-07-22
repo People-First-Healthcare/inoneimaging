@@ -40,13 +40,26 @@ function RequestReferralPads() {
         <div className="flex flex-col gap-5 text-center lg:text-left">
           <h2 className="text-2xl lg:text-3xl lg:w-[70%]">Referral Form PDF</h2>
           <Link
-            href="/files/InOneImaging_Referral_Form.pdf"
+            href="/files/96531 GP Referral Form - Best Practice.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download
             className="text-lg"
           >
-            <Button variant="outline">Download Referral Form</Button>
+            <Button variant="outline">
+              Download Best Practice Referral Form
+            </Button>
+          </Link>
+          <Link
+            href="/files/96531 GP Referral Form - Medical Director.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="text-lg"
+          >
+            <Button variant="outline">
+              Download Medical Director Referral Form
+            </Button>
           </Link>
         </div>
       </div>
