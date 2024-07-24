@@ -1,7 +1,7 @@
 "use server";
 
 import { RequestAppointmentFormDataSchema as FormSchema } from "@/lib/schema";
-import axios from "axios";
+import axios from "xior";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 
@@ -34,10 +34,7 @@ export async function sendAppointmentRequest(formData: formData) {
   const turnstileRes = await axios
     .post(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-      turnstileData,
-      {
-        headers: { "Content-Type": "application/json" },
-      }
+      turnstileData
     )
     .then((res) => res.data);
 
