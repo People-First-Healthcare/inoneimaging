@@ -38,7 +38,7 @@ function AccessPatientImagesPage() {
           </div>
           <div className="border-b border-black"></div>
           <Link
-            href={"https://patient.northwestradiology.com/login.cshtml"}
+            href={"https://pacs.nwradiology.com.au/webviewer/"}
             className="w-full"
           >
             <Button className="w-full">I already have the login details</Button>
