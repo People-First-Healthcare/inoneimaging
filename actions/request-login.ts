@@ -1,7 +1,7 @@
 "use server";
 
 import { RequestLoginFormDataSchema as FormSchema } from "@/lib/schema";
-import axios from "axios";
+import axios from "xior";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 import format from "date-fns/format";
@@ -35,10 +35,7 @@ export async function requestLogin(formData: formData) {
   const turnstileRes = await axios
     .post(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-      turnstileData,
-      {
-        headers: { "Content-Type": "application/json" },
-      }
+      turnstileData
     )
     .then((res) => res.data);
 
